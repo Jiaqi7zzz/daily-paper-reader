@@ -3604,6 +3604,7 @@ article.markdown-section {
   background: #fff;
   border-radius: 14px;
   padding: 7px 9px;
+  font-size: 11px;
   cursor: pointer;
   display: flex;
   gap: 6px;
@@ -3646,6 +3647,7 @@ article.markdown-section {
   gap: 3px;
   min-width: 0;
   line-height: 1.35;
+  font-size: 11px;
 }
 
 .dpr-cloud-item-title {
@@ -3731,6 +3733,7 @@ article.markdown-section {
   background: #fff;
   border-radius: 8px;
   padding: 8px 9px;
+  font-size: 11px;
   cursor: pointer;
   transition: border-color 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
 }
@@ -3779,6 +3782,7 @@ article.markdown-section {
   padding: 6px 7px;
   min-height: 24px;
   line-height: 1.35;
+  font-size: 11px;
   cursor: pointer;
   color: #2f4069;
   word-break: break-word;
@@ -3812,6 +3816,7 @@ article.markdown-section {
   display: inline-block;
   width: 100%;
   max-width: calc(100% - 14px);
+  font-size: 11px;
 }
 
 .dpr-inline-editor {
