@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T18:18:26.063760+00:00",
+  "generated_at": "2026-03-17T18:33:44.659002+00:00",
   "updated_date": "20260308-20260317",
   "carryover_days": 9,
   "items": [
@@ -25,183 +25,21 @@
         "query:RL TL"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "LLM agent tool planning via MCTS",
-      "llm_evidence_cn": "通过蒙特卡洛树搜索进行大模型智能体工具规划",
-      "llm_evidence": "通过蒙特卡洛树搜索进行大模型智能体工具规划",
-      "canonical_evidence": "通过蒙特卡洛树搜索进行大模型智能体工具规划",
-      "llm_tldr_en": "ToolTree uses MCTS and dual-feedback to improve multi-step tool planning for LLM agents.",
-      "llm_tldr_cn": "ToolTree利用蒙特卡洛树搜索和双重反馈改进了大模型智能体的多步工具规划。",
-      "llm_tldr": "ToolTree利用蒙特卡洛树搜索和双重反馈改进了大模型智能体的多步工具规划。",
+      "llm_evidence_en": "dual-feedback Monte Carlo tree search for tool planning",
+      "llm_evidence_cn": "用于工具规划的双反馈蒙特卡洛树搜索",
+      "llm_evidence": "用于工具规划的双反馈蒙特卡洛树搜索",
+      "canonical_evidence": "用于工具规划的双反馈蒙特卡洛树搜索",
+      "llm_tldr_en": "Presents ToolTree, a MCTS-inspired paradigm for adaptive and informed tool-use sequence planning.",
+      "llm_tldr_cn": "提出了 ToolTree，一种受 MCTS 启发的范式，用于自适应和知情的工具使用序列规划。",
+      "llm_tldr": "提出了 ToolTree，一种受 MCTS 启发的范式，用于自适应和知情的工具使用序列规划。",
       "llm_tags": [
-        "query:rl-tl"
+        "query:rl-tl:composite"
       ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "large language model tool learning and tool use",
-      "matched_requirement_id": "req-4",
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
       "selection_source": "carryover_cache",
       "paper_id": "2603.12740v1",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.13404v1",
-      "title": "Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance",
-      "abstract": "Tool use has become central to modern LLM agents, yet interface design is rarely isolated as an experimental variable. This paper studies whether schema based tool contracts and structured validation diagnostics improve reliability under strict interaction budgets. We evaluate three conditions that preserve identical tool semantics and information content: free form documentation, JSON Schema specifications, and JSON Schema with structured diagnostics.   We implement a deterministic software engineering sandbox with logs, metrics, configurations, and repository tasks, and evaluate a fully crossed pilot with one open local model, three seeds, three interface conditions, and four budgets. We report end task success, interface misuse, execution failures, semantic misuse, recovery behavior, and overhead. In this pilot, success remains zero across conditions, while schema conditions reduce interface misuse but not semantic misuse. The evidence supports a precise interpretation that interface formalization improves contract adherence, but semantic action quality and timeout sensitive tasks remain dominant bottlenecks under constrained local inference.",
-      "authors": [
-        "Akshey Sigdel",
-        "Rista Baral"
-      ],
-      "primary_category": "cs.SE",
-      "categories": [
-        "cs.SE",
-        "cs.AI"
-      ],
-      "published": "2026-03-12T07:11:16+00:00",
-      "link": "https://arxiv.org/pdf/2603.13404v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "tool use and schema based tool contracts for LLM agents",
-      "llm_evidence_cn": "LLM智能体的工具使用与基于模式的工具契约",
-      "llm_evidence": "LLM智能体的工具使用与基于模式的工具契约",
-      "canonical_evidence": "LLM智能体的工具使用与基于模式的工具契约",
-      "llm_tldr_en": "Studies how structured tool interfaces and diagnostics improve the reliability of LLM tool use.",
-      "llm_tldr_cn": "研究结构化工具接口和诊断如何提高LLM工具使用的可靠性。",
-      "llm_tldr": "研究结构化工具接口和诊断如何提高LLM工具使用的可靠性。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "large language model tool learning and tool use",
-      "matched_requirement_id": "req-4",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.13404v1",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.13426v1",
-      "title": "Outcome-Aware Tool Selection for Semantic Routers: Latency-Constrained Learning Without LLM Inference",
-      "abstract": "Semantic routers in LLM inference gateways select tools in the critical request path, where every millisecond of added latency compounds across millions of requests. We propose Outcome-Aware Tool Selection (OATS), which interpolates tool embeddings toward the centroid of queries where they historically succeed -- an offline process that adds no parameters, latency, or GPU cost at serving time. On MetaTool (199~tools, 4,287~queries), this improves NDCG@5 from 0.869 to 0.940; on ToolBench (2,413~APIs), from 0.834 to 0.848. We also evaluate two learned extensions: a 2,625-parameter MLP re-ranker and a 197K-parameter contrastive adapter. The MLP re-ranker hurts or matches baseline when outcome data is sparse relative to the tool set; the contrastive adapter provides comparable gains on MetaTool (NDCG@5: 0.931). All methods are evaluated on the same held-out 30\\% test split. The practical takeaway is to start with the zero-cost refinement and add learned components only when data density warrants it. All mechanisms run within single-digit millisecond CPU budgets.",
-      "authors": [
-        "Huamin Chen",
-        "Xunzhuo Liu",
-        "Junchen Jiang",
-        "Bowei He",
-        "Xue Liu"
-      ],
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "published": "2026-03-13T02:13:05+00:00",
-      "link": "https://arxiv.org/pdf/2603.13426v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "outcome-aware tool selection for LLM semantic routers",
-      "llm_evidence_cn": "大语言模型语义路由的结果感知工具选择",
-      "llm_evidence": "大语言模型语义路由的结果感知工具选择",
-      "canonical_evidence": "大语言模型语义路由的结果感知工具选择",
-      "llm_tldr_en": "Optimizes tool selection in LLM gateways by learning from historical success outcomes without inference latency.",
-      "llm_tldr_cn": "通过学习历史成功结果优化大模型网关中的工具选择，且不增加推理延迟。",
-      "llm_tldr": "通过学习历史成功结果优化大模型网关中的工具选择，且不增加推理延迟。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "large language model tool learning and tool use",
-      "matched_requirement_id": "req-4",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.13426v1",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.09065v2",
-      "title": "Learning Adaptive LLM Decoding",
-      "abstract": "Decoding from large language models (LLMs) typically relies on fixed sampling hyperparameters (e.g., temperature, top-p), despite substantial variation in task difficulty and uncertainty across prompts and individual decoding steps. We propose to learn adaptive decoding policies that dynamically select sampling strategies at inference time, conditioned on available compute resources. Rather than fine-tuning the language model itself, we introduce lightweight decoding adapters trained with reinforcement learning and verifiable terminal rewards (e.g. correctness on math and coding tasks). At the sequence level, we frame decoding as a contextual bandit problem: a policy selects a decoding strategy (e.g. greedy, top-k, min-p) for each prompt, conditioned on the prompt embedding and a parallel sampling budget. At the token level, we model decoding as a partially observable Markov decision process (POMDP), where a policy selects sampling actions at each token step based on internal model features and the remaining token budget. Experiments on the MATH and CodeContests benchmarks show that the learned adapters improve the accuracy-budget tradeoff: on MATH, the token-level adapter improves Pass@1 accuracy by up to 10.2% over the best static baseline under a fixed token budget, while the sequence-level adapter yields 2-3% gains under fixed parallel sampling. Ablation analyses support the contribution of both sequence- and token-level adaptation.",
-      "authors": [
-        "Chloe H. Su",
-        "Zhe Ye",
-        "Samuel Tenka",
-        "Aidan Yang",
-        "Soonho Kong",
-        "Udaya Ghai"
-      ],
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG"
-      ],
-      "published": "2026-03-10T01:15:26+00:00",
-      "link": "https://arxiv.org/pdf/2603.09065v2",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "trained with reinforcement learning and verifiable terminal rewards",
-      "llm_evidence_cn": "使用强化学习和可验证的终端奖励进行训练",
-      "llm_evidence": "使用强化学习和可验证的终端奖励进行训练",
-      "canonical_evidence": "使用强化学习和可验证的终端奖励进行训练",
-      "llm_tldr_en": "Learns adaptive decoding policies using RL and verifiable rewards like correctness in math and coding.",
-      "llm_tldr_cn": "利用强化学习和数学、编程等可验证奖励来学习自适应解码策略。",
-      "llm_tldr": "利用强化学习和数学、编程等可验证奖励来学习自适应解码策略。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "reinforcement learning with verifiable reward functions",
-      "matched_requirement_id": "req-3",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.09065v2",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.12826v1",
-      "title": "Rethinking Multiple-Choice Questions for RLVR: Unlocking Potential via Distractor Design",
-      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) significantly enhances the reasoning capabilities of Large Language Models. When applied to RLVR, Multiple-Choice Questions (MCQs) offer a scalable source of verifiable data but risk inducing reward hacking, where models shortcut reasoning via random guessing or simple elimination. Current approaches often mitigate this by converting MCQs to open-ended formats, thereby discarding the contrastive signal provided by expert-designed distractors. In this work, we systematically investigate the impact of option design on RLVR. Our analysis highlights two primary insights: (1) Mismatches in option counts between training and testing degrade performance. (2) Strong distractors effectively mitigate random guessing, enabling effective RLVR training even with 2-way questions. Motivated by these findings, we propose Iterative Distractor Curation (IDC), a framework that actively constructs high-quality distractors to block elimination shortcuts and promote deep reasoning. Experiments on various benchmarks demonstrate that our method effectively enhances distractor quality and yields significant gains in RLVR training compared to the original data.",
-      "authors": [
-        "Xu Guo",
-        "Qiming Ge",
-        "Jian Tong",
-        "Kedi Chen",
-        "Jin Zhang",
-        "Xiaogui Yang",
-        "Xuan Gao",
-        "Haijun Lv",
-        "Zhihui Lu",
-        "Yicheng Zou",
-        "Qipeng Guo"
-      ],
-      "primary_category": "cs.CL",
-      "categories": [
-        "cs.CL"
-      ],
-      "published": "2026-03-13T09:28:36+00:00",
-      "link": "https://arxiv.org/pdf/2603.12826v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Reinforcement Learning with Verifiable Rewards (RLVR) for MCQs",
-      "llm_evidence_cn": "用于多选题的具有可验证奖励的强化学习 (RLVR)",
-      "llm_evidence": "用于多选题的具有可验证奖励的强化学习 (RLVR)",
-      "canonical_evidence": "用于多选题的具有可验证奖励的强化学习 (RLVR)",
-      "llm_tldr_en": "Investigates distractor design in RLVR to prevent reward hacking in multiple-choice reasoning tasks.",
-      "llm_tldr_cn": "研究 RLVR 中的干扰项设计，以防止多选题推理任务中的奖励作弊。",
-      "llm_tldr": "研究 RLVR 中的干扰项设计，以防止多选题推理任务中的奖励作弊。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "reinforcement learning with verifiable reward functions",
-      "matched_requirement_id": "req-3",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.12826v1",
       "carry_days": 1
     },
     {
@@ -226,13 +64,13 @@
         "query:RL TL"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "Dataset curated for Reinforcement Learning with Verifiable Rewards (RLVR)",
-      "llm_evidence_cn": "专为具有可验证奖励的强化学习（RLVR）策划的数据集",
-      "llm_evidence": "专为具有可验证奖励的强化学习（RLVR）策划的数据集",
-      "canonical_evidence": "专为具有可验证奖励的强化学习（RLVR）策划的数据集",
-      "llm_tldr_en": "Provides a multilingual math dataset specifically designed to provide training signals for RLVR.",
-      "llm_tldr_cn": "提供了一个专门为RLVR设计的跨语言数学数据集，用于提供高质量训练信号。",
-      "llm_tldr": "提供了一个专门为RLVR设计的跨语言数学数据集，用于提供高质量训练信号。",
+      "llm_evidence_en": "Multilingual math dataset for Reinforcement Learning with Verifiable Rewards (RLVR)",
+      "llm_evidence_cn": "用于具有可验证奖励强化学习 (RLVR) 的多语言数学数据集",
+      "llm_evidence": "用于具有可验证奖励强化学习 (RLVR) 的多语言数学数据集",
+      "canonical_evidence": "用于具有可验证奖励强化学习 (RLVR) 的多语言数学数据集",
+      "llm_tldr_en": "Provides a high-quality multilingual math dataset specifically curated for RLVR training signals.",
+      "llm_tldr_cn": "提供了一个专门为 RLVR 训练信号策划的高质量多语言数学数据集。",
+      "llm_tldr": "提供了一个专门为 RLVR 训练信号策划的高质量多语言数学数据集。",
       "llm_tags": [
         "query:rl-tl"
       ],
@@ -241,50 +79,6 @@
       "matched_requirement_id": "req-3",
       "selection_source": "carryover_cache",
       "paper_id": "2603.10767v1",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.10178v1",
-      "title": "Video-Based Reward Modeling for Computer-Use Agents",
-      "abstract": "Computer-using agents (CUAs) are becoming increasingly capable; however, it remains difficult to scale evaluation of whether a trajectory truly fulfills a user instruction. In this work, we study reward modeling from execution video: a sequence of keyframes from an agent trajectory that is independent of the agent's internal reasoning or actions. Although video-execution modeling is method-agnostic, it presents key challenges, including highly redundant layouts and subtle, localized cues that determine success. We introduce Execution Video Reward 53k (ExeVR-53k), a dataset of 53k high-quality video--task--reward triplets. We further propose adversarial instruction translation to synthesize negative samples with step-level annotations. To enable learning from long, high-resolution execution videos, we design spatiotemporal token pruning, which removes homogeneous regions and persistent tokens while preserving decisive UI changes. Building on these components, we fine-tune an Execution Video Reward Model (ExeVRM) that takes only a user instruction and a video-execution sequence to predict task success. Our ExeVRM 8B achieves 84.7% accuracy and 87.7% recall on video-execution assessment, outperforming strong proprietary models such as GPT-5.2 and Gemini-3 Pro across Ubuntu, macOS, Windows, and Android, while providing more precise temporal attribution. These results show that video-execution reward modeling can serve as a scalable, model-agnostic evaluator for CUAs.",
-      "authors": [
-        "Linxin Song",
-        "Jieyu Zhang",
-        "Huanxin Sheng",
-        "Taiwei Shi",
-        "Gupta Rahul",
-        "Yang Liu",
-        "Ranjay Krishna",
-        "Jian Kang",
-        "Jieyu Zhao"
-      ],
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ],
-      "published": "2026-03-10T19:17:22+00:00",
-      "link": "https://arxiv.org/pdf/2603.10178v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Reward modeling from execution video for computer-use agents",
-      "llm_evidence_cn": "针对计算机使用智能体的执行视频奖励建模",
-      "llm_evidence": "针对计算机使用智能体的执行视频奖励建模",
-      "canonical_evidence": "针对计算机使用智能体的执行视频奖励建模",
-      "llm_tldr_en": "Introduces a dataset and method for modeling rewards based on tool execution results in video format.",
-      "llm_tldr_cn": "引入了一种基于视频格式的工具执行结果进行奖励建模的数据集和方法。",
-      "llm_tldr": "引入了一种基于视频格式的工具执行结果进行奖励建模的数据集和方法。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "automated reward modeling for tool augmented language models",
-      "matched_requirement_id": "req-6",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.10178v1",
       "carry_days": 1
     },
     {
@@ -329,84 +123,6 @@
       "carry_days": 1
     },
     {
-      "id": "2603.13853v1",
-      "title": "APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution",
-      "abstract": "Retrieval-augmented generation (RAG), based on large language models (LLMs), serves as a vital approach to retrieving and leveraging external knowledge in various domain applications. When confronted with complex multi-hop questions, single-round retrieval is often insufficient for accurate reasoning and problem solving. To enhance search capabilities for complex tasks, most existing works integrate multi-round iterative retrieval with reasoning processes via end-to-end training. While these approaches significantly improve problem-solving performance, they are still faced with challenges in task reasoning and model training, especially ambiguous retrieval execution paths and sparse rewards in end-to-end reinforcement learning (RL) process, leading to inaccurate retrieval results and performance degradation. To address these issues, in this paper, we proposes APEX-Searcher, a novel Agentic Planning and Execution framework to augment LLM search capabilities. Specifically, we introduce a two-stage agentic framework that decouples the retrieval process into planning and execution: It first employs RL with decomposition-specific rewards to optimize strategic planning; Built on the sub-task decomposition, it then applies supervised fine-tuning on high-quality multi-hop trajectories to equip the model with robust iterative sub-task execution capabilities. Extensive experiments demonstrate that our proposed framework achieves significant improvements in both multi-hop RAG and task planning performances across multiple benchmarks.",
-      "authors": [
-        "Kun Chen",
-        "Qingchao Kong",
-        "Zhao Feifei",
-        "Wenji Mao"
-      ],
-      "primary_category": "cs.CL",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "published": "2026-03-14T09:17:12+00:00",
-      "link": "https://arxiv.org/pdf/2603.13853v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Agentic planning and execution with sparse rewards in RL for search",
-      "llm_evidence_cn": "搜索任务中强化学习的代理规划、执行与稀疏奖励",
-      "llm_evidence": "搜索任务中强化学习的代理规划、执行与稀疏奖励",
-      "canonical_evidence": "搜索任务中强化学习的代理规划、执行与稀疏奖励",
-      "llm_tldr_en": "Enhances LLM search capabilities through agentic planning and reinforcement learning for complex tasks.",
-      "llm_tldr_cn": "通过代理规划和强化学习增强LLM在复杂任务中的搜索和推理能力。",
-      "llm_tldr": "通过代理规划和强化学习增强LLM在复杂任务中的搜索和推理能力。",
-      "llm_tags": [
-        "query:rl-tl:composite"
-      ],
-      "matched_query_tag": "query:rl-tl:composite",
-      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
-      "matched_requirement_id": "req-composite-rl-tl",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.13853v1",
-      "carry_days": 1
-    },
-    {
-      "id": "2603.10767v2",
-      "title": "mAceReason-Math: A Dataset of High-Quality Multilingual Math Problems Ready For RLVR",
-      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has been successfully applied to significantly boost the capabilities of pretrained large language models, especially in the math and logic problem domains. However, current research and available training datasets remain English-centric. While multilingual training data and benchmarks have been created in the past, they were not created with RLVR and current model capability in mind, and their level of difficulty is often too low to provide appropriate training signals for current models. To address this gap, we provide mAceReason-Math, a dataset of high-quality translations of challenging math problems sourced from a corpus specifically curated for RLVR (AceReason-Math). We further take specific care to clean and improve our translations, resulting in a coverage of 14 languages with more than 10,000 samples per language. We release the dataset to facilitate multilingual RLVR research and benchmarking in the research community.",
-      "authors": [
-        "Konstantin Dobler",
-        "Simon Lehnerer",
-        "Federico Scozzafava",
-        "Jonathan Janke",
-        "Mohamed Ali"
-      ],
-      "primary_category": "cs.CL",
-      "categories": [
-        "cs.CL"
-      ],
-      "published": "2026-03-11T13:42:26+00:00",
-      "link": "https://arxiv.org/pdf/2603.10767v2",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Multilingual math problems dataset specifically curated for RLVR",
-      "llm_evidence_cn": "专门为RLVR策划的多语言数学问题数据集",
-      "llm_evidence": "专门为RLVR策划的多语言数学问题数据集",
-      "canonical_evidence": "专门为RLVR策划的多语言数学问题数据集",
-      "llm_tldr_en": "Provides a high-quality multilingual dataset to support reinforcement learning with verifiable rewards.",
-      "llm_tldr_cn": "提供高质量的多语言数据集，以支持具有可验证奖励的强化学习（RLVR）训练。",
-      "llm_tldr": "提供高质量的多语言数据集，以支持具有可验证奖励的强化学习（RLVR）训练。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "reinforcement learning with verifiable reward functions",
-      "matched_requirement_id": "req-3",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.10767v2",
-      "carry_days": 1
-    },
-    {
       "id": "2603.14458v1",
       "title": "Distilling Reasoning Without Knowledge: A Framework for Reliable LLMs",
       "abstract": "Fact-seeking question answering with large language models (LLMs) remains unreliable when answers depend on up-to-date or conflicting information. Although retrieval-augmented and tool-using LLMs reduce hallucinations, they often rely on implicit planning, leading to inefficient tool usage. We propose a modular framework that explicitly separates planning from factual retrieval and answer synthesis. A lightweight student planner is trained via a teacher-student framework to generate structured decompositions consisting of abstract reasoning steps and searchable fact requests. The supervision signals contain only planning traces and fact requests, without providing factual answers or retrieved evidence. At inference, the planner produces plans, while prompt-engineered modules perform retrieval and response synthesis. We evaluate the proposed framework on SEAL-0, an extremely challenging benchmark for search-augmented LLMs. Results show that supervised planning improves both accuracy and latency compared to monolithic reasoning models and prompt-based tool-augmented frameworks, demonstrating that explicitly learned planning structures are essential for reliable fact-seeking LLMs.",
@@ -428,13 +144,13 @@
         "query:RL TL"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "Tool-using LLMs and structured planning for fact-seeking requests",
-      "llm_evidence_cn": "使用工具的大语言模型以及针对事实查询请求的结构化规划",
-      "llm_evidence": "使用工具的大语言模型以及针对事实查询请求的结构化规划",
-      "canonical_evidence": "使用工具的大语言模型以及针对事实查询请求的结构化规划",
-      "llm_tldr_en": "Introduces a framework that separates planning from retrieval to improve tool usage efficiency in LLMs.",
-      "llm_tldr_cn": "引入了一种将规划与检索分离的框架，以提高大语言模型在工具使用中的效率。",
-      "llm_tldr": "引入了一种将规划与检索分离的框架，以提高大语言模型在工具使用中的效率。",
+      "llm_evidence_en": "tool-using LLMs and explicit planning",
+      "llm_evidence_cn": "使用工具的大模型与显式规划",
+      "llm_evidence": "使用工具的大模型与显式规划",
+      "canonical_evidence": "使用工具的大模型与显式规划",
+      "llm_tldr_en": "Separates planning from retrieval to improve the efficiency and reliability of tool-using LLMs.",
+      "llm_tldr_cn": "通过将规划与检索分离，提升工具使用型大语言模型的效率与可靠性。",
+      "llm_tldr": "通过将规划与检索分离，提升工具使用型大语言模型的效率与可靠性。",
       "llm_tags": [
         "query:rl-tl"
       ],
@@ -443,6 +159,280 @@
       "matched_requirement_id": "req-4",
       "selection_source": "carryover_cache",
       "paper_id": "2603.14458v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.09331v1",
+      "title": "Reward-Zero: Language Embedding Driven Implicit Reward Mechanisms for Reinforcement Learning",
+      "abstract": "We introduce Reward-Zero, a general-purpose implicit reward mechanism that transforms natural-language task descriptions into dense, semantically grounded progress signals for reinforcement learning (RL). Reward-Zero serves as a simple yet sophisticated universal reward function that leverages language embeddings for efficient RL training. By comparing the embedding of a task specification with embeddings derived from an agent's interaction experience, Reward-Zero produces a continuous, semantically aligned sense-of-completion signal. This reward supplements sparse or delayed environmental feedback without requiring task-specific engineering. When integrated into standard RL frameworks, it accelerates exploration, stabilizes training, and enhances generalization across diverse tasks. Empirically, agents trained with Reward-Zero converge faster and achieve higher final success rates than conventional methods such as PPO with common reward-shaping baselines, successfully solving tasks that hand-designed rewards could not in some complex tasks. In addition, we develop a mini benchmark for the evaluation of completion sense during task execution via language embeddings. These results highlight the promise of language-driven implicit reward functions as a practical path toward more sample-efficient, generalizable, and scalable RL for embodied agents. Code will be released after peer review.",
+      "authors": [
+        "Heng Zhang",
+        "Haddy Alchaer",
+        "Arash Ajoudani",
+        "Yu She"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-10T08:07:49+00:00",
+      "link": "https://arxiv.org/pdf/2603.09331v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "automated reward modeling from task descriptions for RL",
+      "llm_evidence_cn": "基于任务描述的强化学习自动奖励建模",
+      "llm_evidence": "基于任务描述的强化学习自动奖励建模",
+      "canonical_evidence": "基于任务描述的强化学习自动奖励建模",
+      "llm_tldr_en": "Reward-Zero creates implicit rewards from language embeddings to guide RL agents without manual engineering.",
+      "llm_tldr_cn": "Reward-Zero利用语言嵌入创建隐式奖励，无需人工工程即可引导强化学习智能体。",
+      "llm_tldr": "Reward-Zero利用语言嵌入创建隐式奖励，无需人工工程即可引导强化学习智能体。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.09331v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.11337v1",
+      "title": "RewardHackingAgents: Benchmarking Evaluation Integrity for LLM ML-Engineering Agents",
+      "abstract": "LLM agents increasingly perform end-to-end ML engineering tasks where success is judged by a single scalar test metric. This creates a structural vulnerability: an agent can increase the reported score by compromising the evaluation pipeline rather than improving the model. We introduce RewardHackingAgents, a workspace-based benchmark that makes two compromise vectors explicit and measurable: evaluator tampering (modifying metric computation or reporting) and train/test leakage (accessing held-out data or labels during training). Each episode runs in a fresh workspace with patch tracking and runtime file-access logging; detectors compare the agent-reported metric to a trusted reference to assign auditable integrity labels. Across three tasks and two LLM backbones, scripted attacks succeed on both vectors in fully mutable workspaces; single-mechanism defenses block only one vector; and a combined regime blocks both. In natural-agent runs, evaluator-tampering attempts occur in about 50% of episodes and are eliminated by evaluator locking, with a 25-31% median runtime overhead. Overall, we demonstrate that evaluation integrity for ML-engineering agents can be benchmarked as a first-class outcome rather than assumed.",
+      "authors": [
+        "Yonas Atinafu",
+        "Robin Cohen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-11T22:06:44+00:00",
+      "link": "https://arxiv.org/pdf/2603.11337v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "benchmarking evaluation integrity for agents",
+      "llm_evidence_cn": "智能体评估完整性基准测试",
+      "llm_evidence": "智能体评估完整性基准测试",
+      "canonical_evidence": "智能体评估完整性基准测试",
+      "llm_tldr_en": "Benchmarks reward hacking and evaluation tampering in ML-engineering agents to ensure verifiable success.",
+      "llm_tldr_cn": "针对机器学习工程智能体建立基准，检测奖励作弊与评估篡改，确保结果可验证。",
+      "llm_tldr": "针对机器学习工程智能体建立基准，检测奖励作弊与评估篡改，确保结果可验证。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.11337v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.11545v2",
+      "title": "One Supervisor, Many Modalities: Adaptive Tool Orchestration for Autonomous Queries",
+      "abstract": "We present an agentic AI framework for autonomous multimodal query processing that coordinates specialized tools across text, image, audio, video, and document modalities. A central Supervisor dynamically decomposes user queries, delegates subtasks to modality-appropriate tools (e.g., object detection, OCR, speech transcription), and synthesizes results through adaptive routing strategies rather than predetermined decision trees. For text-only queries, the framework uses learned routing via RouteLLM, while non-text paths use SLM-assisted modality decomposition. Evaluated on 2,847 queries across 15 task categories, our framework achieves 72% reduction in time-to-accurate-answer, 85% reduction in conversational rework, and 67% cost reduction compared to the matched hierarchical baseline while maintaining accuracy parity. These results demonstrate that intelligent centralized orchestration fundamentally improves multimodal AI deployment economics.",
+      "authors": [
+        "Mayank Saini",
+        "Arit Kumar Bishwas"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-12T05:02:58+00:00",
+      "link": "https://arxiv.org/pdf/2603.11545v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "agentic AI framework for autonomous tool orchestration across multiple modalities",
+      "llm_evidence_cn": "跨多种模态的自主工具编排智能体AI框架",
+      "llm_evidence": "跨多种模态的自主工具编排智能体AI框架",
+      "canonical_evidence": "跨多种模态的自主工具编排智能体AI框架",
+      "llm_tldr_en": "Presents a supervisor-based framework for dynamic tool selection and orchestration in multimodal queries.",
+      "llm_tldr_cn": "提出了一个基于主管的框架，用于多模态查询中的动态工具选择和编排。",
+      "llm_tldr": "提出了一个基于主管的框架，用于多模态查询中的动态工具选择和编排。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.11545v2",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.10588v1",
+      "title": "Does LLM Alignment Really Need Diversity? An Empirical Study of Adapting RLVR Methods for Moral Reasoning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has achieved remarkable success in logical reasoning tasks, yet whether large language model (LLM) alignment requires fundamentally different approaches remains unclear. Given the apparent tolerance for multiple valid responses in moral reasoning, a natural hypothesis is that alignment tasks inherently require diversity-seeking distribution-matching algorithms rather than reward-maximizing policy-based methods. We conduct the first comprehensive empirical study comparing both paradigms on MoReBench. To enable stable RLVR training, we build a rubric-grounded reward pipeline by training a Qwen3-1.7B judge model. Contrary to our hypothesis, we find that distribution-matching approaches do not demonstrate significant advantages over reward-maximizing methods as expected on alignment tasks. Through semantic visualization mapping high-reward responses to semantic space, we demonstrate that moral reasoning exhibits more concentrated high-reward distributions than mathematical reasoning, where diverse solution strategies yield similarly high rewards. This counter-intuitive finding explains why mode-seeking optimization proves equally or more effective for alignment tasks. Our results suggest that alignment tasks do not inherently require diversity-preserving algorithms, and standard reward-maximizing RLVR methods can effectively transfer to moral reasoning without explicit diversity mechanisms.",
+      "authors": [
+        "Zhaowei Zhang",
+        "Xiaohan Liu",
+        "Xuekai Zhu",
+        "Junchao Huang",
+        "Ceyao Zhang",
+        "Zhiyuan Feng",
+        "Yaodong Yang",
+        "Xiaoyuan Yi",
+        "Xing Xie"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-03-11T09:45:30+00:00",
+      "link": "https://arxiv.org/pdf/2603.10588v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adapting RLVR methods for moral reasoning and alignment",
+      "llm_evidence_cn": "将 RLVR 方法应用于道德推理和对齐",
+      "llm_evidence": "将 RLVR 方法应用于道德推理和对齐",
+      "canonical_evidence": "将 RLVR 方法应用于道德推理和对齐",
+      "llm_tldr_en": "Investigates the application of RLVR in moral reasoning by building a rubric-grounded reward pipeline.",
+      "llm_tldr_cn": "通过构建基于规则的奖励流水线，研究了 RLVR 在道德推理中的应用。",
+      "llm_tldr": "通过构建基于规则的奖励流水线，研究了 RLVR 在道德推理中的应用。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.10588v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.11495v1",
+      "title": "Try, Check and Retry: A Divide-and-Conquer Framework for Boosting Long-context Tool-Calling Performance of LLMs",
+      "abstract": "Tool-calling empowers Large Language Models (LLMs) to interact with external environments. However, current methods often struggle to handle massive and noisy candidate tools in long-context tool-calling tasks, limiting their real-world application. To this end, we propose Tool-DC, a Divide-and-Conquer framework for boosting tool-calling performance of LLMs. The core of Tool-DC is to reduce the reasoning difficulty and make full use of self-reflection ability of LLMs via a \"Try-Check-Retry\" paradigm. Specifically, Tool-DC involves two variants: 1) the training-free Tool-DC (TF), which is plug-and-play and flexible; 2) the training-based Tool-DC (TB), which is more inference-efficient. Extensive experiments show that both Tool-DC methods outperform their counterparts by a clear margin. Tool-DC (TF) brings up to +25.10% average gains against the baseline on BFCL and ACEBench benchmarks, while Tool-DC (TB) enables Qwen2.5-7B to achieve comparable or even better performance than proprietary LLMs, e.g., OpenAI o3 and Claude-Haiku-4.5.",
+      "authors": [
+        "Kunfeng Chen",
+        "Qihuang Zhong",
+        "Juhua Liu",
+        "Bo Du",
+        "Dacheng Tao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-12T03:30:01+00:00",
+      "link": "https://arxiv.org/pdf/2603.11495v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Divide-and-conquer framework for LLM tool-calling",
+      "llm_evidence_cn": "大模型工具调用的分而治之框架",
+      "llm_evidence": "大模型工具调用的分而治之框架",
+      "canonical_evidence": "大模型工具调用的分而治之框架",
+      "llm_tldr_en": "Proposes Tool-DC to improve long-context tool-calling through a try-check-retry paradigm.",
+      "llm_tldr_cn": "提出 Tool-DC 框架，通过“尝试-检查-重试”范式提升长文本工具调用性能。",
+      "llm_tldr": "提出 Tool-DC 框架，通过“尝试-检查-重试”范式提升长文本工具调用性能。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.11495v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.15309v1",
+      "title": "CCTU: A Benchmark for Tool Use under Complex Constraints",
+      "abstract": "Solving problems through tool use under explicit constraints constitutes a highly challenging yet unavoidable scenario for large language models (LLMs), requiring capabilities such as function calling, instruction following, and self-refinement. However, progress has been hindered by the absence of dedicated evaluations. To address this, we introduce CCTU, a benchmark for evaluating LLM tool use under complex constraints. CCTU is grounded in a taxonomy of 12 constraint categories spanning four dimensions (i.e., resource, behavior, toolset, and response). The benchmark comprises 200 carefully curated and challenging test cases across diverse tool-use scenarios, each involving an average of seven constraint types and an average prompt length exceeding 4,700 tokens. To enable reliable evaluation, we develop an executable constraint validation module that performs step-level validation and enforces compliance during multi-turn interactions between models and their environments. We evaluate nine state-of-the-art LLMs in both thinking and non-thinking modes. Results indicate that when strict adherence to all constraints is required, no model achieves a task completion rate above 20%. Further analysis reveals that models violate constraints in over 50% of cases, particularly in the resource and response dimensions. Moreover, LLMs demonstrate limited capacity for self-refinement even after receiving detailed feedback on constraint violations, highlighting a critical bottleneck in the development of robust tool-use agents. To facilitate future research, we release the data and code.",
+      "authors": [
+        "Junjie Ye",
+        "Guoqiang Zhang",
+        "Wenjie Fu",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-03-16T14:05:13+00:00",
+      "link": "https://arxiv.org/pdf/2603.15309v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "benchmark for evaluating LLM tool use under complex constraints",
+      "llm_evidence_cn": "评估复杂约束下LLM工具使用的基准",
+      "llm_evidence": "评估复杂约束下LLM工具使用的基准",
+      "canonical_evidence": "评估复杂约束下LLM工具使用的基准",
+      "llm_tldr_en": "Introduces CCTU, a benchmark for evaluating LLM tool use across 12 constraint categories.",
+      "llm_tldr_cn": "引入CCTU基准，用于评估LLM在12类复杂约束下的工具使用能力。",
+      "llm_tldr": "引入CCTU基准，用于评估LLM在12类复杂约束下的工具使用能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.15309v1",
+      "carry_days": 1
+    },
+    {
+      "id": "2603.11545v1",
+      "title": "One Supervisor, Many Modalities: Adaptive Tool Orchestration for Autonomous Queries",
+      "abstract": "We present an agentic AI framework for autonomous multimodal query processing that coordinates specialized tools across text, image, audio, video, and document modalities. A central Supervisor dynamically decomposes user queries, delegates subtasks to modality-appropriate tools (e.g., object detection, OCR, speech transcription), and synthesizes results through adaptive routing strategies rather than predetermined decision trees. For text-only queries, the framework uses learned routing via RouteLLM, while non-text paths use SLM-assisted modality decomposition. Evaluated on 2,847 queries across 15 task categories, our framework achieves 72% reduction in time-to-accurate-answer, 85% reduction in conversational rework, and 67% cost reduction compared to the matched hierarchical baseline while maintaining accuracy parity. These results demonstrate that intelligent centralized orchestration fundamentally improves multimodal AI deployment economics.",
+      "authors": [
+        "Mayank Saini Arit Kumar Bishwas"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-12T05:02:58+00:00",
+      "link": "https://arxiv.org/pdf/2603.11545v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adaptive tool orchestration for autonomous multimodal queries",
+      "llm_evidence_cn": "自主多模态查询的自适应工具编排",
+      "llm_evidence": "自主多模态查询的自适应工具编排",
+      "canonical_evidence": "自主多模态查询的自适应工具编排",
+      "llm_tldr_en": "Presents an agentic framework for coordinating specialized tools across multiple modalities for complex queries.",
+      "llm_tldr_cn": "提出一种智能体框架，协调多模态专业工具以处理复杂的自主查询任务。",
+      "llm_tldr": "提出一种智能体框架，协调多模态专业工具以处理复杂的自主查询任务。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "carryover_cache",
+      "paper_id": "2603.11545v1",
       "carry_days": 1
     }
   ]
