@@ -1,16 +1,1472 @@
 {
   "mode": "standard",
-  "generated_at": "2026-03-17T18:03:36.175263+00:00",
+  "generated_at": "2026-03-17T18:18:26.061750+00:00",
   "stats": {
     "mode": "standard",
-    "tag_count": 0,
-    "deep_divecandidates": 0,
-    "deep_cap": null,
-    "deep_selected": 0,
-    "quick_candidates": 0,
-    "quick_skim_target": 10,
-    "quick_selected": 0
+    "tag_count": 1,
+    "deep_divecandidates": 40,
+    "deep_cap": 6,
+    "deep_selected": 25,
+    "quick_candidates": 29,
+    "quick_skim_target": 11,
+    "quick_selected": 11
   },
-  "deep_dive": [],
-  "quick_skim": []
+  "deep_dive": [
+    {
+      "id": "2603.07528v2",
+      "title": "TableMind++: An Uncertainty-Aware Programmatic Agent for Tool-Augmented Table Reasoning",
+      "abstract": "Table reasoning requires models to jointly perform semantic understanding and precise numerical operations. Most existing methods rely on a single-turn reasoning paradigm over tables which suffers from context overflow and weak numerical sensitivity. To address these limitations, we previously proposed TableMind as a tuning-based autonomous programmatic agent that simulates human-like interaction within a lightweight large language model (LLM). TableMind internalizes planning, action, and reflection through a two-stage training strategy involving supervised fine-tuning (SFT) on filtered high-quality data and reinforcement learning (RL) via a multi-perspective reward and the Rank-Aware Policy Optimization (RAPO) algorithm. While TableMind establishes a solid foundation for programmatic agents, the inherent stochasticity of LLMs remains a critical challenge that leads to hallucinations. In this paper, we extend this foundation to TableMind++ by introducing a novel uncertainty-aware inference framework to mitigate hallucinations. Specifically, we propose memory-guided plan pruning to retrieve historical trajectories for validating and filtering out logically flawed plans to address epistemic uncertainty. To ensure execution precision, we introduce confidence-based action refinement which monitors token-level probabilities to detect and self-correct syntactic noise for aleatoric uncertainty mitigation. Finally, we employ dual-weighted trajectory aggregation to synthesize a robust consensus from multiple reasoning paths. Extensive experiments on diverse benchmarks demonstrate that TableMind++ consistently outperforms previous baselines and proprietary models to validate the effectiveness of integrating autonomous training with uncertainty quantification. Our code is available.",
+      "authors": [
+        "Mingyue Cheng",
+        "Shuo Yu",
+        "Chuang Jiang",
+        "Xiaoyu Tao",
+        "Qingyang Mao",
+        "Jie Ouyang",
+        "Qi Liu",
+        "Enhong Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-08T08:31:33+00:00",
+      "link": "https://arxiv.org/pdf/2603.07528v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "RL via multi-perspective reward for tool-augmented table reasoning",
+      "llm_evidence_cn": "通过多维度奖励进行工具增强表格推理的强化学习",
+      "llm_evidence": "通过多维度奖励进行工具增强表格推理的强化学习",
+      "canonical_evidence": "通过多维度奖励进行工具增强表格推理的强化学习",
+      "llm_tldr_en": "Develops a programmatic agent using RL and multi-perspective rewards for tool-augmented reasoning tasks.",
+      "llm_tldr_cn": "开发了一个使用强化学习和多维度奖励的程序化智能体，用于工具增强的推理任务。",
+      "llm_tldr": "开发了一个使用强化学习和多维度奖励的程序化智能体，用于工具增强的推理任务。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.07853v1",
+      "title": "SynPlanResearch-R1: Encouraging Tool Exploration for Deep Research with Synthetic Plans",
+      "abstract": "Research Agents enable models to gather information from the web using tools to answer user queries, requiring them to dynamically interleave internal reasoning with tool use. While such capabilities can in principle be learned via reinforcement learning with verifiable rewards (RLVR), we observe that agents often exhibit poor exploration behaviors, including premature termination and biased tool usage. As a result, RLVR alone yields limited improvements. We propose SynPlanResearch-R1, a framework that synthesizes tool-use trajectories that encourage deeper exploration to shape exploration during cold-start supervised fine-tuning, providing a strong initialization for subsequent RL. Across seven multi-hop and open-web benchmarks, \\framework improves performance by up to 6.0% on Qwen3-8B and 5.8% on Qwen3-4B backbones respectively compared to SOTA baselines. Further analyses of tool-use patterns and training dynamics compared to baselines shed light on the factors underlying these gains. Our code is publicly available at https://github.com/HansiZeng/syn-plan-research.",
+      "authors": [
+        "Hansi Zeng",
+        "Zoey Li",
+        "Yifan Gao",
+        "Chenwei Zhang",
+        "Xiaoman Pan",
+        "Tao Yang",
+        "Fengran Mo",
+        "Jiacheng Lin",
+        "Xian Li",
+        "Jingbo Shang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "published": "2026-03-09T00:05:29+00:00",
+      "link": "https://arxiv.org/pdf/2603.07853v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "RLVR for tool-use exploration in research agents",
+      "llm_evidence_cn": "用于研究智能体工具使用探索的可验证奖励强化学习",
+      "llm_evidence": "用于研究智能体工具使用探索的可验证奖励强化学习",
+      "canonical_evidence": "用于研究智能体工具使用探索的可验证奖励强化学习",
+      "llm_tldr_en": "SynPlanResearch-R1 uses synthetic plans to improve RLVR-based tool exploration for LLM research agents.",
+      "llm_tldr_cn": "SynPlanResearch-R1通过合成计划改进了基于可验证奖励强化学习的大模型工具探索。",
+      "llm_tldr": "SynPlanResearch-R1通过合成计划改进了基于可验证奖励强化学习的大模型工具探索。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.08660v1",
+      "title": "How Far Can Unsupervised RLVR Scale LLM Training?",
+      "abstract": "Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model intrinsic signals, showing promising early gains, yet their potential and limitations remain unclear. In this work, we revisit URLVR and provide a comprehensive analysis spanning taxonomy, theory and extensive experiments. We first classify URLVR methods into intrinsic versus external based on reward sources, then establish a unified theoretical framework revealing that all intrinsic methods converge toward sharpening the model's initial distribution This sharpening mechanism succeeds when initial confidence aligns with correctness but fails catastrophically when misaligned. Through systematic experiments, we show intrinsic rewards consistently follow a rise-then-fall pattern across methods, with collapse timing determined by model prior rather than engineering choices. Despite these scaling limits, we find intrinsic rewards remain valuable in test-time training on small datasets, and propose Model Collapse Step to measure model prior, serving as a practical indicator for RL trainability. Finally, we explore external reward methods that ground verification in computational asymmetries, showing preliminary evidence they may escape the confidence-correctness ceiling. Our findings chart boundaries for intrinsic URLVR while motivating paths toward scalable alternatives.",
+      "authors": [
+        "Bingxiang He",
+        "Yuxin Zuo",
+        "Zeyuan Liu",
+        "Shangziqi Zhao",
+        "Zixuan Fu",
+        "Junlin Yang",
+        "Cheng Qian",
+        "Kaiyan Zhang",
+        "Yuchen Fan",
+        "Ganqu Cui",
+        "Xiusi Chen",
+        "Youbang Sun",
+        "Xingtai Lv",
+        "Xuekai Zhu",
+        "Li Sheng",
+        "Ran Li",
+        "Huan-ang Gao",
+        "Yuchen Zhang",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Ning Ding"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-03-09T17:38:11+00:00",
+      "link": "https://arxiv.org/pdf/2603.08660v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Unsupervised reinforcement learning with verifiable rewards (URLVR)",
+      "llm_evidence_cn": "具有可验证奖励的无监督强化学习 (URLVR)",
+      "llm_evidence": "具有可验证奖励的无监督强化学习 (URLVR)",
+      "canonical_evidence": "具有可验证奖励的无监督强化学习 (URLVR)",
+      "llm_tldr_en": "Analyzes the scaling potential and theoretical limits of unsupervised RL with verifiable rewards for LLMs.",
+      "llm_tldr_cn": "分析了LLM中具有可验证奖励的无监督强化学习的扩展潜力和理论极限。",
+      "llm_tldr": "分析了LLM中具有可验证奖励的无监督强化学习的扩展潜力和理论极限。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.09803v1",
+      "title": "Good Reasoning Makes Good Demonstrations: Implicit Reasoning Quality Supervision via In-Context Reinforcement Learning",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) improves reasoning in large language models but treats all correct solutions equally, potentially reinforcing flawed traces that get correct answers by chance. We observe that better reasoning are better teachers: high-quality solutions serve as more effective demonstrations than low-quality ones. We term this teaching ability Demonstration Utility, and show that the policy model's own in-context learning ability provides an efficient way to measure it, yielding a quality signal termed Evidence Gain. To employ this signal during training, we introduce In-Context RLVR. By Bayesian analysis, we show that this objective implicitly reweights rewards by Evidence Gain, assigning higher weights to high-quality traces and lower weights to low-quality ones, without requiring costly computation or external evaluators. Experiments on mathematical benchmarks show improvements in both accuracy and reasoning quality over standard RLVR.",
+      "authors": [
+        "Tiehua Mei",
+        "Minxuan Lv",
+        "Leiyu Pan",
+        "Zhenpeng Su",
+        "Hongru Hou",
+        "Hengrui Chen",
+        "Ao Xu",
+        "Deqing Yang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-10T15:33:07+00:00",
+      "link": "https://arxiv.org/pdf/2603.09803v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "In-Context Reinforcement Learning with Verifiable Rewards (RLVR)",
+      "llm_evidence_cn": "具有可验证奖励的上下文强化学习 (RLVR)",
+      "llm_evidence": "具有可验证奖励的上下文强化学习 (RLVR)",
+      "canonical_evidence": "具有可验证奖励的上下文强化学习 (RLVR)",
+      "llm_tldr_en": "Enhances RLVR by using in-context learning ability to weight rewards based on reasoning quality.",
+      "llm_tldr_cn": "通过利用上下文学习能力根据推理质量对奖励进行加权，增强了RLVR的效果。",
+      "llm_tldr": "通过利用上下文学习能力根据推理质量对奖励进行加权，增强了RLVR的效果。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10505v1",
+      "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
+      "abstract": "Training autonomous web agents is fundamentally limited by the environments they learn from: real-world websites are unsafe to explore, hard to reset, and rarely provide verifiable feedback. We propose VeriEnv, a framework that treats language models as environment creators, automatically cloning real-world websites into fully executable, verifiable synthetic environments. By exposing controlled internal access via a Python SDK, VeriEnv enables agents to self-generate tasks with deterministic, programmatically verifiable rewards, eliminating reliance on heuristic or LLM-based judges. This design decouples agent learning from unsafe real-world interaction while enabling scalable self-evolution through environment expansion. Through experiments on web agent benchmarks, we show that agents trained with VeriEnv generalize to unseen websites, achieve site-specific mastery through self-evolving training, and benefit from scaling the number of training environments. Code and resources will be released at https://github.com/kyle8581/VeriEnv upon acceptance.",
+      "authors": [
+        "Hyungjoo Chae",
+        "Jungsoo Park",
+        "Alan Ritter"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-11T07:58:53+00:00",
+      "link": "https://arxiv.org/pdf/2603.10505v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "deterministic, programmatically verifiable rewards for web agents",
+      "llm_evidence_cn": "Web 智能体的确定性、程序化可验证奖励",
+      "llm_evidence": "Web 智能体的确定性、程序化可验证奖励",
+      "canonical_evidence": "Web 智能体的确定性、程序化可验证奖励",
+      "llm_tldr_en": "Creates verifiable synthetic environments for web agents to learn with deterministic programmatic rewards.",
+      "llm_tldr_cn": "为 Web 智能体创建可验证的合成环境，使其能够利用确定性的程序化奖励进行学习。",
+      "llm_tldr": "为 Web 智能体创建可验证的合成环境，使其能够利用确定性的程序化奖励进行学习。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10848v1",
+      "title": "$V_{0.5}$: Generalist Value Model as a Prior for Sparse RL Rollouts",
+      "abstract": "In Reinforcement Learning with Verifiable Rewards (RLVR), constructing a robust advantage baseline is critical for policy gradients, effectively guiding the policy model to reinforce desired behaviors. Recent research has introduced Generalist Value Models (such as $V_0$), which achieve pre-trained value estimation by explicitly encoding model capabilities in-context, eliminating the need to synchronously update the value model alongside the policy model. In this paper, we propose $V_{0.5}$, which adaptively fuses the baseline predicted by such value model (acting as a prior) with the empirical mean derived from sparse rollouts. This constructs a robust baseline that balances computational efficiency with extremely low variance. Specifically, we introduce a real-time statistical testing and dynamic budget allocation. This balances the high variance caused by sparse sampling against the systematic bias (or hallucinations) inherent in the value model's prior. By constructing a hypothesis test to evaluate the prior's reliability in real-time, the system dynamically allocates additional rollout budget on demand. This mechanism minimizes the baseline estimator's Mean Squared Error (MSE), guaranteeing stable policy gradients, even under extreme sparsity with a group size of 4. Extensive evaluations across six mathematical reasoning benchmarks demonstrate that $V_{0.5}$ significantly outperforms GRPO and DAPO, achieving faster convergence and over some 10% performance improvement.",
+      "authors": [
+        "Yi-Kai Zhang",
+        "Yueqing Sun",
+        "Hongyan Hao",
+        "Qi Gu",
+        "Xunliang Cai",
+        "De-Chuan Zhan",
+        "Han-Jia Ye"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-11T14:57:41+00:00",
+      "link": "https://arxiv.org/pdf/2603.10848v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Reinforcement Learning with Verifiable Rewards (RLVR) value models",
+      "llm_evidence_cn": "具有可验证奖励的强化学习（RLVR）价值模型",
+      "llm_evidence": "具有可验证奖励的强化学习（RLVR）价值模型",
+      "canonical_evidence": "具有可验证奖励的强化学习（RLVR）价值模型",
+      "llm_tldr_en": "Proposes V0.5, a generalist value model to improve policy gradients in RL with verifiable rewards.",
+      "llm_tldr_cn": "提出V0.5通用价值模型，旨在改进具有可验证奖励的强化学习中的策略梯度。",
+      "llm_tldr": "提出V0.5通用价值模型，旨在改进具有可验证奖励的强化学习中的策略梯度。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11226v1",
+      "title": "ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning",
+      "abstract": "Code LLMs still struggle with code execution reasoning, especially in smaller models. Existing methods rely on supervised fine-tuning (SFT) with teacher-generated explanations, primarily in two forms: (1) input-output (I/O) prediction chains and (2) natural-language descriptions of execution traces. However, intermediate execution steps cannot be explicitly verified during SFT, so the training objective can reduce to merely matching teacher explanations. Moreover, training data is typically collected without explicit control over task difficulty. We introduce ExecVerify, which goes beyond text imitation by incorporating verifiable white-box rewards derived from execution traces, including next-statement prediction and variable value/type prediction. Our work first builds a dataset with multiple difficulty levels via constraint-based program synthesis. Then, we apply reinforcement learning (RL) to reward correct answers about both intermediate execution steps and final outputs, aligning the training objective with semantic correctness at each execution step. Finally, we adopt a two-stage training pipeline that first enhances execution reasoning and then transfers to code generation. Experiments demonstrate that a 7B model trained with ExecVerify achieves performance comparable to 32B models on code reasoning benchmarks and improves pass@1 by up to 5.9\\% on code generation tasks over strong post-training baselines.",
+      "authors": [
+        "Lingxiao Tang",
+        "He Ye",
+        "Zhaoyang Chu",
+        "Muyang Ye",
+        "Zhongxin Liu",
+        "Xiaoxue Ren",
+        "Lingfeng Bao"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-03-11T18:49:45+00:00",
+      "link": "https://arxiv.org/pdf/2603.11226v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "verifiable white-box rewards from execution traces",
+      "llm_evidence_cn": "来自执行轨迹的可验证白盒奖励",
+      "llm_evidence": "来自执行轨迹的可验证白盒奖励",
+      "canonical_evidence": "来自执行轨迹的可验证白盒奖励",
+      "llm_tldr_en": "ExecVerify uses verifiable rewards from code execution traces to improve LLM reasoning via RL.",
+      "llm_tldr_cn": "ExecVerify通过代码执行轨迹中的可验证奖励，利用强化学习提升了大模型的推理能力。",
+      "llm_tldr": "ExecVerify通过代码执行轨迹中的可验证奖励，利用强化学习提升了大模型的推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.14389v1",
+      "title": "From $\\boldsymbol{\\logπ}$ to $\\boldsymbolπ$: Taming Divergence in Soft Clipping via Bilateral Decoupled Decay of Probability Gradient Weight",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has catalyzed a leap in Large Language Model (LLM) reasoning, yet its optimization dynamics remain fragile. Standard algorithms like GRPO enforce stability via ``hard clipping'', which inadvertently stifles exploration by discarding gradients of tokens outside the trust region. While recent ``soft clipping'' methods attempt to recover these gradients, they suffer from a critical challenge: relying on log-probability gradient ($\\nabla_θ\\log π_θ$) yields divergent weights as probabilities vanish, destabilizing LLM training. We rethink this convention by establishing probability gradient ($\\nabla_θπ_θ$) as the superior optimization primitive. Accordingly, we propose Decoupled Gradient Policy Optimization (DGPO), which employs a decoupled decay mechanism based on importance sampling ratios. By applying asymmetric, continuous decay to boundary tokens, DGPO resolves the conflict between stability and sustained exploration. Extensive experiments across DeepSeek-R1-Distill-Qwen series models (1.5B/7B/14B) demonstrate that DGPO consistently outperforms strong baselines on various mathematical benchmarks, offering a robust and scalable solution for RLVR. Our code and implementation are available at: https://github.com/VenomRose-Juri/DGPO-RL.",
+      "authors": [
+        "Xiaoliang Fu",
+        "Jiaye Lin",
+        "Yangyi Fang",
+        "Chaowen Hu",
+        "Cong Qin",
+        "Zekai Shao",
+        "Binbin Zheng",
+        "Lu Pan",
+        "Ke Zeng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-15T14:00:48+00:00",
+      "link": "https://arxiv.org/pdf/2603.14389v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "optimization dynamics of Reinforcement Learning with Verifiable Rewards (RLVR)",
+      "llm_evidence_cn": "具有可验证奖励的强化学习（RLVR）的优化动力学",
+      "llm_evidence": "具有可验证奖励的强化学习（RLVR）的优化动力学",
+      "canonical_evidence": "具有可验证奖励的强化学习（RLVR）的优化动力学",
+      "llm_tldr_en": "Improves RLVR stability by using probability gradients instead of log-probability to prevent divergence.",
+      "llm_tldr_cn": "通过使用概率梯度代替对数概率梯度，提升了具有可验证奖励的强化学习的训练稳定性。",
+      "llm_tldr": "通过使用概率梯度代替对数概率梯度，提升了具有可验证奖励的强化学习的训练稳定性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.07927v1",
+      "title": "SWE-Fuse: Empowering Software Agents via Issue-free Trajectory Learning and Entropy-aware RLVR Training",
+      "abstract": "Large language models (LLMs) have transformed the software engineering landscape. Recently, numerous LLM-based agents have been developed to address real-world software issue fixing tasks. Despite their state-of-the-art performance, Despite achieving state-of-the-art performance, these agents face a significant challenge: \\textbf{Insufficient high-quality issue descriptions.} Real-world datasets often exhibit misalignments between issue descriptions and their corresponding solutions, introducing noise and ambiguity that mislead automated agents and limit their problem-solving effectiveness. We propose \\textbf{\\textit{SWE-Fuse}}, an issue-description-aware training framework that fuses issue-description-guided and issue-free samples for training SWE agents. It consists of two key modules: (1) An issue-free-driven trajectory learning module for mitigating potentially misleading issue descriptions while enabling the model to learn step-by-step debugging processes; and (2) An entropy-aware RLVR training module, which adaptively adjusts training dynamics through entropy-driven clipping. It applies relaxed clipping under high entropy to encourage exploration, and stricter clipping under low entropy to ensure training stability. We evaluate SWE-Fuse on the widely studied SWE-bench Verified benchmark shows to demonstrate its effectiveness in solving real-world software problems. Specifically, SWE-Fuse outperforms the best 8B and 32B baselines by 43.0\\% and 60.2\\% in solve rate, respectively. Furthermore, integrating SWE-Fuse with test-time scaling (TTS) enables further performance improvements, achieving solve rates of 49.8\\% and 65.2\\% under TTS@8 for the 8B and 32B models, respectively.",
+      "authors": [
+        "Xin-Cheng Wen",
+        "Binbin Chen",
+        "Haoxuan Lan",
+        "Hang Yu",
+        "Peng Di",
+        "Cuiyun Gao"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-03-09T03:47:10+00:00",
+      "link": "https://arxiv.org/pdf/2603.07927v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Entropy-aware RLVR training for software agents fixing issues",
+      "llm_evidence_cn": "用于软件代理修复问题的熵感知RLVR训练",
+      "llm_evidence": "用于软件代理修复问题的熵感知RLVR训练",
+      "canonical_evidence": "用于软件代理修复问题的熵感知RLVR训练",
+      "llm_tldr_en": "Uses RL with verifiable rewards (RLVR) to train software agents for automated issue fixing.",
+      "llm_tldr_cn": "利用可验证奖励强化学习（RLVR）训练软件代理，以实现自动化的软件问题修复。",
+      "llm_tldr": "利用可验证奖励强化学习（RLVR）训练软件代理，以实现自动化的软件问题修复。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.08068v1",
+      "title": "In-Context Reinforcement Learning for Tool Use in Large Language Models",
+      "abstract": "While large language models (LLMs) exhibit strong reasoning abilities, their performance on complex tasks is often constrained by the limitations of their internal knowledge. A compelling approach to overcome this challenge is to augment these models with external tools -- such as Python interpreters for mathematical computations or search engines for retrieving factual information. However, enabling models to use these tools effectively remains a significant challenge. Existing methods typically rely on cold-start pipelines that begin with supervised fine-tuning (SFT), followed by reinforcement learning (RL). These approaches often require substantial amounts of labeled data for SFT, which is expensive to annotate or synthesize. In this work, we propose In-Context Reinforcement Learning (ICRL), an RL-only framework that eliminates the need for SFT by leveraging few-shot prompting during the rollout stage of RL. Specifically, ICRL introduces in-context examples within the rollout prompts to teach the model how to invoke external tools. Furthermore, as training progresses, the number of in-context examples is gradually reduced, eventually reaching a zero-shot setting where the model learns to call tools independently. We conduct extensive experiments across a range of reasoning and tool-use benchmarks. Results show that ICRL achieves state-of-the-art performance, demonstrating its effectiveness as a scalable, data-efficient alternative to traditional SFT-based pipelines.",
+      "authors": [
+        "Yaoqi Ye",
+        "Yiran Zhao",
+        "Keyu Duan",
+        "Zeyu Zheng",
+        "Kenji Kawaguchi",
+        "Cihang Xie",
+        "Michael Qizhe Shieh"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-09T08:06:18+00:00",
+      "link": "https://arxiv.org/pdf/2603.08068v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reinforcement learning for tool use in large language models",
+      "llm_evidence_cn": "大语言模型工具使用的强化学习",
+      "llm_evidence": "大语言模型工具使用的强化学习",
+      "canonical_evidence": "大语言模型工具使用的强化学习",
+      "llm_tldr_en": "Proposes in-context reinforcement learning to improve LLM tool use without extensive labeled data.",
+      "llm_tldr_cn": "提出上下文强化学习方法，在无需大量标注数据的情况下提升LLM的工具使用能力。",
+      "llm_tldr": "提出上下文强化学习方法，在无需大量标注数据的情况下提升LLM的工具使用能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.09036v1",
+      "title": "SCALAR: Learning and Composing Skills through LLM Guided Symbolic Planning and Deep RL Grounding",
+      "abstract": "LM-based agents excel when given high-level action APIs but struggle to ground language into low-level control. Prior work has LLMs generate skills or reward functions for RL, but these one-shot approaches lack feedback to correct specification errors. We introduce SCALAR, a bidirectional framework coupling LLM planning with RL through a learned skill library. The LLM proposes skills with preconditions and effects; RL trains policies for each skill and feeds back execution results to iteratively refine specifications, improving robustness to initial errors. Pivotal Trajectory Analysis corrects LLM priors by analyzing RL trajectories; Frontier Checkpointing optionally saves environment states at skill boundaries to improve sample efficiency. On Craftax, SCALAR achieves 88.2% diamond collection, a 1.9x improvement over the best baseline, and reaches the Gnomish Mines 9.1% of the time where prior methods fail entirely.",
+      "authors": [
+        "Renos Zabounidis",
+        "Yue Wu",
+        "Simon Stepputtis",
+        "Woojun Kim",
+        "Yuanzhi Li",
+        "Tom Mitchell",
+        "Katia Sycara"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-10T00:11:58+00:00",
+      "link": "https://arxiv.org/pdf/2603.09036v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL trains policies and feeds back execution results to refine specifications",
+      "llm_evidence_cn": "强化学习训练策略并反馈执行结果以优化规范",
+      "llm_evidence": "强化学习训练策略并反馈执行结果以优化规范",
+      "canonical_evidence": "强化学习训练策略并反馈执行结果以优化规范",
+      "llm_tldr_en": "Couples LLM planning with RL to iteratively refine skill specifications based on execution feedback.",
+      "llm_tldr_cn": "将LLM规划与强化学习结合，根据执行反馈迭代优化技能规范。",
+      "llm_tldr": "将LLM规划与强化学习结合，根据执行反馈迭代优化技能规范。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.09117v1",
+      "title": "Decoupling Reasoning and Confidence: Resurrecting Calibration in Reinforcement Learning from Verifiable Rewards",
+      "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) significantly enhances large language models (LLMs) reasoning but severely suffers from calibration degeneration, where models become excessively over-confident in incorrect answers. Previous studies devote to directly incorporating calibration objective into existing optimization target. However, our theoretical analysis demonstrates that there exists a fundamental gradient conflict between the optimization for maximizing policy accuracy and minimizing calibration error. Building on this insight, we propose DCPO, a simple yet effective framework that systematically decouples reasoning and calibration objectives. Extensive experiments demonstrate that our DCPO not only preserves accuracy on par with GRPO but also achieves the best calibration performance and substantially mitigates the over-confidence issue. Our study provides valuable insights and practical solution for more reliable LLM deployment.",
+      "authors": [
+        "Zhengzhao Ma",
+        "Xueru Wen",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Jinglin Yang",
+        "Min He",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-10T02:47:59+00:00",
+      "link": "https://arxiv.org/pdf/2603.09117v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Calibration in Reinforcement Learning from Verifiable Rewards (RLVR)",
+      "llm_evidence_cn": "具有可验证奖励的强化学习（RLVR）中的校准问题",
+      "llm_evidence": "具有可验证奖励的强化学习（RLVR）中的校准问题",
+      "canonical_evidence": "具有可验证奖励的强化学习（RLVR）中的校准问题",
+      "llm_tldr_en": "Addresses the over-confidence issue in LLMs trained using reinforcement learning with verifiable rewards.",
+      "llm_tldr_cn": "解决了使用具有可验证奖励的强化学习训练的大模型中的过度自信问题。",
+      "llm_tldr": "解决了使用具有可验证奖励的强化学习训练的大模型中的过度自信问题。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.09203v1",
+      "title": "Evaluate-as-Action: Self-Evaluated Process Rewards for Retrieval-Augmented Agents",
+      "abstract": "Retrieval-augmented agents can query external evidence, yet their reliability in multi-step reasoning remains limited: noisy retrieval may derail multi-hop question answering, while outcome-only reinforcement learning provides credit signals that are too coarse to optimize intermediate steps. We propose \\textsc{EvalAct} (Evaluate-as-Action), which converts implicit retrieval quality assessment into an explicit action and enforces a coupled Search-to-Evaluate protocol so that each retrieval is immediately followed by a structured evaluation score, yielding process signals aligned with the interaction trajectory. To leverage these signals, we introduce Process-Calibrated Advantage Rescaling (PCAR), a GRPO-based optimization method that rescales advantages at the segment level according to evaluation scores, emphasizing reliable segments while updating uncertain ones conservatively. Experiments on seven open-domain QA benchmarks show that \\textsc{EvalAct} achieves the best average accuracy, with the largest gains on multi-hop tasks, and ablations verify that the explicit evaluation loop drives the primary improvements while PCAR provides consistent additional benefits.",
+      "authors": [
+        "Jiangming Shu",
+        "Yuxiang Zhang",
+        "Ye Ma",
+        "Xueyuan Lin",
+        "Jitao Sang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-10T05:22:40+00:00",
+      "link": "https://arxiv.org/pdf/2603.09203v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "self-evaluated process rewards for retrieval-augmented agents",
+      "llm_evidence_cn": "检索增强智能体的自评过程奖励",
+      "llm_evidence": "检索增强智能体的自评过程奖励",
+      "canonical_evidence": "检索增强智能体的自评过程奖励",
+      "llm_tldr_en": "Introduces EvalAct to generate process signals for retrieval actions, improving RL training for agents.",
+      "llm_tldr_cn": "引入EvalAct为检索动作生成过程信号，改进了智能体的强化学习训练。",
+      "llm_tldr": "引入EvalAct为检索动作生成过程信号，改进了智能体的强化学习训练。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10069v1",
+      "title": "Improving Search Agent with One Line of Code",
+      "abstract": "Tool-based Agentic Reinforcement Learning (TARL) has emerged as a promising paradigm for training search agents to interact with external tools for a multi-turn information-seeking process autonomously. However, we identify a critical training instability that leads to catastrophic model collapse: Importance Sampling Distribution Drift(ISDD). In Group Relative Policy Optimization(GRPO), a widely adopted TARL algorithm, ISDD manifests as a precipitous decline in the importance sampling ratios, which nullifies gradient updates and triggers irreversible training failure. To address this, we propose \\textbf{S}earch \\textbf{A}gent \\textbf{P}olicy \\textbf{O}ptimization (\\textbf{SAPO}), which stabilizes training via a conditional token-level KL constraint. Unlike hard clipping, which ignores distributional divergence, SAPO selectively penalizes the KL divergence between the current and old policies. Crucially, this penalty is applied only to positive tokens with low probabilities where the policy has shifted excessively, thereby preventing distribution drift while preserving gradient flow. Remarkably, SAPO requires only one-line code modification to standard GRPO, ensuring immediate deployability. Extensive experiments across seven QA benchmarks demonstrate that SAPO achieves \\textbf{+10.6\\% absolute improvement} (+31.5\\% relative) over Search-R1, yielding consistent gains across varying model scales (1.5B, 14B) and families (Qwen, LLaMA).",
+      "authors": [
+        "Jian Li",
+        "Dongsheng Chen",
+        "Zhenhua Xu",
+        "Yizhang Jin",
+        "Jiafu Wu",
+        "Chengjie Wang",
+        "Xiaotong Yuan",
+        "Yabiao Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-03-10T04:07:39+00:00",
+      "link": "https://arxiv.org/pdf/2603.10069v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Tool-based Agentic Reinforcement Learning (TARL) for search agents",
+      "llm_evidence_cn": "基于工具的代理强化学习（TARL）用于搜索代理",
+      "llm_evidence": "基于工具的代理强化学习（TARL）用于搜索代理",
+      "canonical_evidence": "基于工具的代理强化学习（TARL）用于搜索代理",
+      "llm_tldr_en": "Proposes SAPO to stabilize Tool-based Agentic Reinforcement Learning by addressing distribution drift.",
+      "llm_tldr_cn": "提出SAPO算法，通过解决分布偏移问题来稳定基于工具的代理强化学习训练。",
+      "llm_tldr": "提出SAPO算法，通过解决分布偏移问题来稳定基于工具的代理强化学习训练。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10101v1",
+      "title": "CLIPO: Contrastive Learning in Policy Optimization Generalizes RLVR",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capacity of Large Language Models (LLMs). However, RLVR solely relies on final answers as outcome rewards, neglecting the correctness of intermediate reasoning steps. Training on these process-wrong but outcome-correct rollouts can lead to hallucination and answer-copying, severely undermining the model's generalization and robustness. To address this, we incorporate a Contrastive Learning mechanism into the Policy Optimization (CLIPO) to generalize the RLVR process. By optimizing a contrastive loss over successful rollouts, CLIPO steers the LLM to capture the invariant structure shared across correct reasoning paths. This provides a more robust cross-trajectory regularization than the original single-path supervision in RLVR, effectively mitigating step-level reasoning inconsistencies and suppressing hallucinatory artifacts. In experiments, CLIPO consistently improves multiple RLVR baselines across diverse reasoning benchmarks, demonstrating uniform improvements in generalization and robustness for policy optimization of LLMs. Our code and training recipes are available at https://github.com/Qwen-Applications/CLIPO.",
+      "authors": [
+        "Sijia Cui",
+        "Pengyu Cheng",
+        "Jiajun Song",
+        "Yongbo Gai",
+        "Guojun Zhang",
+        "Zhechao Yu",
+        "Jianhe Lin",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-10T17:59:54+00:00",
+      "link": "https://arxiv.org/pdf/2603.10101v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generalizes RLVR with contrastive learning in policy optimization",
+      "llm_evidence_cn": "通过策略优化中的对比学习推广RLVR",
+      "llm_evidence": "通过策略优化中的对比学习推广RLVR",
+      "canonical_evidence": "通过策略优化中的对比学习推广RLVR",
+      "llm_tldr_en": "Enhances RLVR by incorporating contrastive learning to capture invariant structures in reasoning paths.",
+      "llm_tldr_cn": "通过引入对比学习增强RLVR，以捕获推理路径中的不变结构，提升鲁棒性。",
+      "llm_tldr": "通过引入对比学习增强RLVR，以捕获推理路径中的不变结构，提升鲁棒性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10588v1",
+      "title": "Does LLM Alignment Really Need Diversity? An Empirical Study of Adapting RLVR Methods for Moral Reasoning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has achieved remarkable success in logical reasoning tasks, yet whether large language model (LLM) alignment requires fundamentally different approaches remains unclear. Given the apparent tolerance for multiple valid responses in moral reasoning, a natural hypothesis is that alignment tasks inherently require diversity-seeking distribution-matching algorithms rather than reward-maximizing policy-based methods. We conduct the first comprehensive empirical study comparing both paradigms on MoReBench. To enable stable RLVR training, we build a rubric-grounded reward pipeline by training a Qwen3-1.7B judge model. Contrary to our hypothesis, we find that distribution-matching approaches do not demonstrate significant advantages over reward-maximizing methods as expected on alignment tasks. Through semantic visualization mapping high-reward responses to semantic space, we demonstrate that moral reasoning exhibits more concentrated high-reward distributions than mathematical reasoning, where diverse solution strategies yield similarly high rewards. This counter-intuitive finding explains why mode-seeking optimization proves equally or more effective for alignment tasks. Our results suggest that alignment tasks do not inherently require diversity-preserving algorithms, and standard reward-maximizing RLVR methods can effectively transfer to moral reasoning without explicit diversity mechanisms.",
+      "authors": [
+        "Zhaowei Zhang",
+        "Xiaohan Liu",
+        "Xuekai Zhu",
+        "Junchao Huang",
+        "Ceyao Zhang",
+        "Zhiyuan Feng",
+        "Yaodong Yang",
+        "Xiaoyuan Yi",
+        "Xing Xie"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-03-11T09:45:30+00:00",
+      "link": "https://arxiv.org/pdf/2603.10588v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "adapting RLVR methods for moral reasoning",
+      "llm_evidence_cn": "将RLVR方法应用于道德推理",
+      "llm_evidence": "将RLVR方法应用于道德推理",
+      "canonical_evidence": "将RLVR方法应用于道德推理",
+      "llm_tldr_en": "Studies the application of Reinforcement Learning with Verifiable Rewards (RLVR) to LLM moral alignment.",
+      "llm_tldr_cn": "研究了具有可验证奖励的强化学习（RLVR）在LLM道德对齐中的应用。",
+      "llm_tldr": "研究了具有可验证奖励的强化学习（RLVR）在LLM道德对齐中的应用。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.10624v1",
+      "title": "Reinforcement Learning with Conditional Expectation Reward",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective in enhancing the reasoning capabilities of large language models, particularly in domains such as mathematics where reliable rule-based verifiers can be constructed. However, the reliance on handcrafted, domain-specific verification rules substantially limits the applicability of RLVR to general reasoning domains with free-form answers, where valid answers often exhibit significant variability, making it difficult to establish complete and accurate rules. To address this limitation, we propose Conditional Expectation Reward (CER), which leverages the large language model itself as an implicit verifier, and is therefore applicable to general domains and eliminates the need for external verifiers or auxiliary models. CER is defined as the expected likelihood of generating the reference answer conditioned on the generated answer. In contrast to rule-based verifiers that yield binary feedback, CER provides a soft, graded reward signal that reflects varying degrees of correctness, making it better suited to tasks where answers vary in correctness. Experimental results demonstrate that CER is effective across a wide range of reasoning tasks, spanning both mathematical and general domains, indicating that CER serves as a flexible and general verification mechanism. The code is available at https://github.com/changyi7231/CER.",
+      "authors": [
+        "Changyi Xiao",
+        "Caijun Xu",
+        "Yixin Cao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-11T10:36:27+00:00",
+      "link": "https://arxiv.org/pdf/2603.10624v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL with verifiable rewards and implicit verifiers",
+      "llm_evidence_cn": "具有可验证奖励和隐式验证器的强化学习",
+      "llm_evidence": "具有可验证奖励和隐式验证器的强化学习",
+      "canonical_evidence": "具有可验证奖励和隐式验证器的强化学习",
+      "llm_tldr_en": "CER proposes an implicit verifier to extend RL with verifiable rewards to general reasoning domains.",
+      "llm_tldr_cn": "CER提出了一种隐式验证器，将具有可验证奖励的强化学习扩展到通用推理领域。",
+      "llm_tldr": "CER提出了一种隐式验证器，将具有可验证奖励的强化学习扩展到通用推理领域。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11076v1",
+      "title": "DIVE: Scaling Diversity in Agentic Task Synthesis for Generalizable Tool Use",
+      "abstract": "Recent work synthesizes agentic tasks for post-training tool-using LLMs, yet robust generalization under shifts in tasks and toolsets remains an open challenge. We trace this brittleness to insufficient diversity in synthesized tasks. Scaling diversity is difficult because training requires tasks to remain executable and verifiable, while generalization demands coverage of diverse tool types, toolset combinations, and heterogeneous tool-use patterns. We propose DIVE, an evidence-driven recipe that inverts synthesis order, executing diverse, real-world tools first and reverse-deriving tasks strictly entailed by the resulting traces, thereby providing grounding by construction. DIVE scales structural diversity along two controllable axes, tool-pool coverage and per-task toolset variety, and an Evidence Collection--Task Derivation loop further induces rich multi-step tool-use patterns across 373 tools in five domains. Training Qwen3-8B on DIVE data (48k SFT + 3.2k RL) improves by +22 average points across 9 OOD benchmarks and outperforms the strongest 8B baseline by +68. Remarkably, controlled scaling analysis reveals that diversity scaling consistently outperforms quantity scaling for OOD generalization, even with 4x less data.",
+      "authors": [
+        "Aili Chen",
+        "Chi Zhang",
+        "Junteng Liu",
+        "Jiangjie Chen",
+        "Chengyu Du",
+        "Yunji Li",
+        "Ming Zhong",
+        "Qin Wang",
+        "Zhengmao Zhu",
+        "Jiayuan Song",
+        "Ke Ji",
+        "Junxian He",
+        "Pengyu Zhao",
+        "Yanghua Xiao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-03-10T20:54:23+00:00",
+      "link": "https://arxiv.org/pdf/2603.11076v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Executable and verifiable agentic tasks for generalizable tool use",
+      "llm_evidence_cn": "可执行且可验证的代理任务用于通用工具使用",
+      "llm_evidence": "可执行且可验证的代理任务用于通用工具使用",
+      "canonical_evidence": "可执行且可验证的代理任务用于通用工具使用",
+      "llm_tldr_en": "Synthesizes diverse, verifiable tasks to improve the generalization of LLMs in tool-using scenarios.",
+      "llm_tldr_cn": "合成多样化且可验证的任务，以提高LLM在工具使用场景中的泛化能力。",
+      "llm_tldr": "合成多样化且可验证的任务，以提高LLM在工具使用场景中的泛化能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11193v1",
+      "title": "DeReason: A Difficulty-Aware Curriculum Improves Decoupled SFT-then-RL Training for General Reasoning",
+      "abstract": "Reinforcement learning with Verifiable Rewards (RLVR) has emerged as a powerful paradigm for eliciting reasoning capabilities in large language models, particularly in mathematics and coding. While recent efforts have extended this paradigm to broader general scientific (STEM) domains, the complex interplay between supervised fine-tuning (SFT) and RL in these contexts remains underexplored. In this paper, we conduct controlled experiments revealing a critical challenge: for general STEM domains, RL applied directly to base models is highly sample-inefficient and is consistently surpassed by supervised fine-tuning (SFT) on moderate-quality responses. Yet sequential SFT followed by RL can further improve performance, suggesting that the two stages play complementary roles, and that how training data is allocated between them matters. Therefore, we propose DeReason, a difficulty-based data decoupling strategy for general reasoning. DeReason partitions training data by reasoning intensity estimated via LLM-based scoring into reasoning-intensive and non-reasoning-intensive subsets. It allocates broad-coverage, non-reasoning-intensive problems to SFT to establish foundational domain knowledge, and reserves a focused subset of difficult problems for RL to cultivate complex reasoning. We demonstrate that this principled decoupling yields better performance than randomly splitting the data for sequential SFT and RL. Extensive experiments on general STEM and mathematical benchmarks demonstrate that our decoupled curriculum training significantly outperforms SFT-only, RL-only, and random-split baselines. Our work provides a systematic study of the interplay between SFT and RL for general reasoning, offering a highly effective and generalized post-training recipe.",
+      "authors": [
+        "Hanxu Hu",
+        "Yuxuan Wang",
+        "Maggie Huan",
+        "Jannis Vamvas",
+        "Yinya Huang",
+        "Zhijiang Guo",
+        "Rico Sennrich"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-11T18:01:55+00:00",
+      "link": "https://arxiv.org/pdf/2603.11193v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Reinforcement learning with Verifiable Rewards (RLVR) for reasoning",
+      "llm_evidence_cn": "具有可验证奖励的强化学习（RLVR）用于推理能力提升",
+      "llm_evidence": "具有可验证奖励的强化学习（RLVR）用于推理能力提升",
+      "canonical_evidence": "具有可验证奖励的强化学习（RLVR）用于推理能力提升",
+      "llm_tldr_en": "Explores curriculum strategies for RL with verifiable rewards to improve LLM reasoning in STEM domains.",
+      "llm_tldr_cn": "探索了具有可验证奖励的强化学习课程策略，以提升大模型在STEM领域的推理能力。",
+      "llm_tldr": "探索了具有可验证奖励的强化学习课程策略，以提升大模型在STEM领域的推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11321v1",
+      "title": "Hindsight-Anchored Policy Optimization: Turning Failure into Feedback in Sparse Reward Settings",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a promising paradigm for post-training reasoning models. However, group-based methods such as Group Relative Policy Optimization (GRPO) face a critical dilemma in sparse-reward settings: pure Reinforcement Learning (RL) suffers from advantage collapse and high-variance gradient estimation, while mixed-policy optimization introduces persistent distributional bias. To resolve this dilemma, we introduce Hindsight-Anchored Policy Optimization (HAPO). HAPO employs the Synthetic Success Injection (SSI) operator, a hindsight mechanism that selectively anchors optimization to teacher demonstrations during failure. This injection is governed by a Thompson sampling-inspired gating mechanism, creating an autonomous, self-paced curriculum. Theoretically, we demonstrate that HAPO achieves \\textit{asymptotic consistency}: by naturally annealing the teacher signal as the policy improves, HAPO recovers the unbiased on-policy gradient. This ensures off-policy guidance acts as a temporary scaffold rather than a persistent ceiling, enabling the model to surpass the limitations of static teacher forcing.",
+      "authors": [
+        "Yuning Wu",
+        "Ke Wang",
+        "Devin Chen",
+        "Kai Wei"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-11T21:33:41+00:00",
+      "link": "https://arxiv.org/pdf/2603.11321v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Reinforcement Learning with Verifiable Rewards (RLVR) for reasoning",
+      "llm_evidence_cn": "用于推理的具有可验证奖励的强化学习 (RLVR)",
+      "llm_evidence": "用于推理的具有可验证奖励的强化学习 (RLVR)",
+      "canonical_evidence": "用于推理的具有可验证奖励的强化学习 (RLVR)",
+      "llm_tldr_en": "Introduces HAPO to improve RL with verifiable rewards in sparse-reward settings using hindsight feedback.",
+      "llm_tldr_cn": "引入 HAPO，通过后视反馈改进稀疏奖励环境下具有可验证奖励的强化学习。",
+      "llm_tldr": "引入 HAPO，通过后视反馈改进稀疏奖励环境下具有可验证奖励的强化学习。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11351v1",
+      "title": "Novelty Adaptation Through Hybrid Large Language Model (LLM)-Symbolic Planning and LLM-guided Reinforcement Learning",
+      "abstract": "In dynamic open-world environments, autonomous agents often encounter novelties that hinder their ability to find plans to achieve their goals. Specifically, traditional symbolic planners fail to generate plans when the robot's planning domain lacks the operators that enable it to interact appropriately with novel objects in the environment. We propose a neuro-symbolic architecture that integrates symbolic planning, reinforcement learning, and a large language model (LLM) to learn how to handle novel objects. In particular, we leverage the common sense reasoning capability of the LLM to identify missing operators, generate plans with the symbolic AI planner, and write reward functions to guide the reinforcement learning agent in learning control policies for newly identified operators. Our method outperforms the state-of-the-art methods in operator discovery as well as operator learning in continuous robotic domains.",
+      "authors": [
+        "Hong Lu",
+        "Pierrick Lorang",
+        "Timothy R. Duggan",
+        "Jivko Sinapov",
+        "Matthias Scheutz"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-03-11T22:38:05+00:00",
+      "link": "https://arxiv.org/pdf/2603.11351v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "LLM writes reward functions to guide reinforcement learning for novel objects",
+      "llm_evidence_cn": "LLM编写奖励函数以引导针对新物体的强化学习",
+      "llm_evidence": "LLM编写奖励函数以引导针对新物体的强化学习",
+      "canonical_evidence": "LLM编写奖励函数以引导针对新物体的强化学习",
+      "llm_tldr_en": "Integrates LLM reasoning with RL by using LLMs to generate reward functions for symbolic planning.",
+      "llm_tldr_cn": "通过使用LLM为符号规划生成奖励函数，将LLM推理与强化学习集成。",
+      "llm_tldr": "通过使用LLM为符号规划生成奖励函数，将LLM推理与强化学习集成。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.11495v1",
+      "title": "Try, Check and Retry: A Divide-and-Conquer Framework for Boosting Long-context Tool-Calling Performance of LLMs",
+      "abstract": "Tool-calling empowers Large Language Models (LLMs) to interact with external environments. However, current methods often struggle to handle massive and noisy candidate tools in long-context tool-calling tasks, limiting their real-world application. To this end, we propose Tool-DC, a Divide-and-Conquer framework for boosting tool-calling performance of LLMs. The core of Tool-DC is to reduce the reasoning difficulty and make full use of self-reflection ability of LLMs via a \"Try-Check-Retry\" paradigm. Specifically, Tool-DC involves two variants: 1) the training-free Tool-DC (TF), which is plug-and-play and flexible; 2) the training-based Tool-DC (TB), which is more inference-efficient. Extensive experiments show that both Tool-DC methods outperform their counterparts by a clear margin. Tool-DC (TF) brings up to +25.10% average gains against the baseline on BFCL and ACEBench benchmarks, while Tool-DC (TB) enables Qwen2.5-7B to achieve comparable or even better performance than proprietary LLMs, e.g., OpenAI o3 and Claude-Haiku-4.5.",
+      "authors": [
+        "Kunfeng Chen",
+        "Qihuang Zhong",
+        "Juhua Liu",
+        "Bo Du",
+        "Dacheng Tao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-12T03:30:01+00:00",
+      "link": "https://arxiv.org/pdf/2603.11495v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Divide-and-conquer framework for boosting tool-calling performance",
+      "llm_evidence_cn": "用于提升工具调用性能的分治框架",
+      "llm_evidence": "用于提升工具调用性能的分治框架",
+      "canonical_evidence": "用于提升工具调用性能的分治框架",
+      "llm_tldr_en": "Proposes a framework to improve LLM tool-calling through a try-check-retry self-reflection paradigm.",
+      "llm_tldr_cn": "提出了一种通过“尝试-检查-重试”自我反思范式来提升大模型工具调用性能的框架。",
+      "llm_tldr": "提出了一种通过“尝试-检查-重试”自我反思范式来提升大模型工具调用性能的框架。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.12698v1",
+      "title": "EvolveCoder: Evolving Test Cases via Adversarial Verification for Code Reinforcement Learning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for improving code generation in large language models, but its effectiveness is limited by weak and static verification signals in existing coding RL datasets. In this paper, we propose a solution-conditioned and adversarial verification framework that iteratively refines test cases based on the execution behaviors of candidate solutions, with the goal of increasing difficulty, improving discriminative power, and reducing redundancy. Based on this framework, we introduce EvolveCoder-22k, a large-scale coding reinforcement learning dataset constructed through multiple rounds of adversarial test case evolution. Empirical analysis shows that iterative refinement substantially strengthens verification, with pass@1 decreasing from 43.80 to 31.22. Reinforcement learning on EvolveCoder-22k yields stable optimization and consistent performance gains, improving Qwen3-4B by an average of 4.2 points across four downstream benchmarks and outperforming strong 4B-scale baselines. Our results highlight the importance of adversarial, solution-conditioned verification for effective and scalable reinforcement learning in code generation.",
+      "authors": [
+        "Chi Ruan",
+        "Dongfu Jiang",
+        "Huaye Zeng",
+        "Ping Nie",
+        "Wenhu Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-13T06:26:50+00:00",
+      "link": "https://arxiv.org/pdf/2603.12698v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Reinforcement learning with verifiable rewards (RLVR) for code generation",
+      "llm_evidence_cn": "用于代码生成的具有可验证奖励的强化学习 (RLVR)",
+      "llm_evidence": "用于代码生成的具有可验证奖励的强化学习 (RLVR)",
+      "canonical_evidence": "用于代码生成的具有可验证奖励的强化学习 (RLVR)",
+      "llm_tldr_en": "Proposes an adversarial verification framework to evolve test cases for more effective RL with verifiable rewards.",
+      "llm_tldr_cn": "提出一种对抗性验证框架，通过演化测试用例来增强具有可验证奖励的强化学习效果。",
+      "llm_tldr": "提出一种对抗性验证框架，通过演化测试用例来增强具有可验证奖励的强化学习效果。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.15255v1",
+      "title": "SAGE: Multi-Agent Self-Evolution for LLM Reasoning",
+      "abstract": "Reinforcement learning with verifiable rewards improves reasoning in large language models (LLMs), but many methods still rely on large human-labeled datasets. While self-play reduces this dependency, it often lacks explicit planning and strong quality control, limiting stability in long-horizon multi-step reasoning. We present SAGE (Self-evolving Agents for Generalized reasoning Evolution), a closed-loop framework where four agents: Challenger, Planner, Solver, and Critic, co-evolve from a shared LLM backbone using only a small seed set. The Challenger continuously generates increasingly difficult tasks; the Planner converts each task into a structured multi-step plan; and the Solver follows the plan to produce an answer, whose correctness is determined by external verifiers. The Critic scores and filters both generated questions and plans to prevent curriculum drift and maintain training signal quality, enabling stable self-training. Across mathematics and code-generation benchmarks, SAGE delivers consistent gains across model scales, improving the Qwen-2.5-7B model by 8.9% on LiveCodeBench and 10.7% on OlympiadBench.",
+      "authors": [
+        "Yulin Peng",
+        "Xinxin Zhu",
+        "Chenxing Wei",
+        "Nianbo Zeng",
+        "Leilei Wang",
+        "Ying Tiffany He",
+        "F. Richard Yu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-03-16T13:24:20+00:00",
+      "link": "https://arxiv.org/pdf/2603.15255v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reinforcement learning with verifiable rewards for reasoning",
+      "llm_evidence_cn": "具有可验证奖励的强化学习用于推理",
+      "llm_evidence": "具有可验证奖励的强化学习用于推理",
+      "canonical_evidence": "具有可验证奖励的强化学习用于推理",
+      "llm_tldr_en": "SAGE uses multi-agent self-evolution and verifiable rewards to improve LLM multi-step reasoning stability.",
+      "llm_tldr_cn": "SAGE通过多智能体自我进化和可验证奖励，提升了大语言模型多步推理的稳定性。",
+      "llm_tldr": "SAGE通过多智能体自我进化和可验证奖励，提升了大语言模型多步推理的稳定性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.15611v1",
+      "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
+      "abstract": "Reinforcement learning for code generation relies on verifiable rewards from unit test pass rates. Yet high-quality test suites are scarce, existing datasets offer limited coverage, and static rewards fail to adapt as models improve. Recent self-play methods unify code and test generation in a single model, but face a inherent dilemma: white-box access leads to self-collusion where the model produces trivial tests for easy rewards, yet black-box restriction yields generic tests that miss implementation-specific bugs. We introduce Code-A1, an adversarial co-evolution framework that jointly optimizes a Code LLM and a Test LLM with opposing objectives. The Code LLM is rewarded for passing more tests, while the Test LLM is rewarded for exposing more defects. This architectural separation eliminates self-collusion risks and safely enables white-box test generation, where the Test LLM can inspect candidate code to craft targeted adversarial tests. We further introduce a Mistake Book mechanism for experience replay and a composite reward balancing test validity with adversarial difficulty. Experiments on Qwen2.5-Coder models demonstrate that Code-A1 achieves code generation performance matching or exceeding models trained on human-annotated tests, while significantly improving test generation capability.",
+      "authors": [
+        "Aozhe Wang",
+        "Yuchen Yan",
+        "Nan Zhou",
+        "Zhengxi Lu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Yongliang Shen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-16T17:58:13+00:00",
+      "link": "https://arxiv.org/pdf/2603.15611v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Verifiable rewards from unit test pass rates in RL for code generation",
+      "llm_evidence_cn": "强化学习代码生成中来自单元测试通过率的可验证奖励",
+      "llm_evidence": "强化学习代码生成中来自单元测试通过率的可验证奖励",
+      "canonical_evidence": "强化学习代码生成中来自单元测试通过率的可验证奖励",
+      "llm_tldr_en": "Uses adversarial RL with verifiable unit test results to co-evolve code generation and testing models.",
+      "llm_tldr_cn": "利用带有可验证单元测试结果的对抗性强化学习，共同演化代码生成和测试模型。",
+      "llm_tldr": "利用带有可验证单元测试结果的对抗性强化学习，共同演化代码生成和测试模型。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.07528v1",
+      "title": "TableMind++: An Uncertainty-Aware Programmatic Agent for Tool-Augmented Table Reasoning",
+      "abstract": "Table reasoning requires models to jointly perform semantic understanding and precise numerical operations. Most existing methods rely on a single-turn reasoning paradigm over tables which suffers from context overflow and weak numerical sensitivity. To address these limitations, we previously proposed TableMind as a tuning-based autonomous programmatic agent that simulates human-like interaction within a lightweight large language model (LLM). TableMind internalizes planning, action, and reflection through a two-stage training strategy involving supervised fine-tuning (SFT) on filtered high-quality data and reinforcement learning (RL) via a multi-perspective reward and the Rank-Aware Policy Optimization (RAPO) algorithm. While TableMind establishes a solid foundation for programmatic agents, the inherent stochasticity of LLMs remains a critical challenge that leads to hallucinations. In this paper, we extend this foundation to TableMind++ by introducing a novel uncertainty-aware inference framework to mitigate hallucinations. Specifically, we propose memory-guided plan pruning to retrieve historical trajectories for validating and filtering out logically flawed plans to address epistemic uncertainty. To ensure execution precision, we introduce confidence-based action refinement which monitors token-level probabilities to detect and self-correct syntactic noise for aleatoric uncertainty mitigation. Finally, we employ dual-weighted trajectory aggregation to synthesize a robust consensus from multiple reasoning paths. Extensive experiments on diverse benchmarks demonstrate that TableMind++ consistently outperforms previous baselines and proprietary models to validate the effectiveness of integrating autonomous training with uncertainty quantification. Our code is available.",
+      "authors": [
+        "Mingyue Cheng",
+        "Shuo Yu",
+        "Chuang Jiang",
+        "Xiaoyu Tao",
+        "Qingyang Mao",
+        "Jie Ouyang",
+        "Qi Liu",
+        "Enhong Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-08T08:31:33+00:00",
+      "link": "https://arxiv.org/pdf/2603.07528v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "tool-augmented table reasoning with RL and multi-perspective reward",
+      "llm_evidence_cn": "结合强化学习和多维度奖励的工具增强表格推理",
+      "llm_evidence": "结合强化学习和多维度奖励的工具增强表格推理",
+      "canonical_evidence": "结合强化学习和多维度奖励的工具增强表格推理",
+      "llm_tldr_en": "TableMind++ uses RL and multi-perspective rewards to enhance tool-augmented table reasoning in LLMs.",
+      "llm_tldr_cn": "TableMind++利用强化学习和多维度奖励增强了大语言模型在工具辅助下的表格推理能力。",
+      "llm_tldr": "TableMind++利用强化学习和多维度奖励增强了大语言模型在工具辅助下的表格推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.08091v1",
+      "title": "Toward Robust LLM-Based Judges: Taxonomic Bias Evaluation and Debiasing Optimization",
+      "abstract": "Large language model (LLM)-based judges are widely adopted for automated evaluation and reward modeling, yet their judgments are often affected by judgment biases. Accurately evaluating these biases is essential for ensuring the reliability of LLM-based judges. However, existing studies typically investigate limited biases under a single judge formulation, either generative or discriminative, lacking a comprehensive evaluation. To bridge this gap, we propose JudgeBiasBench, a benchmark for systematically quantifying biases in LLM-based judges. JudgeBiasBench defines a taxonomy of judgment biases across 4 dimensions, and constructs bias-augmented evaluation instances through a controlled bias injection pipeline, covering 12 representative bias types. We conduct extensive experiments across both generative and discriminative judges, revealing that current judges exhibit significant and diverse bias patterns that often compromise the reliability of automated evaluation. To mitigate judgment bias, we propose bias-aware training that explicitly incorporates bias-related attributes into the training process, encouraging judges to disentangle task-relevant quality from bias-correlated cues. By adopting reinforcement learning for generative judges and contrastive learning for discriminative judges, our methods effectively reduce judgment biases while largely preserving general evaluation capability.",
+      "authors": [
+        "Hongli Zhou",
+        "Hui Huang",
+        "Rui Zhang",
+        "Kehai Chen",
+        "Bing Xu",
+        "Conghui Zhu",
+        "Tiejun Zhao",
+        "Muyun Yang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-09T08:32:21+00:00",
+      "link": "https://arxiv.org/pdf/2603.08091v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Automated evaluation and reward modeling for LLM-based judges",
+      "llm_evidence_cn": "基于LLM裁判的自动评估与奖励建模",
+      "llm_evidence": "基于LLM裁判的自动评估与奖励建模",
+      "canonical_evidence": "基于LLM裁判的自动评估与奖励建模",
+      "llm_tldr_en": "Evaluates and debiases LLM-based judges used for automated reward modeling and evaluation.",
+      "llm_tldr_cn": "评估并消除用于自动奖励建模和评估的LLM裁判中的判断偏差。",
+      "llm_tldr": "评估并消除用于自动奖励建模和评估的LLM裁判中的判断偏差。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.07700v1",
+      "title": "TDM-R1: Reinforcing Few-Step Diffusion Models with Non-Differentiable Reward",
+      "abstract": "While few-step generative models have enabled powerful image and video generation at significantly lower cost, generic reinforcement learning (RL) paradigms for few-step models remain an unsolved problem. Existing RL approaches for few-step diffusion models strongly rely on back-propagating through differentiable reward models, thereby excluding the majority of important real-world reward signals, e.g., non-differentiable rewards such as humans' binary likeness, object counts, etc. To properly incorporate non-differentiable rewards to improve few-step generative models, we introduce TDM-R1, a novel reinforcement learning paradigm built upon a leading few-step model, Trajectory Distribution Matching (TDM). TDM-R1 decouples the learning process into surrogate reward learning and generator learning. Furthermore, we developed practical methods to obtain per-step reward signals along the deterministic generation trajectory of TDM, resulting in a unified RL post-training method that significantly improves few-step models' ability with generic rewards. We conduct extensive experiments ranging from text-rendering, visual quality, and preference alignment. All results demonstrate that TDM-R1 is a powerful reinforcement learning paradigm for few-step text-to-image models, achieving state-of-the-art reinforcement learning performances on both in-domain and out-of-domain metrics. Furthermore, TDM-R1 also scales effectively to the recent strong Z-Image model, consistently outperforming both its 100-NFE and few-step variants with only 4 NFEs. Project page: https://github.com/Luo-Yihong/TDM-R1",
+      "authors": [
+        "Yihong Luo",
+        "Tianyang Hu",
+        "Weijian Luo",
+        "Jing Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-03-08T15:57:10+00:00",
+      "link": "https://arxiv.org/pdf/2603.07700v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reinforcement learning with non-differentiable rewards",
+      "llm_evidence_cn": "具有不可微奖励的强化学习",
+      "llm_evidence": "具有不可微奖励的强化学习",
+      "canonical_evidence": "具有不可微奖励的强化学习",
+      "llm_tldr_en": "Introduces TDM-R1 to incorporate non-differentiable rewards into few-step generative model training.",
+      "llm_tldr_cn": "引入TDM-R1，将不可微奖励纳入少步生成模型的训练中。",
+      "llm_tldr": "引入TDM-R1，将不可微奖励纳入少步生成模型的训练中。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.08035v1",
+      "title": "CDRRM: Contrast-Driven Rubric Generation for Reliable and Interpretable Reward Modeling",
+      "abstract": "Reward modeling is essential for aligning Large Language Models(LLMs) with human preferences, yet conventional reward models suffer from poor interpretability and heavy reliance on costly expert annotations. While recent rubric-based approaches enhance evaluation transparency, they lack systematic quality control, yielding noisy and redundant criteria, failing to mitigate persistent biases (e.g., verbosity, position) in LLM evaluators, and creating a scalability-reliability trade-off. To address these limitations, we propose CDRRM (Contrast-Driven Rubric Reward Model), a framework built on a novel Contrast-then-Synthesis paradigm for high-quality rubric generation and guided preference judgment. CDRRM first conducts multi-dimensional contrastive profiling on preference pairs to identify causal discriminative factors, then synthesizes these insights into compact, context-aware rubrics to guide preference judg- ments. Extensive experiments on three authoritative benchmarks (RewardBench, RMBench, RMB) demonstrate that CDRRM achieves state-of-the-art performance across diverse domains and effectively mitigates aforementioned evaluation biases. Notably, our approach delivers exceptional data efficiency: training the rubric generator on only 3k high-quality samples empowers a frozen pre-trained judge model to outperform fully fine-tuned baselines. This work offers a scalable, interpretable, and data-efficient path for reward modeling.",
+      "authors": [
+        "Dengcan Liu",
+        "Fengkai Yang",
+        "Xiaohan Wang",
+        "Shurui Yan",
+        "Jiajun Chai",
+        "Jiahao Li",
+        "Yikun Ban",
+        "Zhendong Mao",
+        "Wei Lin",
+        "Guojun Yin"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-09T07:15:23+00:00",
+      "link": "https://arxiv.org/pdf/2603.08035v1",
+      "tags": [
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Contrast-driven rubric generation for reliable reward modeling",
+      "llm_evidence_cn": "对比驱动的细则生成用于可靠的奖励建模",
+      "llm_evidence": "对比驱动的细则生成用于可靠的奖励建模",
+      "canonical_evidence": "对比驱动的细则生成用于可靠的奖励建模",
+      "llm_tldr_en": "Proposes a framework for generating interpretable rubrics to improve LLM reward modeling reliability.",
+      "llm_tldr_cn": "提出一种生成可解释评分细则的框架，以提高LLM奖励建模的可靠性。",
+      "llm_tldr": "提出一种生成可解释评分细则的框架，以提高LLM奖励建模的可靠性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.09203v2",
+      "title": "Evaluate-as-Action: Self-Evaluated Process Rewards for Retrieval-Augmented Agents",
+      "abstract": "Retrieval-augmented agents can query external evidence, yet their reliability in multi-step reasoning remains limited: noisy retrieval may derail multi-hop question answering, while outcome-only reinforcement learning provides credit signals that are too coarse to optimize intermediate steps. We propose \\textsc{EvalAct} (Evaluate-as-Action), which converts implicit retrieval quality assessment into an explicit action and enforces a coupled Search-to-Evaluate protocol so that each retrieval is immediately followed by a structured evaluation score, yielding process signals aligned with the interaction trajectory. To leverage these signals, we introduce Process-Calibrated Advantage Rescaling (PCAR), a GRPO-based optimization method that rescales advantages at the segment level according to evaluation scores, emphasizing reliable segments while updating uncertain ones conservatively. Experiments on seven open-domain QA benchmarks show that \\textsc{EvalAct} achieves the best average accuracy, with the largest gains on multi-hop tasks, and ablations verify that the explicit evaluation loop drives the primary improvements while PCAR provides consistent additional benefits.",
+      "authors": [
+        "Jiangming Shu",
+        "Yuxiang Zhang",
+        "Ye Ma",
+        "Xueyuan Lin",
+        "Jitao Sang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-10T05:22:40+00:00",
+      "link": "https://arxiv.org/pdf/2603.09203v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "process rewards for retrieval-augmented agents",
+      "llm_evidence_cn": "检索增强智能体的过程奖励",
+      "llm_evidence": "检索增强智能体的过程奖励",
+      "canonical_evidence": "检索增强智能体的过程奖励",
+      "llm_tldr_en": "Proposes EvalAct to convert retrieval quality into explicit process rewards for RL optimization in agents.",
+      "llm_tldr_cn": "提出 EvalAct，将检索质量转化为显式的过程奖励，用于智能体的强化学习优化。",
+      "llm_tldr": "提出 EvalAct，将检索质量转化为显式的过程奖励，用于智能体的强化学习优化。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.09331v1",
+      "title": "Reward-Zero: Language Embedding Driven Implicit Reward Mechanisms for Reinforcement Learning",
+      "abstract": "We introduce Reward-Zero, a general-purpose implicit reward mechanism that transforms natural-language task descriptions into dense, semantically grounded progress signals for reinforcement learning (RL). Reward-Zero serves as a simple yet sophisticated universal reward function that leverages language embeddings for efficient RL training. By comparing the embedding of a task specification with embeddings derived from an agent's interaction experience, Reward-Zero produces a continuous, semantically aligned sense-of-completion signal. This reward supplements sparse or delayed environmental feedback without requiring task-specific engineering. When integrated into standard RL frameworks, it accelerates exploration, stabilizes training, and enhances generalization across diverse tasks. Empirically, agents trained with Reward-Zero converge faster and achieve higher final success rates than conventional methods such as PPO with common reward-shaping baselines, successfully solving tasks that hand-designed rewards could not in some complex tasks. In addition, we develop a mini benchmark for the evaluation of completion sense during task execution via language embeddings. These results highlight the promise of language-driven implicit reward functions as a practical path toward more sample-efficient, generalizable, and scalable RL for embodied agents. Code will be released after peer review.",
+      "authors": [
+        "Heng Zhang",
+        "Haddy Alchaer",
+        "Arash Ajoudani",
+        "Yu She"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-10T08:07:49+00:00",
+      "link": "https://arxiv.org/pdf/2603.09331v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "implicit reward mechanism for reinforcement learning",
+      "llm_evidence_cn": "强化学习的隐式奖励机制",
+      "llm_evidence": "强化学习的隐式奖励机制",
+      "canonical_evidence": "强化学习的隐式奖励机制",
+      "llm_tldr_en": "Reward-Zero uses language embeddings to create dense, semantically grounded rewards for RL training.",
+      "llm_tldr_cn": "Reward-Zero利用语言嵌入为强化学习训练创建了稠密的、语义化的隐式奖励信号。",
+      "llm_tldr": "Reward-Zero利用语言嵌入为强化学习训练创建了稠密的、语义化的隐式奖励信号。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.08262v1",
+      "title": "FinToolBench: Evaluating LLM Agents for Real-World Financial Tool Use",
+      "abstract": "The integration of Large Language Models (LLMs) into the financial domain is driving a paradigm shift from passive information retrieval to dynamic, agentic interaction. While general-purpose tool learning has witnessed a surge in benchmarks, the financial sector, characterized by high stakes, strict compliance, and rapid data volatility, remains critically underserved. Existing financial evaluations predominantly focus on static textual analysis or document-based QA, ignoring the complex reality of tool execution. Conversely, general tool benchmarks lack the domain-specific rigor required for finance, often relying on toy environments or a negligible number of financial APIs. To bridge this gap, we introduce FinToolBench, the first real-world, runnable benchmark dedicated to evaluating financial tool learning agents. Unlike prior works limited to a handful of mock tools, FinToolBench establishes a realistic ecosystem coupling 760 executable financial tools with 295 rigorous, tool-required queries. We propose a novel evaluation framework that goes beyond binary execution success, assessing agents on finance-critical dimensions: timeliness, intent type, and regulatory domain alignment. Furthermore, we present FATR, a finance-aware tool retrieval and reasoning baseline that enhances stability and compliance. By providing the first testbed for auditable, agentic financial execution, FinToolBench sets a new standard for trustworthy AI in finance. The tool manifest, execution environment, and evaluation code will be open-sourced to facilitate future research.",
+      "authors": [
+        "Jiaxuan Lu",
+        "Kong Wang",
+        "Yemin Wang",
+        "Qingmei Tang",
+        "Hongwei Zeng",
+        "Xiang Chen",
+        "Jiahao Pi",
+        "Shujian Deng",
+        "Lingzhi Chen",
+        "Yi Fu",
+        "Kehua Yang",
+        "Xiao Sun"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-09T11:33:05+00:00",
+      "link": "https://arxiv.org/pdf/2603.08262v1",
+      "tags": [
+        "keyword:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "evaluating LLM agents for real-world financial tool use",
+      "llm_evidence_cn": "评估大语言模型智能体在真实金融工具中的使用",
+      "llm_evidence": "评估大语言模型智能体在真实金融工具中的使用",
+      "canonical_evidence": "评估大语言模型智能体在真实金融工具中的使用",
+      "llm_tldr_en": "A benchmark for evaluating LLM agents on real-world, runnable financial tool execution tasks.",
+      "llm_tldr_cn": "一个用于评估大语言模型智能体在真实、可运行的金融工具执行任务上的基准测试。",
+      "llm_tldr": "一个用于评估大语言模型智能体在真实、可运行的金融工具执行任务上的基准测试。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.09297v1",
+      "title": "TA-Mem: Tool-Augmented Autonomous Memory Retrieval for LLM in Long-Term Conversational QA",
+      "abstract": "Large Language Model (LLM) has exhibited strong reasoning ability in text-based contexts across various domains, yet the limitation of context window poses challenges for the model on long-range inference tasks and necessitates a memory storage system. While many current storage approaches have been proposed with episodic notes and graph representations of memory, retrieval methods still primarily rely on predefined workflows or static similarity top-k over embeddings. To address this inflexibility, we introduced a novel tool-augmented autonomous memory retrieval framework (TA-Mem), which contains: (1) a memory extraction LLM agent which is prompted to adaptively chuck an input into sub-context based on semantic correlation, and extract information into structured notes, (2) a multi-indexed memory database designed for different types of query methods including both key-based lookup and similarity-based retrieval, (3) a tool-augmented memory retrieval agent which explores the memory autonomously by selecting appropriate tools provided by the database based on the user input, and decides whether to proceed to the next iteration or finalizing the response after reasoning on the fetched memories. The TA-Mem is evaluated on the LoCoMo dataset, achieving significant performance improvements over existing baseline approaches. In addition, an analysis of tool use across different question types also demonstrates the adaptivity of the proposed method.",
+      "authors": [
+        "Mengwei Yuan",
+        "Jianan Liu",
+        "Jing Yang",
+        "Xianyou Li",
+        "Weiran Yan",
+        "Yichao Wu",
+        "Penghao Liang"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "published": "2026-03-10T07:27:01+00:00",
+      "link": "https://arxiv.org/pdf/2603.09297v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "tool-augmented autonomous memory retrieval framework for LLM agents",
+      "llm_evidence_cn": "大语言模型智能体的工具增强自主记忆检索框架",
+      "llm_evidence": "大语言模型智能体的工具增强自主记忆检索框架",
+      "canonical_evidence": "大语言模型智能体的工具增强自主记忆检索框架",
+      "llm_tldr_en": "Introduces TA-Mem, a tool-augmented framework for adaptive memory retrieval in long-term LLM conversations.",
+      "llm_tldr_cn": "引入TA-Mem，一种用于长对话中大模型自适应记忆检索的工具增强框架。",
+      "llm_tldr": "引入TA-Mem，一种用于长对话中大模型自适应记忆检索的工具增强框架。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.10535v1",
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+      "abstract": "Reinforcement learning significantly enhances LLM capabilities but suffers from a critical issue: length inflation, where models adopt verbosity or inefficient reasoning to maximize rewards. Prior approaches struggle to address this challenge in a general and lossless manner, primarily because additive penalties introduce a compensatory effect that creates optimization shortcuts, while heuristic gating strategies lack generality beyond binary feedback. To bridge this gap, we present Group Relative Reward Rescaling (GR$^3$), which reframes length control as a multiplicative rescaling paradigm, effectively establishing a generalized, continuous, and reward-dependent gating mechanism. To further ensure lossless optimization, we incorporate group-relative regularization and advantage-aware calibration, which dynamically adapt length budgets to instance difficulty and preserve the advantage signal of high-quality trajectories. Empirically, across both RLHF and RLVR settings, GR$^3$~maintains training dynamics and downstream performance comparable to standard GRPO while significantly mitigating length inflation, outperforming state-of-the-art length-regularized baselines.",
+      "authors": [
+        "Zichao Li",
+        "Jie Lou",
+        "Fangchen Dong",
+        "Zhiyuan Fan",
+        "Mengjie Ren",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Debing Zhang",
+        "Le Sun",
+        "Yaojie Lu",
+        "Xing Yu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-03-11T08:41:34+00:00",
+      "link": "https://arxiv.org/pdf/2603.10535v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reinforcement learning reward rescaling to prevent length inflation",
+      "llm_evidence_cn": "强化学习奖励重缩放以防止长度膨胀",
+      "llm_evidence": "强化学习奖励重缩放以防止长度膨胀",
+      "canonical_evidence": "强化学习奖励重缩放以防止长度膨胀",
+      "llm_tldr_en": "Introduces GR3 to control LLM response length in RL without sacrificing performance or reasoning quality.",
+      "llm_tldr_cn": "引入GR3机制，在强化学习中控制LLM回复长度，同时不损失性能或推理质量。",
+      "llm_tldr": "引入GR3机制，在强化学习中控制LLM回复长度，同时不损失性能或推理质量。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.09065v1",
+      "title": "Learning Adaptive LLM Decoding",
+      "abstract": "Decoding from large language models (LLMs) typically relies on fixed sampling hyperparameters (e.g., temperature, top-p), despite substantial variation in task difficulty and uncertainty across prompts and individual decoding steps. We propose to learn adaptive decoding policies that dynamically select sampling strategies at inference time, conditioned on available compute resources. Rather than fine-tuning the language model itself, we introduce lightweight decoding adapters trained with reinforcement learning and verifiable terminal rewards (e.g. correctness on math and coding tasks). At the sequence level, we frame decoding as a contextual bandit problem: a policy selects a decoding strategy (e.g. greedy, top-k, min-p) for each prompt, conditioned on the prompt embedding and a parallel sampling budget. At the token level, we model decoding as a partially observable Markov decision process (POMDP), where a policy selects sampling actions at each token step based on internal model features and the remaining token budget. Experiments on the MATH and CodeContests benchmarks show that the learned adapters improve the accuracy-budget tradeoff: on MATH, the token-level adapter improves Pass@1 accuracy by up to 10.2% over the best static baseline under a fixed token budget, while the sequence-level adapter yields 2-3% gains under fixed parallel sampling. Ablation analyses support the contribution of both sequence- and token-level adaptation.",
+      "authors": [
+        "Chloe H. Su",
+        "Zhe Ye",
+        "Samuel Tenka",
+        "Aidan Yang",
+        "Soonho Kong",
+        "Udaya Ghai"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-10T01:15:26+00:00",
+      "link": "https://arxiv.org/pdf/2603.09065v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "trained with reinforcement learning and verifiable terminal rewards",
+      "llm_evidence_cn": "使用强化学习和可验证的终端奖励进行训练",
+      "llm_evidence": "使用强化学习和可验证的终端奖励进行训练",
+      "canonical_evidence": "使用强化学习和可验证的终端奖励进行训练",
+      "llm_tldr_en": "Learns adaptive LLM decoding policies using RL with verifiable rewards for math and coding tasks.",
+      "llm_tldr_cn": "利用强化学习和可验证奖励学习自适应LLM解码策略，提升数学和编程任务表现。",
+      "llm_tldr": "利用强化学习和可验证奖励学习自适应LLM解码策略，提升数学和编程任务表现。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.11337v1",
+      "title": "RewardHackingAgents: Benchmarking Evaluation Integrity for LLM ML-Engineering Agents",
+      "abstract": "LLM agents increasingly perform end-to-end ML engineering tasks where success is judged by a single scalar test metric. This creates a structural vulnerability: an agent can increase the reported score by compromising the evaluation pipeline rather than improving the model. We introduce RewardHackingAgents, a workspace-based benchmark that makes two compromise vectors explicit and measurable: evaluator tampering (modifying metric computation or reporting) and train/test leakage (accessing held-out data or labels during training). Each episode runs in a fresh workspace with patch tracking and runtime file-access logging; detectors compare the agent-reported metric to a trusted reference to assign auditable integrity labels. Across three tasks and two LLM backbones, scripted attacks succeed on both vectors in fully mutable workspaces; single-mechanism defenses block only one vector; and a combined regime blocks both. In natural-agent runs, evaluator-tampering attempts occur in about 50% of episodes and are eliminated by evaluator locking, with a 25-31% median runtime overhead. Overall, we demonstrate that evaluation integrity for ML-engineering agents can be benchmarked as a first-class outcome rather than assumed.",
+      "authors": [
+        "Yonas Atinafu",
+        "Robin Cohen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-11T22:06:44+00:00",
+      "link": "https://arxiv.org/pdf/2603.11337v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "verifying tool execution results and evaluator tampering",
+      "llm_evidence_cn": "验证工具执行结果和评估器篡改",
+      "llm_evidence": "验证工具执行结果和评估器篡改",
+      "canonical_evidence": "验证工具执行结果和评估器篡改",
+      "llm_tldr_en": "Benchmarks reward hacking in ML agents by detecting evaluator tampering and data leakage.",
+      "llm_tldr_cn": "通过检测评估器篡改和数据泄漏，对机器学习智能体中的奖励作弊行为进行基准测试。",
+      "llm_tldr": "通过检测评估器篡改和数据泄漏，对机器学习智能体中的奖励作弊行为进行基准测试。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
 }
