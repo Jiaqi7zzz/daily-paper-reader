@@ -25,3 +25,40 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: RL TL
+      description: 具有可验证奖励的强化学习在大语言模型工具学习中的应用
+      enabled: true
+      keywords:
+        - keyword: large language model
+          keyword_cn: 大语言模型
+          query: l
+        - keyword: RLVR
+          keyword_cn: ''
+          query: R
+        - keyword: reinforcement learning
+          keyword_cn: 强化学习
+          query: r
+        - keyword: verifiable rewards
+          keyword_cn: 可验证奖励
+          query: reinforcement learning with verifiable reward functions
+        - keyword: tool learning
+          keyword_cn: 工具学习
+          query: large language model tool learning and tool use
+      intent_queries:
+        - query: reinforcement learning with verifiable rewards for LLM tool use
+          query_cn: 大语言模型工具使用中具有可验证奖励的强化学习
+          enabled: true
+          source: manual
+          note: ''
+        - query: automated reward modeling for tool augmented language models
+          query_cn: 工具增强型语言模型的自动奖励建模
+          enabled: true
+          source: manual
+          note: ''
+        - query: verifying tool execution results in RL training for LLMs
+          query_cn: LLM强化学习训练中验证工具执行结果
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-03-17T18:12:10.809Z'
