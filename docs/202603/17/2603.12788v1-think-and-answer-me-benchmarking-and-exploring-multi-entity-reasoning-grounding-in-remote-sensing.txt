@@ -1,0 +1,357 @@
+Title: Think and Answer ME: Benchmarking and Exploring Multi-Entity Reasoning Grounding in Remote Sensing
+
+URL Source: https://arxiv.org/pdf/2603.12788v1
+
+Published Time: Mon, 16 Mar 2026 00:53:50 GMT
+
+Number of Pages: 23
+
+Markdown Content:
+# Think and Answer ME: Benchmarking and Exploring Multi-Entity Reasoning Grounding in Remote Sensing 
+
+Shuchang Lyu 1 , Haiquan Wen 2, Guangliang Cheng 2†, Meng Li 1, Zheng Zhou 1, You Zhou 1, and Dingding Yao 3, Zhenwei Shi 1 
+
+> 1
+
+Beihang University, Beijing, China.  
+
+> 2
+
+University of Liverpool, Liverpool, The UK.  
+
+> 3
+
+Institute of Acoustics, Chinese Academy of Sciences, Beijing, China 
+
+† Corresponding author: Guangliang.Cheng@liverpool.ac.uk 
+
+Abstract. Recent advances in reasoning language models and reinforce-ment learning with verifiable rewards have significantly enhanced multi-step reasoning capabilities. This progress motivates the extension of rea-soning paradigms to remote sensing visual grounding task. However, existing remote sensing grounding methods remain largely confined to perception-level matching and single-entity formulations, limiting the role of explicit reasoning and inter-entity modeling. To address this chal-lenge, we introduce a new benchmark dataset for Multi-Entity Reasoning Grounding in Remote Sensing (ME-RSRG). Based on ME-RSRG, we re-formulate remote sensing grounding as a multi-entity reasoning task and propose an Entity-Aware Reasoning (EAR) framework built upon visual-linguistic foundation models. EAR generates structured reasoning traces and subject-object grounding outputs. It adopts supervised fine-tuning for cold-start initialization and is further optimized via entity-aware reward-driven Group Relative Policy Optimization (GRPO). Extensive experiments on ME-RSRG demonstrate the challenges of multi-entity reasoning and verify the effectiveness of our proposed EAR framework. Our dataset, code, and models will be available at https://github.com/ CV-ShuchangLyu/ME-RSRG .
+
+Keywords: Reasoning grounding · Visual-linguistic reasoning · Multi-entity · Remote Sensing 
+
+# 1 Introduction 
+
+Recently, reasoning language models such as OpenAI-o1 [14] and DeepSeek-R1 [10] have shown strong multi-step reasoning capability by explicitly “thinking” before “answering”. Meanwhile, reinforcement learning with verifiable rewards [9, 10,26,33] has emerged as a key mechanism for enhancing reasoning ability beyond supervised fine-tuning.  
+
+> arXiv:2603.12788v1 [cs.CV] 13 Mar 2026 2S. Lyu et al.
+> Fig. 1: Paradigm comparison between (a) matching-based visual grounding and (b) multi-entity reasoning grounding in remote sensing.
+
+Recent progress in reasoning models enables the extension of reasoning ground-ing to remote sensing, where scenes are characterized by large-scale spatial lay-outs, dense object distributions, and complex semantic relations. In such sce-narios, adopting a language-centric paradigm allows grounding to move beyond perception-level matching toward structured reasoning with Chain-of-Thought (CoT). It makes remote sensing intelligence more interpretable. Despite these advances, most existing remote sensing visual grounding (RSVG) methods [16, 22, 39, 41] are still formulated as perception-level matching prob-lems, focusing on aligning textual queries with visual regions. This paradigm typically considers a single target entity and places limited emphasis on inter-entity relations. Consequently, incorporating intermediate reasoning steps in this setting may result in superficial reasoning that provides limited interpretability. Specifically, this challenge can be further decomposed into two key issues. 
+
+(1) Existing remote sensing grounding datasets are limited to single-entity annotations. It lacks structured supervision for multiple entities and their relations, which limits systematic exploration of multi-entity reasoning. 
+
+(2) Current grounding models are mainly designed under a matching-oriented paradigm. As a result, supporting reasoning grounding in remote sensing remains challenging without explicit mechanisms for modeling entity roles, inter-entity relations, and intermediate reasoning processes. To address the first issue, we construct a multi-entity reasoning grounding dataset, termed ME-RSRG. Unlike existing datasets that annotate a single target region per referring description, each sample in ME-RSRG explicitly involves a subject entity together with one or more object entities. By providing structured annotations for entity roles and language description, ME-RSRG establishes a unified foundation for multi-entity reasoning grounding in remote sensing. To address the second issue, we propose a reasoning-oriented visual-linguistic framework, termed Entity-Aware Reasoning (EAR) framework based on ME-ME-RSRG 3
+
+RSRG. As shown in Fig. 1 (b), the visual encoder extracts and tokenizes visual representations, while the language input is processed as a unified sequence. These visual and linguistic tokens are then fed into a language model decoder, which serves as the core engine to perform reasoning. Instead of directly pre-dicting a single target location, EAR generates structured outputs by explicitly producing a reasoning trace in the “think” form, followed by the subject-object grounding results in the “answer” form. To optimize EAR, we adopt a two-stage training strategy. Supervised fine-tuning (SFT) serves as a first stage cold start to initialize the model, enabling it to generate structured subject-object ground-ing outputs with coherent reasoning traces. Building upon this initialization, we further introduce Group Relative Policy Optimization (GRPO) [30] for sec-ond stage optimization. It refines the model through entity-aware rewards that explicitly evaluate grounding correctness for different entity roles. Fig. 1 illustrates the paradigm comparison between matching-based visual grounding and multi-entity reasoning grounding in remote sensing. In the con-ventional RSVG paradigm, grounding is formulated as aligning a single refer-ring expression with one target subject. In contrast, the proposed multi-entity reasoning grounding paradigm explicitly extracts multiple entities and produces structured reasoning-aware outputs for more interpretable understanding of com-plex remote sensing scenes. Moreover, our proposed multi-entity formulation is inherently more suitable for reasoning-oriented grounding rather than simple matching. In remote sensing imagery, entities are often distributed over large spatial extents and exhibit rich contextual dependencies, where the identity of a target is frequently determined by its relations to other entities rather than by isolated appearance cues. Meanwhile, several remote sensing methods [18,24,36] have made significant progress in grounding performance. Although reasoning modules are incorporated, the task formulation still focuses on aligning a single referring expression with one target region. In this sense, RS grounding is still treated as a matching problem and largely confined to the single-entity level. On our proposed ME-RSRG dataset, we conduct comprehensive benchmark-ing with a series of representative foundation models to systematically evaluate existing grounding paradigms under the multi-entity reasoning setting. The main contributions of this paper are summarized as follows: 
+
+– We introduce ME-RSRG, a new and challenging benchmark dataset for multi-entity reasoning grounding in remote sensing. To the best of our knowl-edge, it is the first dataset that explicitly models multiple entities and their semantic roles, advancing research on reasoning grounding in remote sensing. 
+
+– We propose an Entity-Aware Reasoning (EAR) framework based on visual-linguistic foundation models. It integrates supervised fine-tuning and entity-aware reward-driven GRPO. EAR provides benchmarking performance for our proposed ME-RSRG dataset. 
+
+– Extensive experiments verify the effectiveness of EAR in structured rela-tional grounding. With optimization under the EAR framework, the Qwen2.5-VL series achieves over 10% improvement in mAcc@0.5 value, and all eval-uated visual-linguistic foundation models show consistent gains. 4 S. Lyu et al. 
+
+# 2 Related Work 
+
+2.1 Visual Grounding in Remote Sensing 
+
+Visual grounding is first explored in natural scene images to localize objects described by language expressions. Representative methods [6, 15, 25, 27, 37] fo-cus on cross-modal representation learning and region-text matching through notable architectures and fusion mechanism. Inspired by these advances in nat-ural images, visual grounding has recently been extended to the remote sensing field. [31] is an early pioneering work that formally defines the remote sensing visual grounding task. To tackle this task, it proposes both a benchmark dataset and the GeoVG method. RSVG-HR [16] dataset is a redesigned language ex-pression using high-resolution remote sensing images in the RSVG dataset [31]. Zhan et al. [39] construct the DIOR-RSVG benchmark dataset and propose a multigranularity visual-language fusion (MGVLF) method to address scale vari-ation and cluttered background challenges in remote sensing scenes. Hu et al. [11] extend remote sensing visual grounding to the open-set setting. To address the limitations of single-object grounding, Efficient Grounding DINO is proposed to improve multi-object grounding in remote sensing. Liu et al. [22] introduce a Language-Guided Transformer (LGFormer) with hybrid visual-textual represen-tations for remote sensing visual grounding under complex scenes. 
+
+2.2 Visual-Linguistic Reasoning Models 
+
+Visual-linguistic reasoning models focus on integrating visual and textual in-formation to support joint understanding on visual scenes. While SFT remains the dominant training paradigm for visual-language models, recent works ex-plore reinforcement fine-tuning (RFT) [28–30] as a complementary strategy to shape model reasoning through reward-driven optimization. Factually Aug-mented RLHF (Fact-RLHF) [32] enhances the reward model with additional factual cues, including image captions and ground-truth multiple-choice options. RLHF-V [38] addresses hallucination issues in multimodal large language mod-els by aligning model behavior with fine-grained human feedback. It improves factual grounding and trustworthiness across multiple benchmarks. POVID [43] mitigates hallucinations by automating preference tuning, leveraging scalable feedback generation and optimization via Direct Preference Optimization (DPO). Recent advances show that Group Relative Policy Optimization (GRPO) [30] has been widely explored in visual-linguistic reasoning tasks. Visual-RFT [26] ex-tends reinforcement fine-tuning with verifiable rewards to visual tasks, showing stronger generalization than SFT across multiple vision and reasoning bench-marks. So-Fake-R1 [13] explores “Cold Start-GRPO” strategy to encourage in-terpretable visual rationales under realistic distribution shifts. Vision-R1 [12] also utilizes reinforcement learning for multimodal reasoning. It further proposes Progressive Thinking Suppression Training (PTST) to stabilize multimodal rea-soning learning and mitigate overthinking during reinforcement fine-tuning. ME-RSRG 5 
+
+> Fig. 2: Overview of ME-RSRG dataset. It includes (a) Dataset production, (b) Dataset statistics, and (c) Data case.
+
+2.3 Visual-Linguistic Reasoning in Remote Sensing 
+
+Visual-linguistic reasoning has mainly been explored in natural scenes. Apply-ing it to remote sensing remains challenging due to large-scale layouts and com-plex spatial relations. SkySense-O [44] advances open-world RS image under-standing by introducing the large-scale “Sky-SA” fine-grained pixel-level dataset and a vision-centric visual-linguistic modeling paradigm. SegEarth-R1 [18] is a first-proposed language-guided segmentation framework that advances geospa-tial pixel reasoning by enabling implicit query-driven spatial understanding. Re-moteReasoner [36] is a unified RS reasoning framework that enables a single model to handle diverse remote sensing reasoning tasks from natural language queries without task-specific fine-tuning. RSThinker [24] investigates structured and verifiable multi-step reasoning for remote sensing analysis via large-scale rationale supervision and reinforcement learning. 
+
+# 3 Proposed Dataset: ME-RSRG 
+
+3.1 Dataset Production 
+
+As shown in Fig. 2 (a), the production of ME-RSRG follows a 5-step pipeline to ensure data quality. It includes dataset collection, instance selection, manual annotation, expert assessment, and CoT generation. 
+
+Dataset Collection. We collect data from three benchmark RS visual ground-ing datasets: RSVG-HR [16], DIOR-RSVG [39], and OPT-RSVG [20]. RSVG-HR is built on the very high-resolution images of RSVG [31], with rewritten language annotations using a clearer protocol of absolute position and relative position. It contains 2,650 image-language pairs across 7 categories, with the image size as 1024 ×1024. DIOR-RSVG is built upon the DIOR dataset [19] and covers 20 6 S. Lyu et al. 
+
+object categories. It contains 38,320 language expressions over 17,402 images of size 800 ×800. OPT-RSVG consists of 25,452 RS images and 48,952 image-query pairs among 14 object categories. Since part of the OPT-RSVG dataset is derived from DIOR, we prevent data leakage during the collection process. 
+
+Instance Selection. In this step, we perform expression-level analysis to select data containing explicit subject-object structures and multiple entities. As shown in Fig. 2 (a), we employ Gemini-2.5-Pro [5] to filter the collected expressions. Only those describing relational dependencies between at least two entities are retained. In addition, the detailed prompts used for Gemini in the data selection process will be provided in the supplementary material. 
+
+Manual Annotation. After instance selection, we conduct manual annotation to construct multi-entity grounding instances. We inherit the original bound-ing box annotations and language descriptions from RSVG-HR, DIOR-RSVG, and OPT-RSVG. Based on these single-subject annotations, annotators further identify and label corresponding object entities within the same image. At the current research stage, our annotation protocol focuses on “single-subject single-object” and “single-subject multiple-objects” settings. This step also includes fil-tering and correcting inappropriate expressions identified in the previous stage to ensure semantic consistency and annotation quality. 
+
+Expert Assessment. As depicted in Fig. 2 (a), domain experts (trained stu-dents and annotators) conduct a strict quality review of the annotations. Each instance undergoes sequential review by two experts. They check the accuracy of bounding box coordinates and verify the correctness of subject and object entity assignments. Samples that fail to meet the quality criteria are either re-annotated (back to “Manual Annotation” step) or removed from the dataset. 
+
+CoT Generation. In the final step, we generate reasoning traces for a subset of the data ( ∼20% of training set). Given the image and manually annotated bounding boxes, we employ Gemini-2.5-Pro [5] to produce reasoning descriptions in the tag of < think > ... < /think > . These descriptions provide intermediate reasoning signals to support reasoning-oriented training. The exact prompt used for CoT generation with Gemini will be detailed in the supplementary material. 
+
+3.2 Dataset Analysis Dataset Statistical Analysis. As depicted in Fig. 2 (b), ME-RSRG contains 7,162 images and 12,091 image-text instances in total. A single image may cor-respond to multiple descriptions, reflecting diverse multi-entity relations within the same scene. The dataset is split into 10,305 training instances and 1,786 test instances, covering 6,028 and 1,134 images, respectively. Among the 10,305 training instances, 2,149 are annotated with explicit < think > ... < /think > 
+
+reasoning tags, while the remaining 8,156 provide only grounding annotations without intermediate reasoning traces. The CoT-annotated samples are typically used for SFT as a cold-start initialization. 
+
+Dataset Case Analysis. As depicted in Fig. 2 (c), we analyze the data charac-ters from the following aspects. First, large-scale spatial layouts are prominent. Object scales vary greatly within a scene. Their wide spatial distribution makes ME-RSRG 7
+
+Table 1: Comparison between ME-RSRG and other related datasets. In the table, “Im.”, and “Ins.” respectively denote the image and instance (image-text pair).                                                       
+
+> Dataset Im./Ins. Num. Entity Im. Size Sources Tasks Remote Sensing Visual Grounding Datasets
+> RSVG [31] 4,239/7,933 Single 1024 ×1024 Google Earth VG RSVG-HR [16] 4,239/2,650 Single 1024 ×1024 Google Earth VG DIOR-RSVG [39] 17,402/38,320 Single 800 ×800 DIOR [19] VG OPT-RSVG [20] 25,452/48,952 Single ∼152 2-∼10569 2
+> DIOR [19], SPCD [3], HRRSD [40] VG VRSBench-Ref [21] 29,614/52,472 Single 512 ×512 DIOR [19], DOTA-v2 [7] VG
+> Remote Sensing Reasoning Datasets
+> RemoteReasoner [36] 5,434/-Single 123 2-7617 2EarthReason [18] RG , VQA, Captioning Geo-CoT380k [24] -/70,711 Single 512 ×512 ,
+> 800 ×800
+> DIOR-RSVG [18], VRSBench-Ref [21]
+> RG , VQA, Captioning, Counting, Cls, Det ME-RSRG (ours) 7,162/12,091 Multi.
+> 1024 ×1024 ,
+> 800 ×800 ,
+> ∼152 2-∼10569 2
+> DIOR-RSVG [18], RSVG-HR [16], OPT-RSVG [20]
+> RG
+
+spatial configuration a key cue for grounding. The identity of a subject often de-pends on its relative position, or functional association with other entities. This demands explicit modeling of subject-object roles. Second, multi-entity ambigu-ity increases the difficulty. A single image may contain many similar instances, such as multiple “roundabouts” shown in Fig. 2 (c). Accurate grounding re-lies on relational disambiguation rather than isolated appearance cues. Third, the dataset supports step-by-step subject-object reasoning with partial CoT su-pervision. It also requires simultaneous localization of object entities, ensuring role-consistent and interpretable multi-entity grounding. 
+
+Dataset Comparison. Tab. 5 presents a comprehensive comparison between ME-RSRG and existing remote sensing visual grounding and reasoning datasets. Most remote sensing visual grounding datasets are constructed under a single-entity paradigm. The VG tasks built on these datasets mainly focus on perception-level alignment between textual queries and individual objects. Recent reasoning-oriented datasets, such as RemoteReasoner and Geo-CoT380k, extend the task scope to reasoning grounding and other reasoning tasks. However, they still rely on single-entity annotations and do not explicitly model multiple entities with structured subject-object roles. In contrast, our proposed ME-RSRG is explicitly designed for multi-entity reasoning grounding. Each instance contains a subject entity and one or more object entities with structured relational descriptions. It further provides explicit “think” annotations for partial training data. The dataset emphasizes challenges from both scale variation and domain diversity, covering wide-ranging object sizes as well as multiple image sources and resolutions. To the best of our knowl-edge, it is the first remote sensing dataset that explicitly models multiple entities and their semantic roles within structured relational descriptions. 8 S. Lyu et al.  
+
+> Fig. 3: Overview of EAR framework. We adopt a two-stage optimization strategy: SFT initialization and entity-aware reward-driven GRPO refinement.
+
+# 4 Methodology 
+
+To support multi-entity reasoning grounding on ME-RSRG, we propose an Entity-Aware Reasoning (EAR) framework as a dedicated benchmarking framework. EAR integrates visual-linguistic encoding with structured reasoning generation, explicitly modeling subject–object roles and their relations. 
+
+4.1 Overall Architecture 
+
+As illustrated in Fig. 3, the EAR framework is built on two core models: a pol-icy model and a reference model. The policy model serves as the main reasoning engine. It is initialized from a visual-linguistic foundation model (e.g., Qwen-VL series [1,2]) and takes the image and referring expression as input. Given each in-put, the policy model samples multiple structured completions ( {oi}Gi=1 ), includ-ing the reasoning trace (“think”) and the “answer” representing entity type and bounding box. These sampled completions are then evaluated by our proposed entity-aware reward model, which assigns rewards ( {Ri}Gi=1 ) based on grounding accuracy for different entity roles and their relational consistency. These rewards are further normalized within each sample group to compute relative advantages ({Ai}Gi=1 ). In parallel, a frozen copy of the initial policy is maintained as the ref-erence model. The KL divergence ( DKL ) between the current policy and this reference distribution is computed to regularize updates and stabilize training. 
+
+4.2 Entity-Aware Reward-Driven GRPO 
+
+Based on the overall architecture, we propose the core component of EAR: an Entity-Aware Reward model. Specifically, it consists of three components: (1) ME-RSRG 9
+
+Two-level format reward. It ensures structured reasoning and answer out-puts. (2) An entity-aware grounding accuracy reward. This reward eval-uates subject and object localization separately. (3) A relational consistency reward. It assesses the coherence of predicted inter-entity relations. 
+
+Two-Level Format Reward. To guarantee stable structured generation under the reasoning grounding setting, we design a two-level format reward ( Rf mt ). It constrains both the global output structure and the entity-level answer format. The first level ( structural tag reward ) enforces the overall output template. Each completion must strictly follow the form as < think > ... < /think >< answer > ... < /answer > . The < think > tag contains the reasoning trace, and the < answer > block contains the final grounding results. The second level ( entity-aware answer reward ) verifies whether the < answer > 
+
+block follows the predefined entity representation form: “ subject : [( x1, y 1) , (x2, y 2)] ,
+
+object : [( x1, y 1) , (x2, y 2)] , ... ”. Each entity is assigned a role label (e.g., subject or object) and a bounding box defined by two coordinate points. This reward is granted only when at least one correctly formatted entity is detected. The final format reward is computed as the sum of the two levels (Eq. 5). 
+
+Rf mt = λ1 ∗ 1(structural tag format satisfied )+ λ2 ∗ 1(valid entity format detected ) (1) where 1(·) denotes the indicator function. We set λ1 = 0 .3 and λ2 = 0 .3, yielding a maximum format reward of 0.6 when both conditions are satisfied. If only one condition holds, the reward is 0.3; otherwise, it is 0. This partial-credit scheme facilitates progressive learning of structural and entity-level formatting. By jointly constraining reasoning structure and entity output pattern, the two-level format reward provides a reliable foundation for subsequent entity-aware grounding accuracy and relational consistency reward within the GRPO stage. 
+
+Entity-Aware Grounding Accuracy Reward. To explicitly evaluate ground-ing quality under the multi-entity setting, we design an entity-aware grounding accuracy reward ( Rent ). It operates on the prediction of the entities extracted from the validated block < answer > (shown in Eq. 6). 
+
+Rent = 1
+
+N
+
+> N
+
+X
+
+> i=1
+
+αir(iou i), r(iou i) = 
+
+
+
+1.0, iou i > 0.75 ,
+
+0.8, iou i > 0.5,
+
+0.4, iou i > 0.25 ,
+
+0, otherwise 
+
+(2) where N denotes the total number of predicted entities (including the subject and all objects). αi is the role-specific weight for the ith entity (1.5 for the subject and 1.25 for objects). iou i represents the intersection-over-union between the predicted and ground-truth bounding boxes of the ith entity. The function r(·)
+
+maps the IoU values to discrete base scores according to predefined thresholds. This reward function is designed with the following principles. (1) The role-specific weighting encourages subject matching. In multi-entity referring expres-sions, the subject serves as the primary grounding target, while object entities 10 S. Lyu et al. 
+
+provide relational constraints. (2) The reward assigns partial credit once IoU exceeds 0.25 and increases progressively at higher thresholds. This dense feed-back signal encourages incremental improvement. (3) We adopt discrete IoU thresholds to promote precise localization. Compared with continuous scores, threshold-based rewards ease credit assignment in multi-entity settings by en-forcing clear correctness boundaries over minor geometric noise. 
+
+Relational Consistency Reward (Bonus Reward). Beyond entity-aware grounding accuracy, we introduce a relational consistency reward ( Rrel ) as an instance-level bonus to explicitly reinforce relation-level grounding completeness. We denote the set of subject entities as S and the set of object entities as 
+
+O. In our current research setting, |S| = 1 , while |O| ≥ 1. For each ground-truth entity k ∈ S ∪ O , we define a binary matching indicator ( mk) to measure the predicted box and the corresponding ground-truth box of kth entity. The relational consistency reward is formulated in Eq. 3. 
+
+Rrel = β11(X
+
+> i∈S
+
+mi ≥ 1 ∧ X
+
+> j∈O
+
+mj ≥ 1) + β21(X
+
+> j∈O
+
+mj ≥ 2) ,mk =
+
+(
+
+1, iou k > 0.25 ,
+
+0, otherwise  (3) where β1 and β2 are bonus values (set to 0.3 in our implementation), 1(·) denotes the indicator function that outputs 1 when the condition holds and 0 otherwise. As shown in Eq. 3, the first term encourages relational completeness by re-quiring both the subject and at least one object to be correctly matched. This ensures that grounding captures a valid subject-object relation rather than iso-lated entity localization. The second term promotes relational grounding by re-warding correct matching of multiple object entities. It encourages the model to capture richer relational structures when multiple objects are involved. As a whole, the total reward ( Rtotal ) is calculated in Eq. 4. 
+
+Rtotal = Rf mt + Rent + Rrel  (4) 
+
+4.3 Optimization 
+
+As shown in Fig. 3, EAR adopts a two-stage optimization strategy. In the first stage, SFT serves as a cold-start initialization. In the second stage, entity-aware reward-driven GRPO is employed to further refine the policy model. Preliminary knowledge for two-stage optimization is provided in the supplementary material. 
+
+Stage I: Supervised Fine-Tuning (SFT). In the first stage, we perform SFT to initialize the policy model with structured reasoning capability. Given an image-expression pair, the model is trained to generate a unified output sequence that includes both the reasoning trace ( < think > tag) and the final subject-object grounding result ( < answer > tag). This stage teaches the model the required output structure, entity identification, and coarse grounding behavior. 
+
+Stage II: Entity-Aware Reward-Driven GRPO. Building upon the SFT initialization, we employ GRPO to transition the model from basic pattern ME-RSRG 11 
+
+matching to structured reasoning. For each input, the policy samples a group of independent completions. These outputs are evaluated by our proposed Entity-Aware Reward function, which integrates format constraints, grounding accu-racy, and relational consistency bonuses. Specifically, this reward mechanism penalizes role confusion by validating the correspondence between entities and their spatial coordinates. By normalizing each Ri against the group mean, the model derives the advantage Ai through group-relative comparison. This mecha-nism prioritizes reasoning paths with higher entity localization precision. Overall, this stage mitigates “path drift” in complex multi-entity scenarios, ensuring the model maintains both structural integrity and high grounding performance. 
+
+# 5 Experimental Results 
+
+5.1 Experimental Setup Dataset. We conduct extensive benchmarking using our proposed ME-RSRG dataset. For the initial cold-start stage, a subset of 2,149 instances containing annotated reasoning chains (labeled with <think> tags) is utilized for 1st stage SFT. In the subsequent reinforcement learning stage, we expand the training to 10,305 instances for GRPO, which encompasses the entire training set. Notably, in the GRPO process, all reasoning CoT annotations are removed. 
+
+Implementation Details. To establish a comprehensive benchmark on our proposed ME-RSRG dataset, we mainly select the notable Qwen-VL series [1, 2, 34] and InternVL series [4, 35] as the primary policy models. All experiments are implemented using the ms-swift framework [42], executed on single NVIDIA A800 GPU (80GB). More details are provided in the supplementary material. 
+
+Evaluation Metrics. To evaluate the performance of EAR framework and provide comprehensive benchmarking baseline on ME-RSRG dataset, we employ mean accuracy at an IoU threshold of 0.5 (mAcc@0.5) as the primary metric. We further report Acc@0.5_sub and Acc@0.5_obj, which respectively measure the grounding precision of primary entity (subject) and target landmarks (objects). 
+
+5.2 Main Experimental Results Baseline Capability. As shown in Tab. 2, we benchmark the zero-shot per-formance of different visual-linguistic foundation models. Overall, most models exhibit extremely limited multi-entity grounding ability without task-specific fine-tuning. Even large-scale models provide only modest gains. For example, Qwen3-VL-8B achieves the strongest baseline performance with an mAcc@0.5 of 21.72%, yet the overall accuracy remains limited. This highlights the challenges of the ME-RSRG dataset, which requires precise role identification, relational reasoning, and accurate spatial localization under multi-entity settings. 
+
+Impact of SFT Initialization. In Tab. 2, we find that all foundation models show substantial improvements over their baseline counterparts after SFT. For instance, Qwen2.5-VL-7B improves by 22.99% in mAcc@0.5, and InternVL3.5-4B rises sharply from 0.51% to 32.80%. These consistent gains demonstrate that 12 S. Lyu et al.                                                                                               
+
+> Table 2: Performance of representative methods on the ME-RSRG dataset.
+> Results for “sub.”, “obj.”, and “mean” denote Acc@0.5_sub (%), Acc@0.5_obj (%), and mAcc@0.5 (%), respectively. The best-performing results are highlighted in bold. Methods (policy models) Baseline SFT EAR sub. obj. mean sub. obj. mean sub. obj. mean
+> Qwen-VL series
+> Qwen2-VL-2B [34] 1.40 1.15 1.27 23.18 23.08 23.13 27.55 22.93 25.16 Qwen2.5-VL-3B [2] 7.45 10.81 9.18 27.04 30.43 28.79 38.63 42.08 40.41 Qwen2.5-VL-7B [2] 11.31 9.44 10.35 31.75 34.84 33.34 44.40 48.90 46.72
+> Qwen3-VL-4B [1] 20.95 13.80 17.25 36.39 35.89 36.13 38.52 36.83 37.65 Qwen3-VL-8B [1] 26.82 16.95 21.72 33.76 34.89 34.34 37.96 36.94 37.43
+> InternVL series
+> InternVL2.5-4B [4] 1.68 1.57 1.63 6.94 5.55 6.18 9.18 9.97 9.59 InternVL3.5-4B [35] 0.50 0.52 0.51 34.49 31.22 32.80 38.02 35.31 36.62 InternVL3.5-8B [35] 2.35 2.31 2.33 35.33 32.32 33.78 39.08 34.89 36.92
+> Other Visual-Linguistic Foundation Models
+> LLaVA-1.5-7b [23] 1.29 1.21 1.25 3.42 3.25 3.33 7.95 7.97 7.96 LLaVA-OneVision [17] 00.05 0.03 9.80 6.24 7.96 18.14 14.59 16.31
+
+SFT effectively equips the models with structured output formatting, basic entity role awareness, and coarse grounding capability. 
+
+Impact of Optimization within EAR framework. As reported in Tab. 2, Building upon SFT initialization, the full EAR optimization consistently brings further performance gains across most models. The Qwen2.5-VL series shows particularly significant improvements, each exceeding ∼10% in mAcc@0.5 after EAR optimization. All models exhibit performance improvements compared with their SFT counterparts. Compared with SFT alone, EAR yields balanced gains on both subject and object accuracy. It indicates that reward-driven optimization effectively enhances entity-aware grounding and relational consistency. 
+
+5.3 Ablation Study Effectiveness of Each Optimization Mechanism. From the results in Tab. 3, the “GRPO-only” mode does not yield satisfactory performance. Removing SFT and directly applying GRPO leads to clear degradation for both models. For instance, Qwen2.5-VL-3B drops from 28.79 to 15.49 in mAcc@0.5. It shows that reinforcement learning without structured initialization cannot establish stable role-aware grounding. This verifies that SFT is a necessary prerequisite for ef-fective reward-driven optimization. Notably, Qwen3-VL-4B is more robust to optimization variations. Although “GRPO-only” still underperforms SFT, the gap is smaller than that of Qwen2.5-VL-3B. In both models, combining SFT and GRPO yields the best results, confirming the effectiveness of the two-stage optimization mechanism with EAR framework. ME-RSRG 13 
+
+Table 3: Ablation study for optimization mechanism. Here, “GRPO” indicates the entity-aware reward-driven GRPO. method SFT GRPO sub. obj. mean Qwen2.5-VL-3B ✓ ✘ 27.04 30.43 28.79 Qwen2.5-VL-3B ✘ ✓ 16.74 14.30 15.49 Qwen2.5-VL-3B ✓ ✓ 38.63 42.08 40.41 Qwen3-VL-4B ✓ ✘ 36.39 35.89 36.13 Qwen3-VL-4B ✘ ✓ 32.19 31.64 31.91 Qwen3-VL-4B ✓ ✓ 38.52 36.83 37.65 
+
+Table 4: Ablation study for reward func-tions. Entity-aware accuracy and second-level format rewards are used by default. method 1st Rf mt Rrel sub. obj. mean Qwen2.5-VL-3B ✓ ✘ 33.48 33.21 33.34 Qwen2.5-VL-3B ✘ ✓ 34.32 39.14 36.81 Qwen2.5-VL-3B ✓ ✓ 38.63 42.08 40.41 Qwen3-VL-4B ✓ ✘ 34.83 31.22 32.96 Qwen3-VL-4B ✘ ✓ 35.66 34.63 35.13 Qwen3-VL-4B ✓ ✓ 38.52 36.83 37.65 
+
+Effectiveness of Each Reward Function. From the results in Tab. 4, entity-aware grounding accuracy and the second-level format reward are included in all settings, as they are responsible for entity extraction. Without them, the task objective is ill-defined. Removing the first-level format reward leads to consis-tent performance drops. This reward regularizes the structured reasoning pro-cess. Without it, the < think > trace tends to collapse in later stages, and training becomes unstable due to reward fluctuations. Removing the relational consistency reward causes the model to predict only a single object and over-look relational completeness. It weakens both subject-object and object-object coordination. Consequently, both subject and object accuracies decline, which proves the importance of maintaining multi-entity consistency in remote sensing reasoning grounding. 
+
+5.4 Visualization and Analysis Visualization on Qualitative Results and Failure Cases. We select the best-performed Qwen2.5-VL-7B for experiments. As shown in Fig. 4, the model shows strong ability across diverse scenarios. From top to bottom, the three cases demonstrate complementary strengths of the model. In the first case, the model accurately localizes multiple entities while preserving their spatial relationships. In the second case, it successfully identifies small targets under interference from similar structures. In the third case, the model can find entities with large size variation within the same scene, achieving precise multi-scale localization ability. From the failure cases shown in Fig. 5, two typical error patterns can be ob-served. In some scenes, the model identifies relevant entities but does not strictly satisfy the required spatial relations, showing confusion under compound posi-tional constraints. In other scenes, it is misled by similar and repetitive structures and selects incorrect yet plausible regions. These results indicate that strict re-lational consistency and fine-grained discrimination still remain challenging in complex multi-entity settings. Specifically, within the reasoning traces, we ob-serve a persistent linguistic bias where the model frequently generates the fixed template: “The description mentioned two entities.” This occurs regardless of the actual number of objects present. It suggests that the model tends to overfit to 14 S. Lyu et al.  
+
+> Fig. 4: Qualitative Results Visualization.
+> Fig. 5: Failure Cases Visualization. Fig. 6: Reward Evolution Curves.
+
+this specific phrasing due to the predominance of “single-subject-single-object” instances during the SFT phase. More visualization results can be referred to the supplementary material. 
+
+Visualization on Reward Evolution. We conduct this analysis on Qwen2.5-VL-3B. As shown in Fig. 6, we can analyze in the following points. (1) The relational consistency reward (bonus) and entity-aware grounding accuracy re-ward are merged for visualization. This is because only a small portion of batches contain multiple objects, making the second term of Rrel is sparsely activated (Eq. 3). Meanwhile, these two rewards are tightly coupled in calculation in prac-tical implementation. (2) For the GRPO-only setting, the weights of both format levels are increased by 0.2 (i.e. λ1 = λ2 = 0 .5), Without SFT initialization, strict format regularization becomes crucial to prevent structural collapse and stabilize optimization. (3) Compared to GRPO-only mode, EAR exhibits a healthier re-ward evolution. With SFT anchoring the output structure in advance, the model avoids format collapse and reduces fluctuation during optimization. This struc-tural stabilization enhances the model’s focus on entity grounding and relational consistency, which results in a higher average reward throughout training. ME-RSRG 15 
+
+# 6 Conclusion 
+
+In this paper, we introduce ME-RSRG, a challenging dataset for multi-entity re-mote sensing reasoning grounding. Unlike conventional grounding settings that emphasize isolated entities, ME-RSRG explicitly requires role identification, re-lational reasoning, and coordinated multi-entity localization. To address this challenge and build a benchmark for this task, we further propose an Entity-Aware Reasoning (EAR) framework. EAR introduces a tailored Entity-Aware Reward-Driven GRPO strategy and adopts a two-stage optimization scheme. With this design, it stabilizes reasoning behavior and strengthens multi-entity relational grounding capability. Extensive experiments demonstrate that ME-RSRG poses substantial difficulty for existing models, while EAR achieves con-sistent improvements across multiple visual-linguistic foundation models. 
+
+# Acknowledgements 
+
+This work was supported by “the Fundamental Research Funds for the Central Universities” (Grant number 501QYJC2025102002) 
+
+# References 
+
+1. Bai, S., Cai, Y., Chen, R., et al.: Qwen3-vl technical report. arXiv preprint arXiv:2511.21631 (2025) 8, 11, 12, 19 2. Bai, S., Chen, K., Liu, X., et al.: Qwen2.5-vl technical report. arXiv preprint arXiv:2502.13923 (2025) 8, 11, 12, 19 3. Bhartiya, K.: Swimming pool and car detection (2019), https://www.kaggle.com/ datasets/kbhartiya83/swimming-pool-and-car-detection 74. Chen, Z., Wang, W., Cao, Y., et al.: Expanding performance boundaries of open-source multimodal models with model, data, and test-time scaling. arXiv preprint arXiv:2412.05271 (2025) 11, 12, 19 5. Comanici, G., Bieber, E., Schaekermann, M., et al.: Gemini 2.5: Pushing the fron-tier with advanced reasoning, multimodality, long context, and next generation agentic capabilities. arXiv preprint arXiv:2507.06261 (2025) 6, 18 6. Deng, J., Yang, Z., Liu, D., et al.: Transvg++: End-to-end visual grounding with language conditioned vision transformer. TPAMI 45 (11), 13636–13652 (2023) 4 7. Ding, J., Xue, N., Xia, G.S., et al.: Object detection in aerial images: A large-scale benchmark and challenges. TPAMI 44 (11), 7778–7796 (2022) 7 8. Dosovitskiy, A., Beyer, L., Kolesnikov, A., et al.: An image is worth 16x16 words: Transformers for image recognition at scale. In: ICLR (2021) 20 9. Du, A., Gao, B., Xing, B., et al.: Kimi k1.5: Scaling reinforcement learning with llms. arXiv preprint arXiv:2501.12599 (2025) 1 10. Guo, D., Yang, D., Zhang, H., et al.: Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning. arXiv preprint arXiv:2501.12948 (2025) 1 11. Hu, Z., Gao, K., Zhang, X., et al.: Efficient grounding DINO: efficient cross-modality fusion and efficient label assignment for visual grounding in remote sens-ing. TGRS 63 , 1–14 (2025) 4 16 S. Lyu et al. 12. Huang, W., Jia, B., Zhai, Z., et al.: Vision-r1: Incentivizing reasoning capability in multimodal large language models. In: ICLR (2026) 4 13. Huang, Z., Li, T., Li, X., et al.: So-fake: Benchmarking and explaining social media image forgery detection. arXiv preprint arXiv:2505.18660 (2025) 4 14. Jaech, A., Kalai, A., Lerer, A., et al.: Openai o1 system card. arXiv preprint arXiv:2412.16720 (2024) 1 15. Kazemzadeh, S., Ordonez, V., Matten, M., et al.: Referitgame: Referring to objects in photographs of natural scenes. In: EMNLP. pp. 787–798 (2014) 4 16. Lan, M., Rong, F., Jiao, H., et al.: Language query-based transformer with multi-scale cross-modal alignment for visual grounding on remote sensing images. TGRS 
+
+62 , 1–13 (2024) 2, 4, 5, 7 17. Li, B., Zhang, Y., Guo, D., et al.: Llava-onevision: Easy visual task transfer. arXiv preprint arXiv:2408.03326 (2024) 12, 19 18. Li, K., Xin, Z., Pang, L., et al.: Segearth-r1: Geospatial pixel reasoning via large language model. arXiv preprint arXiv:2504.09644 (2025) 3, 5, 7 19. Li, K., Wan, G., Cheng, G., et al.: Object detection in optical remote sensing images: A survey and a new benchmark. ISPRS 159 , 296–307 (2020) 5, 7 20. Li, K., Wang, D., Xu, H., et al.: Language-guided progressive attention for visual grounding in remote sensing images. TRGS 62 , 1–13 (2024) 5, 7 21. Li, X., Ding, J., Elhoseiny, M.: Vrsbench: A versatile vision-language benchmark dataset for remote sensing image understanding. In: NeurIPS. vol. 37, pp. 3229– 3242 (2024) 7 22. Liu, B., Liu, X., Li, L., et al.: Language-guided hybrid representation learning for visual grounding on remote sensing images. In: IJCAI. pp. 1557–1566 (2025) 2, 4 23. Liu, H., Li, C., Wu, Q., et al.: Visual instruction tuning (2023) 12, 19 24. Liu, J., Sun, L., Fu, R., et al.: Towards faithful reasoning in remote sensing: A perceptually-grounded geospatial chain-of-thought for vision-language models. arXiv preprint arXiv:2509.22221 (2026) 3, 5, 7 25. Liu, S., Zeng, Z., Ren, T., et al.: Grounding DINO: marrying DINO with grounded pre-training for open-set object detection. In: ECCV. vol. 15105, pp. 38–55 (2024) 426. Liu, Z., Sun, Z., Zang, Y., et al.: Visual-rft: Visual reinforcement fine-tuning. In: ICCV. pp. 2034–2044 (2025) 1, 4 27. Mao, J., Huang, J., Toshev, A., et al.: Generation and comprehension of unam-biguous object descriptions. In: CVPR. pp. 11–20 (2016) 4 28. Rafailov, R., Sharma, A., Mitchell, E., et al.: Direct preference optimization: Your language model is secretly a reward model. In: NeurIPS. pp. 53728–53741 (2023) 429. Schulman, J., Wolski, F., Dhariwal, P., et al.: Proximal policy optimization algo-rithms. arXiv preprint arXiv:1707.06347 (2017) 4 30. Shao, Z., Wang, P., Zhu, Q., et al.: Deepseekmath: Pushing the limits of mathemat-ical reasoning in open language models. arXiv preprint arXiv:2402.03300 (2024) 3, 4, 20 31. Sun, Y., Feng, S., Li, X., et al.: Visual grounding in remote sensing images. In: ACMMM. pp. 404–412 (2022) 4, 5, 7 32. Sun, Z., Shen, S., Cao, S., et al.: Aligning large multimodal models with factually augmented RLHF. In: ACL (Findings). pp. 13088–13110 (2024) 4 33. Tan, H., Ji, Y., Hao, X., et al.: Reason-RFT: Reinforcement fine-tuning for visual reasoning of vision language models. In: NeurIPS (2025) 1 ME-RSRG 17 34. Wang, P., Bai, S., Tan, S., et al.: Qwen2-vl: Enhancing vision-language model’s perception of the world at any resolution. arXiv preprint arXiv:2409.12191 (2024) 11, 12, 19 35. Wang, W., Gao, Z., et al.: Internvl3.5: Advancing open-source multimodal models in versatility, reasoning, and efficiency. arXiv preprint arXiv:2508.18265 (2025) 11, 12, 19 36. Yao, L., Liu, F., Lu, H., et al.: Remotereasoner: Towards unifying geospatial rea-soning workflow. arXiv preprint arXiv:2507.19280 (2025) 3, 5, 7 37. Yu, L., Poirson, P., Yang, S., et al.: Modeling context in referring expressions. In: ECCV. vol. 9906, pp. 69–85 (2016) 4 38. Yu, T., Yao, Y., Zhang, H., et al.: Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback. In: CVPR. pp. 13807– 13816 (2024) 4 39. Zhan, Y., Xiong, Z., Yuan, Y.: RSVG: exploring data and models for visual ground-ing on remote sensing data. TGRS 61 , 1–13 (2023) 2, 4, 5, 7 40. Zhang, Y., Yuan, Y., Feng, Y., et al.: Hierarchical and robust convolutional neural network for very high-resolution remote sensing object detection. TGRS 57 (8), 5535–5548 (2019) 7 41. Zhao, Y., Chen, Y., Yao, R., et al.: Context-driven and sparse decoding for remote sensing visual grounding. Information Fusion 123 , 103296 (2025) 2 42. Zhao, Y., Huang, J., Hu, J., et al.: Swift:a scalable lightweight infrastructure for fine-tuning. arXiv preprint arXiv:2408.05517 (2024) 11 43. Zhou, Y., Cui, C., Rafailov, R., et al.: Aligning modalities in vision large language models via preference fine-tuning. In: ICLR (2024) 4 44. Zhu, Q., Lao, J., Ji, D., et al.: Skysense-o: Towards open-world remote sensing interpretation with vision-centric visual-language modeling. In: CVPR. pp. 14733– 14744 (2025) 5 18 S. Lyu et al.  
+
+> Fig. 7: Prompt design for instance selection and CoT generation. Red words indicate the required inputs for the two steps. Best viewed in color.
+
+# A Prompt Design for Dataset Construction 
+
+This section describes the prompt design used in the construction of the ME-RSRG dataset. Specifically, we introduce the prompts for instance selection and for Chain-of-Thought (CoT) generation, which support the filtering of suitable samples and the production of structured reasoning annotations. The prompts designed for these two steps are shown in Fig. 7. 
+
+A.1 Prompt for Instance Selection 
+
+As mentioned in main text, we perform an instance selection step using Gemini-2.5-Pro [5] to identify suitable samples for multi-entity reasoning. Given each candidate sentence, the model determines whether it contains both a subject entity to be localized and an object entity providing contextual or relational ref-erence. Only sentences that explicitly include both roles are retained for dataset construction. The prompt for this process is provided in Fig. 7 (a). 
+
+A.2 Prompt for CoT Generation 
+
+For reasoning annotation, we also employ Gemini-2.5-Pro [5] to generate chain-of-thought (CoT) descriptions. Given the image and the corresponding sentence, the model is prompted to produce a step-by-step reasoning process that identifies the subject and object entities and explains their spatial relation for grounding. The generated reasoning is formatted within a <think> paragraph to maintain a consistent structure across the dataset. The prompt is shown in Fig. 7 (b). 
+
+# B Preliminary Knowledge for Two-Stage Optimization 
+
+B.1 Stage I: Supervised Fine-Tuning (SFT) 
+
+SFT is commonly used to provide an initial capability for structured reasoning and task-specific outputs in visual-linguistic models. Building upon this initial-ME-RSRG 19 
+
+ization, reinforcement learning can further refine model behavior by optimizing task-oriented objectives. In this section, we introduce the preliminary knowl-edge of the two-stage optimization used in our framework, including SFT-based initialization and the subsequent Group Relative Policy Optimization (GRPO). SFT serves as the initial training stage, where the model learns task-specific output formats and reasoning behaviors from annotated data. Given the con-structed dataset, the training objective maximizes the log-likelihood of the tar-get output oi under a standard auto-regressive formulation. The formulation is shown in Eq. 5. 
+
+LSF T = −
+
+> |oi|
+
+X
+
+> t=1
+
+log π θ (oi,t |xi, o i,<t ) (5) where xi denotes the input (“image-text” pair). oi denotes the output sequence. 
+
+oi,t is the tth token of oi. πθ represents the policy model parameterized by θ.
+
+B.2 Stage II: Group Relative Policy Optimization (GRPO) 
+
+Based on the SFT initialization, we employ GRPO to further optimize the policy with reward signals. For each input xi, the policy model πθ samples a set of can-didate outputs {oi}Gi=1 , which are evaluated by the reward function to compute token-level advantages. The GRPO objective is defined in Eq. 6.                      
+
+> LGRP O =−Exi∼D, {oi}Gi=1 ∼πθold (·| xi)
+> 1
+> G
+> GX
+> i=1
+> 1
+> |oi|
+> |oi|
+> X
+> t=1
+> min (ri,t (θ) ˆAi,t , clip (ri,t (θ),1−ϵ, 1 + ϵ) ˆAi,t )−βDKL (πθ|| πref ),
+> ˆAi,t =Ri−mean (R)
+> std (R),ri,t (θ) = πθ(oi,t |xi, o i,<t )
+> πold (oi,t |xi, o i,<t )
+> (6)
+
+where Ri represents the reward assigned to completion oi. ˆAi,t denotes the normalized advantage computed from group rewards. ri,t (θ) is the probability ratio between the current policy and the old policy ( πθold ). ϵ controls the clipping range, and βDKL (πθ || πref ) regularizes the policy toward the reference policy. 
+
+# C Comprehensive Implementation Details 
+
+C.1 Large Visual-Linguistic Models 
+
+As mentioned in main text, we mainly select the notable Qwen-VL series [1,2,34] and InternVL series [4, 35] as the policy models due to their strong multi-modal reasoning ability and diverse model scales. LLaVA [23] and LLaVA-OneVision [17] are also selected for a more comprehensive evaluation across different baselines. 
+
+Qwen-VL Series. Qwen2-VL pioneers native dynamic resolution, breaking the “fixed-grid” limitation to process any aspect ratio. By introducing mRoPE (Mul-timodal Rotary Position Embedding), it establishes the first robust link between 20 S. Lyu et al.                                
+
+> Table 5: Optimization details for SFT and GRPO. SFT GRPO
+> Parameters Values Parameters Values Learning rate 1e-4 Learning rate 1e-5 Warmup ratio 0.05 Warmup ratio 0.01 Max model length 2048 Max model length 1536 LoRA rank 8LoRA rank 8LoRA α32 LoRA α32 Gradient accumulation steps 16 Gradient accumulation steps 4--Generations 8--βfor KL 0.0025
+
+2D spatial layouts and 1D video timelines. Expanding on Qwen2-VL, Qwen2.5-VL shifts toward efficiency and “time-aware” perception by integrating window attention into the ViT [8]. Absolute time encoding further enables precise frame-to-timestamp mapping, extending stable video perception beyond one hour. Qwen3-VL elevates Qwen2.5-VL from perception to native reasoning through visual Chain-of-Thought (CoT). Refined through Deep GRPO [30], it masters complex spatial logic for domains like remote sensing. For our experiments, we select Qwen2-VL (2B), Qwen2.5-VL (3B/7B), and Qwen3-VL (4B/8B). 
+
+InternVL Series. InternVL is a large-scale visual-linguistic series designed to bridge the gap between open-source models and proprietary systems. In this pa-per, we select InternVL2.5-4B, InternVL3.5-4B, and InternVL3.5-8B for evalua-tion. InternVL2.5 series enhances multi-image understanding in logical reasoning, mathematics, and code generation. These optimizations deliver a more efficient balance between computational cost and multimodal intelligence. InternVL3.5 supports higher resolution inputs and utilizes advanced training strategies to minimize hallucinations in dense environments. This version also excels at pixel-level detail and complex spatial layouts. 
+
+Other Visual-Linguistic Foundation Models. We also include LLaVA and LLaVA-OneVision in our experiments. These models are widely used open-source visual-linguistic baselines and exhibit strong visual instruction-following capabil-ity. Their architectures and training strategies differ from those of the Qwen-VL and InternVL series, providing complementary backbones for evaluation. Addi-tional models are not included mainly due to limited open-source availability, compatibility with our experimental setting, and training resource constraints. 
+
+C.2 Optimization Details 
+
+For the two-stage optimization strategy consisting of SFT and reward-driven GRPO, we provide detailed parameters in Tab. 5. Most training parameters are ME-RSRG 21 
+
+kept consistent across different policy models, while minor adjustments can be found in the released code. SFT is trained with a learning rate of 1e-4 and a warmup ratio of 0.05, with the maximum model length set to 2048. GRPO uses a smaller learning rate of 1e-5 and a warmup ratio of 0.01, with a maximum model length of 1536. Gradient accumulation steps are set to 16 for SFT and 4 for GRPO. During GRPO training, 8 generations are sampled for each query, and the KL regularization coefficient β is set to 0.0025. For both stages, LoRA is adopted for with rank 8 and α = 32 . Input images are not resized to a fixed resolution. Instead, the height and width are adjusted to the nearest multiples of 28. 
+
+C.3 Visualization on Qualitative Results. Capability on Multi-Entity Grounding across Multiple Objects. As shown in Fig. 8 (a), the model optimized in EAR framework can accurately identify and grounds the subject among multiple objects while correctly locating the related objects. 
+
+Capability on Disambiguating Similar Targets. As shown in Fig. 8 (b), the Qwen2.5-VL-7B accurately grounds targets even when multiple similar objects appear in close proximity. This ability reduces confusion among visually similar instances and enables precise subject-object localization. 
+
+Capability on Handling Large Scale Variations. As shown in Fig. 8 (c), the model effectively grounds entities with large scale differences. It can accurately localize both large and small objects within the same scene, demonstrating strong robustness to scale variation. 
+
+Capability on Long-Range Subject-Object Relation Capturing. As shown in Fig. 8 (d), Optimized in EAR, visual-linguistic model can capture subject-object relations even when the two entities are far apart in the scene. It correctly associates the distant entities and grounds them according to their relations. 
+
+C.4 Visualization on Failure Cases. 
+
+This section presents additional failure cases to analyze the limitations of the proposed EAR framework on the ME-RSRG dataset. 
+
+Misunderstanding Entities and Confused Relations. As shown in Fig. 9 (a), The model may incorrectly identify entity roles or misunderstand the relation described in the sentence, leading to inaccurate grounding results. For the first case, the object “some tennis courts that are in the middle part” is not fully localized, as the bounding box fails to cover the entire region. This incomplete grounding of the object further affects the localization of the subject “the first two adjacent tennis courts”. For the second case, the object “some tennis courts” is visually divided into four groups, each containing three courts. The model interprets “first” as the first group rather than the first one, leading to incorrect localization. For the third case, different interpretations of the object (“parking lot” and “white building”) lead to completely different subject predictions. This example also highlights the importance of subject modifiers such as “lower left”. 22 S. Lyu et al. 
+
+Fig. 8: Supplementary qualitative visualization results. ME-RSRG 23 
+
+> Fig. 9: Supplementary failure cases visualization.
+
+Confusion in Repetitive Layouts. As shown in Fig. 9 (b), Although EAR performs well in distinguishing similar targets, highly repetitive layouts can still mislead the model and lead to plausible but incorrect grounding. For the first case, the long distance between entities makes the relationship “to the left of” vulnerable to interference from similar vehicles, resulting in incorrect grounding. For the second case, the model fails to locate the relevant object entity due to insufficient visual features. The third case shows a typical phenomenon that the correct spatial cue is overridden by more salient but misleading visual similarities among targets.
