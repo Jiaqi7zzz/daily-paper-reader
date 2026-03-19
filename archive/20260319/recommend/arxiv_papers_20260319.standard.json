@@ -1,0 +1,734 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-19T20:32:01.316965+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 14,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2603.17673v1",
+      "title": "Post-Training Local LLM Agents for Linux Privilege Escalation with Verifiable Rewards",
+      "abstract": "LLM agents are increasingly relevant to research domains such as vulnerability discovery. Yet, the strongest systems remain closed and cloud-only, making them resource-intensive, difficult to reproduce, and unsuitable for work involving proprietary code or sensitive data. Consequently, there is an urgent need for small, local models that can perform security tasks under strict resource budgets, but methods for developing them remain underexplored. In this paper, we address this gap by proposing a two-stage post-training pipeline. We focus on the problem of Linux privilege escalation, where success is automatically verifiable and the task requires multi-step interactive reasoning. Using an experimental setup that prevents data leakage, we post-train a 4B model in two stages: supervised fine-tuning on traces from procedurally generated privilege-escalation environments, followed by reinforcement learning with verifiable rewards. On a held-out benchmark of 12 Linux privilege-escalation scenarios, supervised fine-tuning alone more than doubles the baseline success rate at 20 rounds, and reinforcement learning further lifts our resulting model, PrivEsc-LLM, to 95.8%, nearly matching Claude Opus 4.6 at 97.5%. At the same time, the expected inference cost per successful escalation is reduced by over 100x.",
+      "authors": [
+        "Philipp Normann",
+        "Andreas Happe",
+        "Jürgen Cito",
+        "Daniel Arp"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-03-18T12:52:54+00:00",
+      "link": "https://arxiv.org/pdf/2603.17673v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "post-training LLM agents for multi-step reasoning with automatically verifiable success",
+      "llm_evidence_cn": "针对自动可验证成功的跨步推理任务进行大语言模型智能体后训练",
+      "llm_evidence": "针对自动可验证成功的跨步推理任务进行大语言模型智能体后训练",
+      "canonical_evidence": "针对自动可验证成功的跨步推理任务进行大语言模型智能体后训练",
+      "llm_tldr_en": "Develops local LLM agents for security tasks using RL with automatically verifiable rewards.",
+      "llm_tldr_cn": "利用具有自动可验证奖励的强化学习，开发用于安全任务的本地大语言模型智能体。",
+      "llm_tldr": "利用具有自动可验证奖励的强化学习，开发用于安全任务的本地大语言模型智能体。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.16448v2",
+      "title": "TRUST-SQL: Tool-Integrated Multi-Turn Reinforcement Learning for Text-to-SQL over Unknown Schemas",
+      "abstract": "Text-to-SQL parsing has achieved remarkable progress under the Full Schema Assumption. However, this premise fails in real-world enterprise environments where databases contain hundreds of tables with massive noisy metadata. Rather than injecting the full schema upfront, an agent must actively identify and verify only the relevant subset, giving rise to the Unknown Schema scenario we study in this work. To address this, we propose TRUST-SQL (Truthful Reasoning with Unknown Schema via Tools). We formulate the task as a Partially Observable Markov Decision Process where our autonomous agent employs a structured four-phase protocol to ground reasoning in verified metadata. Crucially, this protocol provides a structural boundary for our novel Dual-Track GRPO strategy. By applying token-level masked advantages, this strategy isolates exploration rewards from execution outcomes to resolve credit assignment, yielding a 9.9% relative improvement over standard GRPO. Extensive experiments across five benchmarks demonstrate that TRUST-SQL achieves an average absolute improvement of 30.6% and 16.6% for the 4B and 8B variants respectively over their base models. Remarkably, despite operating entirely without pre-loaded metadata, our framework consistently matches or surpasses strong baselines that rely on schema prefilling.",
+      "authors": [
+        "Ai Jian",
+        "Xiaoyun Zhang",
+        "Wanrou Du",
+        "Jingqing Ruan",
+        "Jiangbo Pei",
+        "Weipeng Zhang",
+        "Ke Zeng",
+        "Xunliang Cai"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-17T12:30:42+00:00",
+      "link": "https://arxiv.org/pdf/2603.16448v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Uses multi-turn RL to ground reasoning in verified tool metadata",
+      "llm_evidence_cn": "使用多轮强化学习将推理建立在经过验证的工具元数据上",
+      "llm_evidence": "使用多轮强化学习将推理建立在经过验证的工具元数据上",
+      "canonical_evidence": "使用多轮强化学习将推理建立在经过验证的工具元数据上",
+      "llm_tldr_en": "TRUST-SQL employs RL and a four-phase protocol to verify schema metadata for tool-integrated Text-to-SQL.",
+      "llm_tldr_cn": "TRUST-SQL采用强化学习和四阶段协议来验证工具集成Text-to-SQL中的模式元数据。",
+      "llm_tldr": "TRUST-SQL采用强化学习和四阶段协议来验证工具集成Text-to-SQL中的模式元数据。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.17829v1",
+      "title": "CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents",
+      "abstract": "A prerequisite for coding agents to perform tasks on large repositories is code localization - the identification of relevant files, classes, and functions to work on. While repository-level code localization has been performed using embedding-based retrieval approaches such as vector search, recent work has focused on developing agents to localize relevant code either as a standalone precursor to or interleaved with performing actual work. Most prior methods on agentic code search equip the agent with complex, specialized tools, such as repository graphs derived from static analysis. In this paper, we demonstrate that, with an effective reinforcement learning recipe, a coding agent equipped with nothing more than a standard Unix terminal can be trained to achieve strong results. Our experiments on three benchmarks (SWE-Bench Verified, Pro, and Lite) reveal that our models consistently achieve superior or competitive performance over 2-18x larger base and post-trained LLMs and sometimes approach performance provided by closed models like Claude Sonnet, even when using specialized scaffolds. Our work particularly focuses on techniques for re-purposing existing coding agent environments for code search, reward design, and RL optimization. We release the resulting model family, CodeScout, along with all our code and data for the community to build upon.",
+      "authors": [
+        "Lintang Sutawika",
+        "Aditya Bharat Soni",
+        "Bharath Sriraam R R",
+        "Apurva Gandhi",
+        "Taha Yassine",
+        "Sanidhya Vijayvargiya",
+        "Yuchen Li",
+        "Xuhui Zhou",
+        "Yilin Zhang",
+        "Leander Melroy Maben",
+        "Graham Neubig"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-18T15:25:42+00:00",
+      "link": "https://arxiv.org/pdf/2603.17829v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reinforcement learning of code search agents with terminal tool",
+      "llm_evidence_cn": "使用终端工具的代码搜索智能体强化学习",
+      "llm_evidence": "使用终端工具的代码搜索智能体强化学习",
+      "canonical_evidence": "使用终端工具的代码搜索智能体强化学习",
+      "llm_tldr_en": "Demonstrates an effective RL recipe for coding agents using standard tools like a Unix terminal.",
+      "llm_tldr_cn": "展示了一种有效的强化学习方案，用于训练使用Unix终端等标准工具的代码智能体。",
+      "llm_tldr": "展示了一种有效的强化学习方案，用于训练使用Unix终端等标准工具的代码智能体。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.14458v1",
+      "title": "Distilling Reasoning Without Knowledge: A Framework for Reliable LLMs",
+      "abstract": "Fact-seeking question answering with large language models (LLMs) remains unreliable when answers depend on up-to-date or conflicting information. Although retrieval-augmented and tool-using LLMs reduce hallucinations, they often rely on implicit planning, leading to inefficient tool usage. We propose a modular framework that explicitly separates planning from factual retrieval and answer synthesis. A lightweight student planner is trained via a teacher-student framework to generate structured decompositions consisting of abstract reasoning steps and searchable fact requests. The supervision signals contain only planning traces and fact requests, without providing factual answers or retrieved evidence. At inference, the planner produces plans, while prompt-engineered modules perform retrieval and response synthesis. We evaluate the proposed framework on SEAL-0, an extremely challenging benchmark for search-augmented LLMs. Results show that supervised planning improves both accuracy and latency compared to monolithic reasoning models and prompt-based tool-augmented frameworks, demonstrating that explicitly learned planning structures are essential for reliable fact-seeking LLMs.",
+      "authors": [
+        "Auksarapak Kietkajornrit",
+        "Jad Tarifi",
+        "Nima Asgharbeygi"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "published": "2026-03-15T16:06:54+00:00",
+      "link": "https://arxiv.org/pdf/2603.14458v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Tool-using LLMs and explicit planning for factual retrieval",
+      "llm_evidence_cn": "使用工具的大模型以及针对事实检索的显式规划",
+      "llm_evidence": "使用工具的大模型以及针对事实检索的显式规划",
+      "canonical_evidence": "使用工具的大模型以及针对事实检索的显式规划",
+      "llm_tldr_en": "Separates planning from retrieval in tool-using LLMs to improve reasoning reliability and efficiency.",
+      "llm_tldr_cn": "在工具使用型大模型中将规划与检索分离，以提高推理的可靠性和效率。",
+      "llm_tldr": "在工具使用型大模型中将规划与检索分离，以提高推理的可靠性和效率。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.15309v1",
+      "title": "CCTU: A Benchmark for Tool Use under Complex Constraints",
+      "abstract": "Solving problems through tool use under explicit constraints constitutes a highly challenging yet unavoidable scenario for large language models (LLMs), requiring capabilities such as function calling, instruction following, and self-refinement. However, progress has been hindered by the absence of dedicated evaluations. To address this, we introduce CCTU, a benchmark for evaluating LLM tool use under complex constraints. CCTU is grounded in a taxonomy of 12 constraint categories spanning four dimensions (i.e., resource, behavior, toolset, and response). The benchmark comprises 200 carefully curated and challenging test cases across diverse tool-use scenarios, each involving an average of seven constraint types and an average prompt length exceeding 4,700 tokens. To enable reliable evaluation, we develop an executable constraint validation module that performs step-level validation and enforces compliance during multi-turn interactions between models and their environments. We evaluate nine state-of-the-art LLMs in both thinking and non-thinking modes. Results indicate that when strict adherence to all constraints is required, no model achieves a task completion rate above 20%. Further analysis reveals that models violate constraints in over 50% of cases, particularly in the resource and response dimensions. Moreover, LLMs demonstrate limited capacity for self-refinement even after receiving detailed feedback on constraint violations, highlighting a critical bottleneck in the development of robust tool-use agents. To facilitate future research, we release the data and code.",
+      "authors": [
+        "Junjie Ye",
+        "Guoqiang Zhang",
+        "Wenjie Fu",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-03-16T14:05:13+00:00",
+      "link": "https://arxiv.org/pdf/2603.15309v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "benchmark for evaluating LLM tool use under constraints",
+      "llm_evidence_cn": "评估LLM在约束下使用工具的基准",
+      "llm_evidence": "评估LLM在约束下使用工具的基准",
+      "canonical_evidence": "评估LLM在约束下使用工具的基准",
+      "llm_tldr_en": "Introduces CCTU, a benchmark for evaluating LLM tool use capabilities under complex constraints.",
+      "llm_tldr_cn": "引入CCTU基准，用于评估大语言模型在复杂约束下的工具使用能力。",
+      "llm_tldr": "引入CCTU基准，用于评估大语言模型在复杂约束下的工具使用能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.16223v1",
+      "title": "Dual Consensus: Escaping from Spurious Majority in Unsupervised RLVR via Two-Stage Vote Mechanism",
+      "abstract": "Current label-free RLVR approaches for large language models (LLMs), such as TTRL and Self-reward, have demonstrated effectiveness in improving the performance of LLMs on complex reasoning tasks. However, these methods rely heavily on accurate pseudo-label estimation and converge on spurious yet popular answers, thereby trapping in a dominant mode and limiting further improvements. Building on this, we propose Dual Consensus Reinforcement Learning (DCRL), a novel self-supervised training method which is capable of generating more reliable learning signals through a two-stage consensus mechanism. The model initially acts as an anchor, producing dominant responses; then it serves as an explorer, generating diverse auxiliary signals via a temporary unlearning process. The final training target is derived from the harmonic mean of these two signal sets. Notably, the process operates entirely without external models or supervision. Across eight benchmarks and diverse domains, DCRL consistently improves Pass@1 over majority vote while yielding more stable training dynamics. These results demonstrate that DCRL establishes a scalable path toward stronger reasoning without labels.",
+      "authors": [
+        "Kaixuan Du",
+        "Meng Cao",
+        "Hang Zhang",
+        "Yukun Wang",
+        "Xiangzhou Huang",
+        "Ni Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-17T07:57:23+00:00",
+      "link": "https://arxiv.org/pdf/2603.16223v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "unsupervised RLVR via two-stage vote mechanism",
+      "llm_evidence_cn": "通过两阶段投票机制进行无监督可验证奖励强化学习",
+      "llm_evidence": "通过两阶段投票机制进行无监督可验证奖励强化学习",
+      "canonical_evidence": "通过两阶段投票机制进行无监督可验证奖励强化学习",
+      "llm_tldr_en": "DCRL improves RL with verifiable rewards by using a two-stage consensus mechanism to generate reliable signals.",
+      "llm_tldr_cn": "DCRL通过两阶段共识机制生成可靠信号，改进了具有可验证奖励的强化学习。",
+      "llm_tldr": "DCRL通过两阶段共识机制生成可靠信号，改进了具有可验证奖励的强化学习。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.16124v1",
+      "title": "SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Code Understanding",
+      "abstract": "Agentic repository-level code understanding is essential for automating complex software engineering tasks, yet the field lacks reliable benchmarks. Existing evaluations often overlook the long tail topics and rely on popular repositories where Large Language Models (LLMs) can cheat via memorized knowledge. To address this, we introduce SWE-QA-Pro, a benchmark constructed from diverse, long-tail repositories with executable environments. We enforce topical balance via issue-driven clustering to cover under-represented task types and apply a rigorous difficulty calibration process: questions solvable by direct-answer baselines are filtered out. This results in a dataset where agentic workflows significantly outperform direct answering (e.g., a ~13-point gap for Claude Sonnet 4.5), confirming the necessity of agentic codebase exploration. Furthermore, to tackle the scarcity of training data for such complex behaviors, we propose a scalable synthetic data pipeline that powers a two-stage training recipe: Supervised Fine-Tuning (SFT) followed by Reinforcement Learning from AI Feedback (RLAIF). This approach allows small open models to learn efficient tool usage and reasoning. Empirically, a Qwen3-8B model trained with our recipe surpasses GPT-4o by 2.3 points on SWE-QA-Pro and substantially narrows the gap to state-of-the-art proprietary models, demonstrating both the validity of our evaluation and the effectiveness of our agentic training workflow.",
+      "authors": [
+        "Songcheng Cai",
+        "Zhiheng Lyu",
+        "Yuansheng Ni",
+        "Xiangchao Chen",
+        "Baichuan Zhou",
+        "Shenzhe Zhu",
+        "Yi Lu",
+        "Haozhe Wang",
+        "Chi Ruan",
+        "Benjamin Schneider",
+        "Weixu Zhang",
+        "Xiang Li",
+        "Andy Zheng",
+        "Yuyu Zhang",
+        "Ping Nie",
+        "Wenhu Chen"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-17T05:12:48+00:00",
+      "link": "https://arxiv.org/pdf/2603.16124v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Benchmark for agentic code understanding with executable environments",
+      "llm_evidence_cn": "具有可执行环境的代理代码理解基准",
+      "llm_evidence": "具有可执行环境的代理代码理解基准",
+      "canonical_evidence": "具有可执行环境的代理代码理解基准",
+      "llm_tldr_en": "SWE-QA-Pro provides a scalable training recipe and benchmark for verifiable repository-level code understanding.",
+      "llm_tldr_cn": "SWE-QA-Pro为可验证的仓库级代码理解提供了可扩展的训练方案和基准。",
+      "llm_tldr": "SWE-QA-Pro为可验证的仓库级代码理解提供了可扩展的训练方案和基准。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.12246v1",
+      "title": "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training",
+      "abstract": "Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled synthetic setting, where a \"gold-standard\" judge (gpt-oss-120b) provides preference annotations to train smaller judges, reveals key differences between non-reasoning and reasoning judges: non-reasoning judges lead to reward hacking easily, while reasoning judges can lead to policies that achieve strong performance when evaluated by the gold-standard judge. Interestingly, we find that the reasoning-judge-trained policies achieve such strong performance by learning to generate highly effective adversarial outputs that can also score well on popular benchmarks such as Arena-Hard by deceiving other LLM-judges. Combined with our further analysis, our study highlights both important findings and room for improvements for applying (reasoning) LLM-judges in non-verifiable LLM post-training.",
+      "authors": [
+        "Yixin Liu",
+        "Yue Yu",
+        "DiJia Su",
+        "Sid Wang",
+        "Xuewei Wang",
+        "Song Jiang",
+        "Bo Liu",
+        "Arman Cohan",
+        "Yuandong Tian",
+        "Zhengxing Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-03-12T17:57:06+00:00",
+      "link": "https://arxiv.org/pdf/2603.12246v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL-based LLM alignment in non-verifiable domains",
+      "llm_evidence_cn": "不可验证领域中基于强化学习的 LLM 对齐",
+      "llm_evidence": "不可验证领域中基于强化学习的 LLM 对齐",
+      "canonical_evidence": "不可验证领域中基于强化学习的 LLM 对齐",
+      "llm_tldr_en": "Investigates the impact of reasoning judges in RL training for domains where outputs cannot be directly verified.",
+      "llm_tldr_cn": "研究了在输出无法直接验证的领域中，推理裁判对强化学习训练的影响。",
+      "llm_tldr": "研究了在输出无法直接验证的领域中，推理裁判对强化学习训练的影响。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16600v1",
+      "title": "Rationale Matters: Learning Transferable Rubrics via Proxy-Guided Critique for VLMReward Models",
+      "abstract": "Generative reward models (GRMs) for vision-language models (VLMs) often evaluate outputs via a three-stage pipeline: rubric generation, criterion-based scoring, and a final verdict. However, the intermediate rubric is rarely optimized directly. Prior work typically either treats rubrics as incidental or relies on expensive LLM-as-judge checks that provide no differentiable signal and limited training-time guidance. We propose Proxy-GRM, which introduces proxy-guided rubric verification into Reinforcement Learning (RL) to explicitly enhance rubric quality. Concretely, we train lightweight proxy agents (Proxy-SFT and Proxy-RL) that take a candidate rubric together with the original query and preference pair, and then predict the preference ordering using only the rubric as evidence. The proxy's prediction accuracy serves as a rubric-quality reward, incentivizing the model to produce rubrics that are internally consistent and transferable. With ~50k data samples, Proxy-GRM reaches state-of-the-art results on the VL-Reward Bench, Multimodal Reward Bench, and MM-RLHF-Reward Bench, outperforming the methods trained on four times the data. Ablations show Proxy-SFT is a stronger verifier than Proxy-RL, and implicit reward aggregation performs best. Crucially, the learned rubrics transfer to unseen evaluators, improving reward accuracy at test time without additional training. Our code is available at https://github.com/Qwen-Applications/Proxy-GRM.",
+      "authors": [
+        "Weijie Qiu",
+        "Dai Guan",
+        "Junxin Wang",
+        "Zhihang Li",
+        "Yongbo Gai",
+        "Mengyu Zhou",
+        "Erchao Zhao",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-03-17T14:45:49+00:00",
+      "link": "https://arxiv.org/pdf/2603.16600v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proxy-guided rubric verification in reinforcement learning",
+      "llm_evidence_cn": "强化学习中的代理引导准则验证",
+      "llm_evidence": "强化学习中的代理引导准则验证",
+      "canonical_evidence": "强化学习中的代理引导准则验证",
+      "llm_tldr_en": "Introduces Proxy-GRM to enhance reward model quality through explicit rubric verification in RL.",
+      "llm_tldr_cn": "引入Proxy-GRM，通过强化学习中的显式准则验证来增强奖励模型的质量。",
+      "llm_tldr": "引入Proxy-GRM，通过强化学习中的显式准则验证来增强奖励模型的质量。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.12248v2",
+      "title": "Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models",
+      "abstract": "Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose energy-based fine-tuning (EBFT), which uses strided block-parallel sampling to generate multiple rollouts from nested prefixes concurrently, batches feature extraction over these rollouts, and uses the resulting embeddings to perform an on-policy policy-gradient update. We present a theoretical perspective connecting EBFT to KL-regularized feature-matching and energy-based modeling. Empirically, across Q&A coding, unstructured coding, and translation, EBFT matches RLVR and outperforms SFT on downstream accuracy while achieving a lower validation cross-entropy than both methods.",
+      "authors": [
+        "Samy Jelassi",
+        "Mujin Kwun",
+        "Rosie Zhao",
+        "Yuanzhi Li",
+        "Nicolo Fusi",
+        "Yilun Du",
+        "Sham M. Kakade",
+        "Carles Domingo-Enrich"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-12T17:57:50+00:00",
+      "link": "https://arxiv.org/pdf/2603.12248v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Sequence-level behavior optimization without requiring a task-specific verifier",
+      "llm_evidence_cn": "无需特定任务验证器的序列级行为优化",
+      "llm_evidence": "无需特定任务验证器的序列级行为优化",
+      "canonical_evidence": "无需特定任务验证器的序列级行为优化",
+      "llm_tldr_en": "Introduces energy-based fine-tuning to match sequence-level features as an alternative to explicit reward modeling.",
+      "llm_tldr_cn": "引入基于能量的微调，通过匹配序列级特征来替代显式的奖励建模。",
+      "llm_tldr": "引入基于能量的微调，通过匹配序列级特征来替代显式的奖励建模。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16600v2",
+      "title": "Rationale Matters: Learning Transferable Rubrics via Proxy-Guided Critique for VLM Reward Models",
+      "abstract": "Generative reward models (GRMs) for vision-language models (VLMs) often evaluate outputs via a three-stage pipeline: rubric generation, criterion-based scoring, and a final verdict. However, the intermediate rubric is rarely optimized directly. Prior work typically either treats rubrics as incidental or relies on expensive LLM-as-judge checks that provide no differentiable signal and limited training-time guidance. We propose Proxy-GRM, which introduces proxy-guided rubric verification into Reinforcement Learning (RL) to explicitly enhance rubric quality. Concretely, we train lightweight proxy agents (Proxy-SFT and Proxy-RL) that take a candidate rubric together with the original query and preference pair, and then predict the preference ordering using only the rubric as evidence. The proxy's prediction accuracy serves as a rubric-quality reward, incentivizing the model to produce rubrics that are internally consistent and transferable. With ~50k data samples, Proxy-GRM reaches state-of-the-art results on the VL-Reward Bench, Multimodal Reward Bench, and MM-RLHF-Reward Bench, outperforming the methods trained on four times the data. Ablations show Proxy-SFT is a stronger verifier than Proxy-RL, and implicit reward aggregation performs best. Crucially, the learned rubrics transfer to unseen evaluators, improving reward accuracy at test time without additional training. Our code is available at https://github.com/Qwen-Applications/Proxy-GRM.",
+      "authors": [
+        "Weijie Qiu",
+        "Dai Guan",
+        "Junxin Wang",
+        "Zhihang Li",
+        "Yongbo Gai",
+        "Mengyu Zhou",
+        "Erchao Zhao",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-03-17T14:45:49+00:00",
+      "link": "https://arxiv.org/pdf/2603.16600v2",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proxy-guided rubric verification in RL to enhance reward quality",
+      "llm_evidence_cn": "强化学习中的代理引导准则验证以增强奖励质量",
+      "llm_evidence": "强化学习中的代理引导准则验证以增强奖励质量",
+      "canonical_evidence": "强化学习中的代理引导准则验证以增强奖励质量",
+      "llm_tldr_en": "Introduces Proxy-GRM to optimize reward model rubrics via proxy-guided verification in RL.",
+      "llm_tldr_cn": "引入 Proxy-GRM，通过强化学习中的代理引导验证来优化奖励模型的评分准则。",
+      "llm_tldr": "引入 Proxy-GRM，通过强化学习中的代理引导验证来优化奖励模型的评分准则。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.14463v1",
+      "title": "An Industrial-Scale Insurance LLM Achieving Verifiable Domain Mastery and Hallucination Control without Competence Trade-offs",
+      "abstract": "Adapting Large Language Models (LLMs) to high-stakes vertical domains like insurance presents a significant challenge: scenarios demand strict adherence to complex regulations and business logic with zero tolerance for hallucinations. Existing approaches often suffer from a Competency Trade-off - sacrificing general intelligence for domain expertise - or rely heavily on RAG without intrinsic reasoning. To bridge this gap, we present INS-S1, an insurance-specific LLM family trained via a novel end-to-end alignment paradigm. Our approach features two methodological innovations: (1) A Verifiable Data Synthesis System that constructs hierarchical datasets for actuarial reasoning and compliance; and (2) A Progressive SFT-RL Curriculum Framework that integrates dynamic data annealing with a synergistic mix of Verified Reasoning (RLVR) and AI Feedback (RLAIF). By optimizing data ratios and reward signals, this framework enforces domain constraints while preventing catastrophic forgetting. Additionally, we release INSEva, the most comprehensive insurance benchmark to date (39k+ samples). Extensive experiments show that INS-S1 achieves SOTA performance on domain tasks, significantly outperforming DeepSeek-R1 and Gemini-2.5-Pro. Crucially, it maintains top-tier general capabilities and achieves a record-low 0.6% hallucination rate (HHEM). Our results demonstrate that rigorous domain specialization can be achieved without compromising general intelligence.",
+      "authors": [
+        "Qian Zhu",
+        "Xinnan Guo",
+        "Jingjing Huo",
+        "Jun Li",
+        "Pan Liu",
+        "Wenyan Yang",
+        "Wanqing Xu",
+        "Xuan Lin"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-15T16:13:37+00:00",
+      "link": "https://arxiv.org/pdf/2603.14463v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Verifiable data synthesis and alignment for domain-specific LLM reasoning and compliance",
+      "llm_evidence_cn": "针对特定领域大模型推理和合规性的可验证数据合成与对齐",
+      "llm_evidence": "针对特定领域大模型推理和合规性的可验证数据合成与对齐",
+      "canonical_evidence": "针对特定领域大模型推理和合规性的可验证数据合成与对齐",
+      "llm_tldr_en": "Develops an insurance-specific LLM using verifiable data synthesis to ensure domain mastery and reduce hallucinations.",
+      "llm_tldr_cn": "通过可验证数据合成开发保险领域大模型，确保领域专业性并减少幻觉。",
+      "llm_tldr": "通过可验证数据合成开发保险领域大模型，确保领域专业性并减少幻觉。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.17533v1",
+      "title": "A Unified Language Model for Large Scale Search, Recommendation, and Reasoning",
+      "abstract": "LLMs are increasingly applied to recommendation, retrieval, and reasoning, yet deploying a single end-to-end model that can jointly support these behaviors over large, heterogeneous catalogs remains challenging. Such systems must generate unambiguous references to real items, handle multiple entity types, and operate under strict latency and reliability constraints requirements that are difficult to satisfy with text-only generation. While tool-augmented recommender systems address parts of this problem, they introduce orchestration complexity and limit end-to-end optimization. We view this setting as an instance of a broader research problem: how to adapt LLMs to reason jointly over multiple-domain entities, users, and language in a fully self-contained manner. To this end, we introduce NEO, a framework that adapts a pre-trained decoder-only LLM into a tool-free, catalog-grounded generator. NEO represents items as SIDs and trains a single model to interleave natural language and typed item identifiers within a shared sequence. Text prompts control the task, target entity type, and output format (IDs, text, or mixed), while constrained decoding guarantees catalog-valid item generation without restricting free-form text. We refer to this instruction-conditioned controllability as language-steerability. We treat SIDs as a distinct modality and study design choices for integrating discrete entity representations into LLMs via staged alignment and instruction tuning. We evaluate NEO at scale on a real-world catalog of over 10M items across multiple media types and discovery tasks, including recommendation, search, and user understanding. In offline experiments, NEO consistently outperforms strong task-specific baselines and exhibits cross-task transfer, demonstrating a practical path toward consolidating large-scale discovery capabilities into a single language-steerable generative model.",
+      "authors": [
+        "Marco De Nadai",
+        "Edoardo D'Amico",
+        "Max Lefarov",
+        "Alexandre Tamborrino",
+        "Divita Vohra",
+        "Mark VanMiddlesworth",
+        "Shawn Lin",
+        "Jacqueline Wood",
+        "Jan Stypka",
+        "Eliza Klyce",
+        "Keshi Dai",
+        "Timothy Christopher Heath",
+        "Martin D. Gould",
+        "Yves Raimond",
+        "Sandeep Ghael",
+        "Tony Jebara",
+        "Andreas Damianou",
+        "Vladan Radosavljevic",
+        "Paul N. Bennett",
+        "Mounia Lalmas",
+        "Praveen Chandar"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-03-18T09:42:32+00:00",
+      "link": "https://arxiv.org/pdf/2603.17533v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "tool-augmented recommender systems and tool use",
+      "llm_evidence_cn": "工具增强的推荐系统与工具使用",
+      "llm_evidence": "工具增强的推荐系统与工具使用",
+      "canonical_evidence": "工具增强的推荐系统与工具使用",
+      "llm_tldr_en": "Proposes a unified LLM for search and recommendation that addresses tool-augmented system complexity.",
+      "llm_tldr_cn": "提出一种统一的大语言模型，用于搜索和推荐，解决了工具增强系统的复杂性问题。",
+      "llm_tldr": "提出一种统一的大语言模型，用于搜索和推荐，解决了工具增强系统的复杂性问题。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.15417v1",
+      "title": "Amplification Effects in Test-Time Reinforcement Learning: Safety and Reasoning Vulnerabilities",
+      "abstract": "Test-time training (TTT) has recently emerged as a promising method to improve the reasoning abilities of large language models (LLMs), in which the model directly learns from test data without access to labels. However, this reliance on test data also makes TTT methods vulnerable to harmful prompt injections. In this paper, we investigate safety vulnerabilities of TTT methods, where we study a representative self-consistency-based test-time learning method: test-time reinforcement learning (TTRL), a recent TTT method that improves LLM reasoning by rewarding self-consistency using majority vote as a reward signal. We show that harmful prompt injection during TTRL amplifies the model's existing behaviors, i.e., safety amplification when the base model is relatively safe, and harmfulness amplification when it is vulnerable to the injected data. In both cases, there is a decline in reasoning ability, which we refer to as the reasoning tax. We also show that TTT methods such as TTRL can be exploited adversarially using specially designed \"HarmInject\" prompts to force the model to answer jailbreak and reasoning queries together, resulting in stronger harmfulness amplification. Overall, our results highlight that TTT methods that enhance LLM reasoning by promoting self-consistency can lead to amplification behaviors and reasoning degradation, highlighting the need for safer TTT methods.",
+      "authors": [
+        "Vanshaj Khattar",
+        "Md Rafi ur Rashid",
+        "Moumita Choudhury",
+        "Jing Liu",
+        "Toshiaki Koike-Akino",
+        "Ming Jin",
+        "Ye Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "published": "2026-03-16T15:28:59+00:00",
+      "link": "https://arxiv.org/pdf/2603.15417v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "test-time reinforcement learning rewarding self-consistency",
+      "llm_evidence_cn": "通过奖励自一致性进行测试时强化学习",
+      "llm_evidence": "通过奖励自一致性进行测试时强化学习",
+      "canonical_evidence": "通过奖励自一致性进行测试时强化学习",
+      "llm_tldr_en": "Analyzes safety vulnerabilities in test-time RL methods that use self-consistency as a reward signal.",
+      "llm_tldr_cn": "分析了使用自一致性作为奖励信号的测试时强化学习方法的安全漏洞。",
+      "llm_tldr": "分析了使用自一致性作为奖励信号的测试时强化学习方法的安全漏洞。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.17775v1",
+      "title": "CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution",
+      "abstract": "Label-free reinforcement learning enables large language models to improve reasoning capabilities without ground-truth supervision, typically by treating majority-voted answers as pseudo-labels. However, we identify a critical failure mode: as training maximizes self-consistency, output diversity collapses, causing the model to confidently reinforce systematic errors that evade detection. We term this the consensus trap. To escape it, we propose CoVerRL, a framework where a single model alternates between generator and verifier roles, with each capability bootstrapping the other. Majority voting provides noisy but informative supervision for training the verifier, while the improving verifier progressively filters self-consistent errors from pseudo-labels. This co-evolution creates a virtuous cycle that maintains high reward accuracy throughout training. Experiments across Qwen and Llama model families demonstrate that CoVerRL outperforms label-free baselines by 4.7-5.9\\% on mathematical reasoning benchmarks. Moreover, self-verification accuracy improves from around 55\\% to over 85\\%, confirming that both capabilities genuinely co-evolve.",
+      "authors": [
+        "Teng Pan",
+        "Yuchen Yan",
+        "Zixuan Wang",
+        "Ruiqing Zhang",
+        "Gaiyang Han",
+        "Wanqi Zhang",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yongliang Shen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-18T14:38:55+00:00",
+      "link": "https://arxiv.org/pdf/2603.17775v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "label-free RL with generator-verifier co-evolution",
+      "llm_evidence_cn": "生成器-验证器协同进化的无标签强化学习",
+      "llm_evidence": "生成器-验证器协同进化的无标签强化学习",
+      "canonical_evidence": "生成器-验证器协同进化的无标签强化学习",
+      "llm_tldr_en": "CoVerRL uses a generator-verifier loop to improve reasoning and avoid consensus traps in label-free RL.",
+      "llm_tldr_cn": "CoVerRL通过生成器-验证器循环改进推理能力，避免无标签强化学习中的共识陷阱。",
+      "llm_tldr": "CoVerRL通过生成器-验证器循环改进推理能力，避免无标签强化学习中的共识陷阱。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.15510v1",
+      "title": "Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs",
+      "abstract": "The synthesis of inductive loop invariants is a critical bottleneck in automated program verification. While Large Language Models (LLMs) show promise in mitigating this issue, they often fail on hard instances, generating invariants that are invalid or computationally ineffective. While fine-tuning is a natural route to mitigate this limitation, obtaining high-quality training data for invariant generation remains an open challenge. We present a rigorous data curation pipeline designed to extract high-quality training signals from raw verifier-generated invariants. First, we formalize the properties required for a high-quality training invariant. Second, we propose Wonda, a pipeline that refines noisy data via AST-based normalization, followed by LLM-driven semantic rewriting and augmentation with provable quality guarantees. We demonstrate that fine-tuning Small Language Models (SLMs) on this curated dataset result in consistent and significant performance gain. In particular, a fine-tuned 4B parameter model matches the utility of a GPT-OSS-120B baseline and approaches the state-of-the-art GPT-5.2, without incurring reasoning-time overhead. On challenging instances from the recent InvBench evaluation suite, our approach doubles the invariant correctness and speedup rates of base models; and improves their Virtual Best Performance (VBP) rates on the verification task by up to 14.2%.",
+      "authors": [
+        "Ido Pinto",
+        "Yizhak Yisrael Elboher",
+        "Haoze Wu",
+        "Nina Narodytska",
+        "Guy Katz"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-16T16:37:38+00:00",
+      "link": "https://arxiv.org/pdf/2603.15510v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "extracting training signals from verifier-generated invariants",
+      "llm_evidence_cn": "从验证器生成的变量中提取训练信号",
+      "llm_evidence": "从验证器生成的变量中提取训练信号",
+      "canonical_evidence": "从验证器生成的变量中提取训练信号",
+      "llm_tldr_en": "Curates high-quality training data from program verifiers to improve LLM-based invariant generation.",
+      "llm_tldr_cn": "从程序验证器中筛选高质量训练数据，以改进基于大模型的程序不变式生成。",
+      "llm_tldr": "从程序验证器中筛选高质量训练数据，以改进基于大模型的程序不变式生成。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.17815v1",
+      "title": "Process Supervision for Chain-of-Thought Reasoning via Monte Carlo Net Information Gain",
+      "abstract": "Multi-step reasoning improves the capabilities of large language models (LLMs) but increases the risk of errors propagating through intermediate steps. Process reward models (PRMs) mitigate this by scoring each step individually, enabling fine-grained supervision and improved reliability. Existing methods for training PRMs rely on costly human annotations or computationally intensive automatic labeling. We propose a novel approach to automatically generate step-level labels using Information Theory. Our method estimates how each reasoning step affects the likelihood of the correct answer, providing a signal of step quality. Importantly, it reduces computational complexity to $\\mathcal{O}(N)$, improving over the previous $\\mathcal{O}(N \\log N)$ methods. We demonstrate that these labels enable effective chain-of-thought selection in best-of-$K$ evaluation settings across diverse reasoning benchmarks, including mathematics, Python programming, SQL, and scientific question answering. This work enables scalable and efficient supervision of LLM reasoning, particularly for tasks where error propagation is critical.",
+      "authors": [
+        "Corentin Royer",
+        "Debarun Bhattacharjya",
+        "Gaetano Rossiello",
+        "Andrea Giovannini",
+        "Mennatallah El-Assady"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-18T15:08:01+00:00",
+      "link": "https://arxiv.org/pdf/2603.17815v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Automatically generate step-level labels for process reward models",
+      "llm_evidence_cn": "自动为过程奖励模型生成步骤级标签",
+      "llm_evidence": "自动为过程奖励模型生成步骤级标签",
+      "canonical_evidence": "自动为过程奖励模型生成步骤级标签",
+      "llm_tldr_en": "Uses Information Theory to automatically generate process rewards for multi-step reasoning in LLMs.",
+      "llm_tldr_cn": "利用信息论为大模型的多步推理自动生成过程奖励信号。",
+      "llm_tldr": "利用信息论为大模型的多步推理自动生成过程奖励信号。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

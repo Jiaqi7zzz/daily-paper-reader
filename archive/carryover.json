@@ -1,48 +1,6 @@
 {
-  "generated_at": "2026-03-18T19:47:31.571324+00:00",
-  "updated_date": "20260318",
+  "generated_at": "2026-03-19T20:32:01.318222+00:00",
+  "updated_date": "20260319",
   "carryover_days": 9,
-  "items": [
-    {
-      "id": "2603.15309v1",
-      "title": "CCTU: A Benchmark for Tool Use under Complex Constraints",
-      "abstract": "Solving problems through tool use under explicit constraints constitutes a highly challenging yet unavoidable scenario for large language models (LLMs), requiring capabilities such as function calling, instruction following, and self-refinement. However, progress has been hindered by the absence of dedicated evaluations. To address this, we introduce CCTU, a benchmark for evaluating LLM tool use under complex constraints. CCTU is grounded in a taxonomy of 12 constraint categories spanning four dimensions (i.e., resource, behavior, toolset, and response). The benchmark comprises 200 carefully curated and challenging test cases across diverse tool-use scenarios, each involving an average of seven constraint types and an average prompt length exceeding 4,700 tokens. To enable reliable evaluation, we develop an executable constraint validation module that performs step-level validation and enforces compliance during multi-turn interactions between models and their environments. We evaluate nine state-of-the-art LLMs in both thinking and non-thinking modes. Results indicate that when strict adherence to all constraints is required, no model achieves a task completion rate above 20%. Further analysis reveals that models violate constraints in over 50% of cases, particularly in the resource and response dimensions. Moreover, LLMs demonstrate limited capacity for self-refinement even after receiving detailed feedback on constraint violations, highlighting a critical bottleneck in the development of robust tool-use agents. To facilitate future research, we release the data and code.",
-      "authors": [
-        "Junjie Ye",
-        "Guoqiang Zhang",
-        "Wenjie Fu",
-        "Tao Gui",
-        "Qi Zhang",
-        "Xuanjing Huang"
-      ],
-      "primary_category": "cs.CL",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "published": "2026-03-16T14:05:13+00:00",
-      "link": "https://arxiv.org/pdf/2603.15309v1",
-      "tags": [
-        "keyword:RL TL",
-        "query:RL TL"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Benchmark for LLM tool use under complex constraints",
-      "llm_evidence_cn": "大模型在复杂约束下使用工具的基准测试",
-      "llm_evidence": "大模型在复杂约束下使用工具的基准测试",
-      "canonical_evidence": "大模型在复杂约束下使用工具的基准测试",
-      "llm_tldr_en": "Introduces a comprehensive benchmark for evaluating LLM tool-use capabilities under diverse constraints.",
-      "llm_tldr_cn": "引入了一个全面的基准，用于评估大语言模型在多种约束下的工具使用能力。",
-      "llm_tldr": "引入了一个全面的基准，用于评估大语言模型在多种约束下的工具使用能力。",
-      "llm_tags": [
-        "query:rl-tl"
-      ],
-      "matched_query_tag": "query:rl-tl",
-      "matched_query_text": "large language model tool learning and tool use",
-      "matched_requirement_id": "req-4",
-      "selection_source": "carryover_cache",
-      "paper_id": "2603.15309v1",
-      "carry_days": 1
-    }
-  ]
+  "items": []
 }
