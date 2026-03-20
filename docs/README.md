@@ -6,71 +6,73 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-19
-- 运行时间：2026-03-19 20:41:25 UTC
+- 最新运行日期：2026-03-20
+- 运行时间：2026-03-20 20:13:49 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日深度解析 17 篇论文，重点聚焦本地 LLM 智能体在 Linux 提权与复杂 SQL 生成中的实战
-- 详情：[/202603/19/README](/202603/19/README)
+今日聚焦强化学习与 LLM 智能体前沿，深度解析 17 篇论文中采样效率与执行加速的最新突破。
+满分论文揭示了 Beta-Bernoulli 奖励估计与上下文引导（Context Bootstrapped）在提升 RL 性能上的巨大潜力。
+建议优先研读两篇 10 分佳作，掌握如何通过精准奖励建模与模式感知执行来优化复杂决策任务。
+- 详情：[/202603/20/README](/202603/20/README)
 
 ### 精读区论文标签
-1. [Post-Training Local LLM Agents for Linux Privilege Escalation with Verifiable Rewards](/202603/19/2603.17673v1-post-training-local-llm-agents-for-linux-privilege-escalation-with-verifiable-rewards)  
+1. [Discounted Beta--Bernoulli Reward Estimation for Sample-Efficient Reinforcement Learning with Verifiable Rewards](/202603/20/2603.18444v1-discounted-beta--bernoulli-reward-estimation-for-sample-efficient-reinforcement-learning-with-verifiable-rewards)  
    标签：评分：10.0/10、query:rl-tl
-   evidence：针对自动可验证成功的跨步推理任务进行大语言模型智能体后训练
-2. [TRUST-SQL: Tool-Integrated Multi-Turn Reinforcement Learning for Text-to-SQL over Unknown Schemas](/202603/19/2603.16448v2-trust-sql-tool-integrated-multi-turn-reinforcement-learning-for-text-to-sql-over-unknown-schemas)  
+   evidence：具有可验证奖励的高样本效率强化学习 (RLVR)
+2. [Context Bootstrapped Reinforcement Learning](/202603/20/2603.18953v1-context-bootstrapped-reinforcement-learning)  
+   标签：评分：10.0/10、query:rl-tl
+   evidence：针对可验证奖励强化学习（RLVR）的上下文引导强化学习
+3. [ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical Reinforcement Learning](/202603/20/2603.16060v2-arise-agent-reasoning-with-intrinsic-skill-evolution-in-hierarchical-reinforcement-learning)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：使用多轮强化学习将推理建立在经过验证的工具元数据上
-3. [CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents](/202603/19/2603.17829v1-codescout-an-effective-recipe-for-reinforcement-learning-of-code-search-agents)  
+   evidence：具有可验证奖励的强化学习
+4. [HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning](/202603/20/2603.17024v2-hopchain-multi-hop-data-synthesis-for-generalizable-vision-language-reasoning)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：使用终端工具的代码搜索智能体强化学习
-4. [Distilling Reasoning Without Knowledge: A Framework for Reliable LLMs](/202603/19/2603.14458v1-distilling-reasoning-without-knowledge-a-framework-for-reliable-llms)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：使用工具的大模型以及针对事实检索的显式规划
-5. [CCTU: A Benchmark for Tool Use under Complex Constraints](/202603/19/2603.15309v1-cctu-a-benchmark-for-tool-use-under-complex-constraints)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：评估LLM在约束下使用工具的基准
-6. [Dual Consensus: Escaping from Spurious Majority in Unsupervised RLVR via Two-Stage Vote Mechanism](/202603/19/2603.16223v1-dual-consensus-escaping-from-spurious-majority-in-unsupervised-rlvr-via-two-stage-vote-mechanism)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：通过两阶段投票机制进行无监督可验证奖励强化学习
+   evidence：为具有可验证奖励的强化学习（RLVR）合成多步推理数据
+5. [SLEA-RL: Step-Level Experience Augmented Reinforcement Learning for Multi-Turn Agentic Training](/202603/20/2603.18079v1-slea-rl-step-level-experience-augmented-reinforcement-learning-for-multi-turn-agentic-training)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：多轮工具使用任务与智能体训练
+6. [VEPO: Variable Entropy Policy Optimization for Low-Resource Language Foundation Models](/202603/20/2603.19152v1-vepo-variable-entropy-policy-optimization-for-low-resource-language-foundation-models)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：具有可验证奖励的强化学习用于结构化约束
 
 ### 速读区论文标签
-1. [SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Code Understanding](/202603/19/2603.16124v1-swe-qa-pro-a-representative-benchmark-and-scalable-training-recipe-for-repository-level-code-understanding)  
+1. [RewardFlow: Topology-Aware Reward Propagation on State Graphs for Agentic RL with Large Language Models](/202603/20/2603.18859v1-rewardflow-topology-aware-reward-propagation-on-state-graphs-for-agentic-rl-with-large-language-models)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：大模型智能体推理任务的自动化状态级奖励估计
+2. [Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution](/202603/20/2603.18897v1-act-while-thinking-accelerating-llm-agents-via-pattern-aware-speculative-tool-execution)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：通过投机性工具执行加速LLM智能体
+3. [Large Reward Models: Generalizable Online Robot Reward Generation with Vision-Language Models](/202603/20/2603.16065v1-large-reward-models-generalizable-online-robot-reward-generation-with-vision-language-models)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：具有可执行环境的代理代码理解基准
-2. [Rationale Matters: Learning Transferable Rubrics via Proxy-Guided Critique for VLMReward Models](/202603/19/2603.16600v1-rationale-matters-learning-transferable-rubrics-via-proxy-guided-critique-for-vlmreward-models)  
+   evidence：将视觉语言模型适配为机器人操作策略的在线奖励生成器
+4. [PaAgent: Portrait-Aware Image Restoration Agent via Subjective-Objective Reinforcement Learning](/202603/20/2603.17055v1-paagent-portrait-aware-image-restoration-agent-via-subjective-objective-reinforcement-learning)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：强化学习中的代理引导准则验证
-3. [Rationale Matters: Learning Transferable Rubrics via Proxy-Guided Critique for VLM Reward Models](/202603/19/2603.16600v2-rationale-matters-learning-transferable-rubrics-via-proxy-guided-critique-for-vlm-reward-models)  
+   evidence：通过强化学习调用修复工具的多模态大模型智能体
+5. [InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning](/202603/20/2603.17310v1-infodensity-rewarding-information-dense-traces-for-efficient-reasoning)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：强化学习中的代理引导准则验证以增强奖励质量
-4. [A Unified Language Model for Large Scale Search, Recommendation, and Reasoning](/202603/19/2603.17533v1-a-unified-language-model-for-large-scale-search-recommendation-and-reasoning)  
+   evidence：为推理中的高信息密度轨迹提供奖励
+6. [Complementary Reinforcement Learning](/202603/20/2603.17621v1-complementary-reinforcement-learning)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：工具增强的推荐系统与工具使用
-5. [CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution](/202603/19/2603.17775v1-coverrl-breaking-the-consensus-trap-in-label-free-reasoning-via-generator-verifier-co-evolution)  
+   evidence：用于训练基于LLM的智能体的强化学习
+7. [Retrieval-Augmented LLM Agents: Learning to Learn from Experience](/202603/20/2603.18272v1-retrieval-augmented-llm-agents-learning-to-learn-from-experience)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：生成器-验证器协同进化的无标签强化学习
-6. [Process Supervision for Chain-of-Thought Reasoning via Monte Carlo Net Information Gain](/202603/19/2603.17815v1-process-supervision-for-chain-of-thought-reasoning-via-monte-carlo-net-information-gain)  
+   evidence：从经验中学习的检索增强大模型智能体
+8. [Learning to Self-Evolve](/202603/20/2603.18620v1-learning-to-self-evolve)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：自动为过程奖励模型生成步骤级标签
-7. [Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training](/202603/19/2603.12246v1-examining-reasoning-llms-as-judges-in-non-verifiable-llm-post-training)  
+   evidence：强化学习框架，其中上下文编辑由下游性能提升奖励
+9. [Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation](/202603/20/2603.13045v1-mending-the-holes-mitigating-reward-hacking-in-reinforcement-learning-for-multilingual-translation)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：不可验证领域中基于强化学习的 LLM 对齐
-8. [Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models](/202603/19/2603.12248v2-matching-features-not-tokens-energy-based-fine-tuning-of-language-models)  
+   evidence：减轻强化学习中的奖励作弊
+10. [Diffusion Reinforcement Learning via Centered Reward Distillation](/202603/20/2603.14128v1-diffusion-reinforcement-learning-via-centered-reward-distillation)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：无需特定任务验证器的序列级行为优化
-9. [An Industrial-Scale Insurance LLM Achieving Verifiable Domain Mastery and Hallucination Control without Competence Trade-offs](/202603/19/2603.14463v1-an-industrial-scale-insurance-llm-achieving-verifiable-domain-mastery-and-hallucination-control-without-competence-trade-offs)  
+   evidence：扩散模型的外部奖励强化学习微调
+11. [Efficient Soft Actor-Critic with LLM-Based Action-Level Guidance for Continuous Control](/202603/20/2603.17468v1-efficient-soft-actor-critic-with-llm-based-action-level-guidance-for-continuous-control)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：针对特定领域大模型推理和合规性的可验证数据合成与对齐
-10. [Amplification Effects in Test-Time Reinforcement Learning: Safety and Reasoning Vulnerabilities](/202603/19/2603.15417v1-amplification-effects-in-test-time-reinforcement-learning-safety-and-reasoning-vulnerabilities)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：通过奖励自一致性进行测试时强化学习
-11. [Not All Invariants Are Equal: Curating Training Data to Accelerate Program Verification with SLMs](/202603/19/2603.15510v1-not-all-invariants-are-equal-curating-training-data-to-accelerate-program-verification-with-slms)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：从验证器生成的变量中提取训练信号
+   evidence：基于LLM的强化学习智能体动作级指导
 
 
 <div class="dpr-home-promo-card">
