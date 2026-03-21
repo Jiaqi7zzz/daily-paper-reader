@@ -1,0 +1,290 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-21T19:14:37.041176+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2603.16839v1",
+      "title": "Learning to Present: Inverse Specification Rewards for Agentic Slide Generation",
+      "abstract": "Automated presentation generation remains a challenging task requiring coherent content creation, visual design, and audience-aware communication. This work proposes an OpenEnv-compatible reinforcement learning environment where LLM agents learn to research topics, plan content, and generate professional HTML slide presentations through tool use. We introduce a multi-component reward system combining structural validation, render quality assessment, LLM-based aesthetic scoring, content quality metrics, and an inverse specification reward that measures how faithfully generated slides convey their intended purpose. The inverse specification reward, an \"inverse task\" where an LLM attempts to recover the original specification from generated slides, provides a holistic quality signal. Our approach fine-tunes Qwen2.5-Coder-7B via GRPO, training only 0.5% of parameters on prompts derived from expert demonstrations collected using Claude Opus 4.6. Experiments on 48 diverse business briefs across six models demonstrate that our fine-tuned 7B model achieves 91.2% of Claude Opus 4.6's quality while improving 33.1% over the base model. The six-model comparison reveals that instruction adherence and tool-use compliance, rather than raw parameter count, determine agentic task performance. We contribute SlideRL, an open-source dataset of 288 multi-turn rollout trajectories across all six models: https://huggingface.co/datasets/KarthikRagunathAnandaKumar/sliderl-multi-turn-rollouts Code: https://github.com/pushing-the-frontier/slide-forge-llm",
+      "authors": [
+        "Karthik Ragunath Ananda Kumar",
+        "Subrahmanyam Arunachalam"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-17T17:45:53+00:00",
+      "link": "https://arxiv.org/pdf/2603.16839v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL environment where LLM agents learn slide generation through tool use with structural validation rewards",
+      "llm_evidence_cn": "LLM智能体通过工具使用学习幻灯片生成的强化学习环境，包含结构验证奖励",
+      "llm_evidence": "LLM智能体通过工具使用学习幻灯片生成的强化学习环境，包含结构验证奖励",
+      "canonical_evidence": "LLM智能体通过工具使用学习幻灯片生成的强化学习环境，包含结构验证奖励",
+      "llm_tldr_en": "Proposes an RL framework for agentic slide generation using tool use and multi-component verifiable rewards.",
+      "llm_tldr_cn": "提出了一个利用工具使用和多组件可验证奖励进行智能体幻灯片生成的强化学习框架。",
+      "llm_tldr": "提出了一个利用工具使用和多组件可验证奖励进行智能体幻灯片生成的强化学习框架。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.16161v1",
+      "title": "SQL-ASTRA: Alleviating Sparse Feedback in Agentic SQL via Column-Set Matching and Trajectory Aggregation",
+      "abstract": "Agentic Reinforcement Learning (RL) shows promise for complex tasks, but Text-to-SQL remains mostly restricted to single-turn paradigms. A primary bottleneck is the credit assignment problem. In traditional paradigms, rewards are determined solely by the final-turn feedback, which ignores the intermediate process and leads to ambiguous credit evaluation. To address this, we propose Agentic SQL, a framework featuring a universal two-tiered reward mechanism designed to provide effective trajectory-level evaluation and dense step-level signals. First, we introduce Aggregated Trajectory Reward (ATR) to resolve multi-turn credit assignment. Using an asymmetric transition matrix, ATR aggregates process-oriented scores to incentivize continuous improvement. Leveraging Lyapunov stability theory, we prove ATR acts as an energy dissipation operator, guaranteeing a cycle-free policy and monotonic convergence. Second, Column-Set Matching Reward (CSMR) provides immediate step-level rewards to mitigate sparsity. By executing queries at each turn, CSMR converts binary (0/1) feedback into dense [0, 1] signals based on partial correctness. Evaluations on BIRD show a 5% gain over binary-reward GRPO. Notably, our approach outperforms SOTA Arctic-Text2SQL-R1-7B on BIRD and Spider 2.0 using identical models, propelling Text-to-SQL toward a robust multi-turn agent paradigm.",
+      "authors": [
+        "Long Li",
+        "Zhijian Zhou",
+        "Jiangxuan Long",
+        "Peiyang Liu",
+        "Weidi Xu",
+        "Zhe Wang",
+        "Shirui Pan",
+        "Chao Qu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-17T06:26:36+00:00",
+      "link": "https://arxiv.org/pdf/2603.16161v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "verifying trajectory-level and step-level signals in agentic SQL RL",
+      "llm_evidence_cn": "在代理 SQL 强化学习中验证轨迹级和步骤级信号",
+      "llm_evidence": "在代理 SQL 强化学习中验证轨迹级和步骤级信号",
+      "canonical_evidence": "在代理 SQL 强化学习中验证轨迹级和步骤级信号",
+      "llm_tldr_en": "Proposes a two-tiered reward mechanism to alleviate sparse feedback in agentic Text-to-SQL tasks.",
+      "llm_tldr_cn": "提出双层奖励机制，以缓解代理式 Text-to-SQL 任务中的稀疏反馈问题。",
+      "llm_tldr": "提出双层奖励机制，以缓解代理式 Text-to-SQL 任务中的稀疏反馈问题。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.19191v1",
+      "title": "OS-Themis: A Scalable Critic Framework for Generalist GUI Rewards",
+      "abstract": "Reinforcement Learning (RL) has the potential to improve the robustness of GUI agents in stochastic environments, yet training is highly sensitive to the quality of the reward function. Existing reward approaches struggle to achieve both scalability and performance. To address this, we propose OS-Themis, a scalable and accurate multi-agent critic framework. Unlike a single judge, OS-Themis decomposes trajectories into verifiable milestones to isolate critical evidence for decision making and employs a review mechanism to strictly audit the evidence chain before making the final verdict. To facilitate evaluation, we further introduce OmniGUIRewardBench (OGRBench), a holistic cross-platform benchmark for GUI outcome rewards, where all evaluated models achieve their best performance under OS-Themis. Extensive experiments on AndroidWorld show that OS-Themis yields a 10.3% improvement when used to support online RL training, and a 6.9% gain when used for trajectory validation and filtering in the self-training loop, highlighting its potential to drive agent evolution.",
+      "authors": [
+        "Zehao Li",
+        "Zhenyu Wu",
+        "Yibo Zhao",
+        "Bowen Yang",
+        "Jingjing Xie",
+        "Zhaoyang Liu",
+        "Zhoumianze Liu",
+        "Kaiming Jin",
+        "Jianze Liang",
+        "Zonglin Li",
+        "Feng Wu",
+        "Bowen Zhou",
+        "Zun Wang",
+        "Zichen Ding"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-19T17:47:47+00:00",
+      "link": "https://arxiv.org/pdf/2603.19191v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Verifiable milestones for GUI agent rewards",
+      "llm_evidence_cn": "GUI智能体奖励的可验证里程碑",
+      "llm_evidence": "GUI智能体奖励的可验证里程碑",
+      "canonical_evidence": "GUI智能体奖励的可验证里程碑",
+      "llm_tldr_en": "A multi-agent critic framework that decomposes GUI trajectories into verifiable milestones for accurate rewards.",
+      "llm_tldr_cn": "一种多智能体评论家框架，将GUI轨迹分解为可验证的里程碑以提供准确奖励。",
+      "llm_tldr": "一种多智能体评论家框架，将GUI轨迹分解为可验证的里程碑以提供准确奖励。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.12614v1",
+      "title": "ChainFuzzer: Greybox Fuzzing for Workflow-Level Multi-Tool Vulnerabilities in LLM Agents",
+      "abstract": "Tool-augmented LLM agents increasingly rely on multi-step, multi-tool workflows to complete real tasks. This design expands the attack surface, because data produced by one tool can be persisted and later reused as input to another tool, enabling exploitable source-to-sink dataflows that only emerge through tool composition. We study this risk as multi-tool vulnerabilities in LLM agents, and show that existing discovery efforts focused on single-tool or single-hop testing miss these long-horizon behaviors and provide limited debugging value. We present ChainFuzzer, a greybox framework for discovering and reproducing multi-tool vulnerabilities with auditable evidence. ChainFuzzer (i) identifies high-impact operations with strict source-to-sink dataflow evidence and extracts plausible upstream candidate tool chains based on cross-tool dependencies, (ii) uses Trace-guided Prompt Solving (TPS) to synthesize stable prompts that reliably drive the agent to execute target chains, and (iii) performs guardrail-aware fuzzing to reproduce vulnerabilities under LLM guardrails via payload mutation and sink-specific oracles. We evaluate ChainFuzzer on 20 popular open-source LLM agent apps (998 tools). ChainFuzzer extracts 2,388 candidate tool chains and synthesizes 2,213 stable prompts, confirming 365 unique, reproducible vulnerabilities across 19/20 apps (302 require multi-tool execution). Component evaluation shows tool-chain extraction achieves 96.49% edge precision and 91.50% strict chain precision; TPS increases chain reachability from 27.05% to 95.45%; guardrail-aware fuzzing boosts payload-level trigger rate from 18.20% to 88.60%. Overall, ChainFuzzer achieves 3.02 vulnerabilities per 1M tokens, providing a practical foundation for testing and hardening real-world multi-tool agent systems.",
+      "authors": [
+        "Jiangrong Wu",
+        "Zitong Yao",
+        "Yuhong Nan",
+        "Zibin Zheng"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2026-03-13T03:35:54+00:00",
+      "link": "https://arxiv.org/pdf/2603.12614v1",
+      "tags": [
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multi-tool workflows and vulnerability discovery in LLM agents",
+      "llm_evidence_cn": "大模型智能体中的多工具工作流与漏洞发现",
+      "llm_evidence": "大模型智能体中的多工具工作流与漏洞发现",
+      "canonical_evidence": "大模型智能体中的多工具工作流与漏洞发现",
+      "llm_tldr_en": "A greybox fuzzing framework to discover vulnerabilities in multi-step, multi-tool LLM agent workflows.",
+      "llm_tldr_cn": "一种灰盒模糊测试框架，用于发现大模型智能体多步工具调用流中的漏洞。",
+      "llm_tldr": "一种灰盒模糊测试框架，用于发现大模型智能体多步工具调用流中的漏洞。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.18334v1",
+      "title": "Can LLMs Reason Like Automated Theorem Provers for Rust Verification? VCoT-Bench: Evaluating via Verification Chain of Thought",
+      "abstract": "As Large Language Models (LLMs) increasingly assist secure software development, their ability to meet the rigorous demands of Rust program verification remains unclear. Existing evaluations treat Rust verification as a black box, assessing models only by binary pass or fail outcomes for proof hints. This obscures whether models truly understand the logical deductions required for verifying nontrivial Rust code. To bridge this gap, we introduce VCoT-Lift, a framework that lifts low-level solver reasoning into high-level, human-readable verification steps. By exposing solver-level reasoning as an explicit Verification Chain-of-Thought, VCoT-Lift provides a concrete ground truth for fine-grained evaluation. Leveraging VCoT-Lift, we introduce VCoT-Bench, a comprehensive benchmark of 1,988 VCoT completion tasks for rigorously evaluating LLMs' understanding of the entire verification process. VCoT-Bench measures performance along three orthogonal dimensions: robustness to varying degrees of missing proofs, competence across different proof types, and sensitivity to the proof locations. Evaluation of ten state-of-the-art models reveals severe fragility, indicating that current LLMs fall well short of the reasoning capabilities exhibited by automated theorem provers.",
+      "authors": [
+        "Zichen Xie",
+        "Wenxi Wang"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-18T22:42:20+00:00",
+      "link": "https://arxiv.org/pdf/2603.18334v1",
+      "tags": [
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Verifying reasoning steps via high-level verification chain-of-thought",
+      "llm_evidence_cn": "通过高层验证思维链验证推理步骤",
+      "llm_evidence": "通过高层验证思维链验证推理步骤",
+      "canonical_evidence": "通过高层验证思维链验证推理步骤",
+      "llm_tldr_en": "Evaluates LLM reasoning by lifting solver-level logic into human-readable verification steps.",
+      "llm_tldr_cn": "通过将求解器底层逻辑提升为可读的验证步骤，评估大模型的推理能力。",
+      "llm_tldr": "通过将求解器底层逻辑提升为可读的验证步骤，评估大模型的推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16434v1",
+      "title": "From Natural Language to Executable Option Strategies via Large Language Models",
+      "abstract": "Large Language Models (LLMs) excel at general code generation, yet translating natural-language trading intents into correct option strategies remains challenging. Real-world option design requires reasoning over massive, multi-dimensional option chain data with strict constraints, which often overwhelms direct generation methods. We introduce the Option Query Language (OQL), a domain-specific intermediate representation that abstracts option markets into high-level primitives under grammatical rules, enabling LLMs to function as reliable semantic parsers rather than free-form programmers. OQL queries are then validated and executed deterministically by an engine to instantiate executable strategies. We also present a new dataset for this task and demonstrate that our neuro-symbolic pipeline significantly improves execution accuracy and logical consistency over direct baselines.",
+      "authors": [
+        "Haochen Luo",
+        "Zhengzhao Lai",
+        "Junjie Xu",
+        "Yifan Li",
+        "Tang Pok Hin",
+        "Yuan Zhang",
+        "Chen Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "published": "2026-03-17T12:14:47+00:00",
+      "link": "https://arxiv.org/pdf/2603.16434v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "LLMs as semantic parsers for executable domain-specific tool queries",
+      "llm_evidence_cn": "LLM作为可执行领域特定工具查询的语义解析器",
+      "llm_evidence": "LLM作为可执行领域特定工具查询的语义解析器",
+      "canonical_evidence": "LLM作为可执行领域特定工具查询的语义解析器",
+      "llm_tldr_en": "Introduces OQL to translate natural language into executable option strategies via LLMs.",
+      "llm_tldr_cn": "引入OQL将自然语言通过LLM转化为可执行的期权策略。",
+      "llm_tldr": "引入OQL将自然语言通过LLM转化为可执行的期权策略。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.16500v1",
+      "title": "From the Inside Out: Progressive Distribution Refinement for Confidence Calibration",
+      "abstract": "Leveraging the model's internal information as the self-reward signal in Reinforcement Learning (RL) has received extensive attention due to its label-free nature. While prior works have made significant progress in applying the Test-Time Scaling (TTS) strategies to RL, the discrepancy in internal information between test and training remains inadequately addressed. Moreover, Test-Time Training based on voting-based TTS strategies often suffers from reward hacking problems. To address these issues, we propose DistriTTRL, which leverages the distribution prior of the model's confidence during RL to progressively optimize the reward signal, rather than relying solely on single-query rollouts. Additionally, we mitigate the phenomenon of consistent reward hacking caused by the voting-based TTS strategies through diversity-targeted penalties. Benefiting from this training mechanism where model capability and self-reward signals complement each other, and the mitigation of reward hacking, DistriTTRL has achieved significant performance improvements across multiple models and benchmarks.",
+      "authors": [
+        "Xizhong Yang",
+        "Yinan Xia",
+        "Huiming Wang",
+        "Mofei Song"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-03-17T13:26:29+00:00",
+      "link": "https://arxiv.org/pdf/2603.16500v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "optimizing reward signals in reinforcement learning",
+      "llm_evidence_cn": "优化强化学习中的奖励信号",
+      "llm_evidence": "优化强化学习中的奖励信号",
+      "canonical_evidence": "优化强化学习中的奖励信号",
+      "llm_tldr_en": "Proposes DistriTTRL to refine self-reward signals in RL using confidence distribution priors.",
+      "llm_tldr_cn": "提出DistriTTRL，利用置信度分布先验优化强化学习中的自我奖励信号。",
+      "llm_tldr": "提出DistriTTRL，利用置信度分布先验优化强化学习中的自我奖励信号。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

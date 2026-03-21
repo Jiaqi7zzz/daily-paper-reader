@@ -6,73 +6,43 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-20
-- 运行时间：2026-03-20 20:13:49 UTC
+- 最新运行日期：2026-03-21
+- 运行时间：2026-03-21 19:15:45 UTC
 - 运行状态：成功
-- 本次总论文数：17
-- 精读区：6
-- 速读区：11
+- 本次总论文数：7
+- 精读区：3
+- 速读区：4
 
 ### 今日简报（AI）
-今日聚焦强化学习与 LLM 智能体前沿，深度解析 17 篇论文中采样效率与执行加速的最新突破。
-满分论文揭示了 Beta-Bernoulli 奖励估计与上下文引导（Context Bootstrapped）在提升 RL 性能上的巨大潜力。
-建议优先研读两篇 10 分佳作，掌握如何通过精准奖励建模与模式感知执行来优化复杂决策任务。
-- 详情：[/202603/20/README](/202603/20/README)
+今日聚焦 LLM Agent 在幻灯片自动生成与 SQL 复杂查询优化领域的深度突破。
+重点推荐通过逆向规范奖励提升 PPT 制作质量，以及利用列集匹配解决 SQL 智能体反馈稀疏的新方案。
+建议关注 Agent 如何从通用对话进化为能处理演示文稿、期权策略等高价值结构化任务的专业工具。
+- 详情：[/202603/21/README](/202603/21/README)
 
 ### 精读区论文标签
-1. [Discounted Beta--Bernoulli Reward Estimation for Sample-Efficient Reinforcement Learning with Verifiable Rewards](/202603/20/2603.18444v1-discounted-beta--bernoulli-reward-estimation-for-sample-efficient-reinforcement-learning-with-verifiable-rewards)  
-   标签：评分：10.0/10、query:rl-tl
-   evidence：具有可验证奖励的高样本效率强化学习 (RLVR)
-2. [Context Bootstrapped Reinforcement Learning](/202603/20/2603.18953v1-context-bootstrapped-reinforcement-learning)  
-   标签：评分：10.0/10、query:rl-tl
-   evidence：针对可验证奖励强化学习（RLVR）的上下文引导强化学习
-3. [ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical Reinforcement Learning](/202603/20/2603.16060v2-arise-agent-reasoning-with-intrinsic-skill-evolution-in-hierarchical-reinforcement-learning)  
+1. [Learning to Present: Inverse Specification Rewards for Agentic Slide Generation](/202603/21/2603.16839v1-learning-to-present-inverse-specification-rewards-for-agentic-slide-generation)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：具有可验证奖励的强化学习
-4. [HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning](/202603/20/2603.17024v2-hopchain-multi-hop-data-synthesis-for-generalizable-vision-language-reasoning)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：为具有可验证奖励的强化学习（RLVR）合成多步推理数据
-5. [SLEA-RL: Step-Level Experience Augmented Reinforcement Learning for Multi-Turn Agentic Training](/202603/20/2603.18079v1-slea-rl-step-level-experience-augmented-reinforcement-learning-for-multi-turn-agentic-training)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：多轮工具使用任务与智能体训练
-6. [VEPO: Variable Entropy Policy Optimization for Low-Resource Language Foundation Models](/202603/20/2603.19152v1-vepo-variable-entropy-policy-optimization-for-low-resource-language-foundation-models)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：具有可验证奖励的强化学习用于结构化约束
+   evidence：LLM智能体通过工具使用学习幻灯片生成的强化学习环境，包含结构验证奖励
+2. [SQL-ASTRA: Alleviating Sparse Feedback in Agentic SQL via Column-Set Matching and Trajectory Aggregation](/202603/21/2603.16161v1-sql-astra-alleviating-sparse-feedback-in-agentic-sql-via-column-set-matching-and-trajectory-aggregation)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：在代理 SQL 强化学习中验证轨迹级和步骤级信号
+3. [OS-Themis: A Scalable Critic Framework for Generalist GUI Rewards](/202603/21/2603.19191v1-os-themis-a-scalable-critic-framework-for-generalist-gui-rewards)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：GUI智能体奖励的可验证里程碑
 
 ### 速读区论文标签
-1. [RewardFlow: Topology-Aware Reward Propagation on State Graphs for Agentic RL with Large Language Models](/202603/20/2603.18859v1-rewardflow-topology-aware-reward-propagation-on-state-graphs-for-agentic-rl-with-large-language-models)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：大模型智能体推理任务的自动化状态级奖励估计
-2. [Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution](/202603/20/2603.18897v1-act-while-thinking-accelerating-llm-agents-via-pattern-aware-speculative-tool-execution)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：通过投机性工具执行加速LLM智能体
-3. [Large Reward Models: Generalizable Online Robot Reward Generation with Vision-Language Models](/202603/20/2603.16065v1-large-reward-models-generalizable-online-robot-reward-generation-with-vision-language-models)  
+1. [ChainFuzzer: Greybox Fuzzing for Workflow-Level Multi-Tool Vulnerabilities in LLM Agents](/202603/21/2603.12614v1-chainfuzzer-greybox-fuzzing-for-workflow-level-multi-tool-vulnerabilities-in-llm-agents)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：将视觉语言模型适配为机器人操作策略的在线奖励生成器
-4. [PaAgent: Portrait-Aware Image Restoration Agent via Subjective-Objective Reinforcement Learning](/202603/20/2603.17055v1-paagent-portrait-aware-image-restoration-agent-via-subjective-objective-reinforcement-learning)  
+   evidence：大模型智能体中的多工具工作流与漏洞发现
+2. [From Natural Language to Executable Option Strategies via Large Language Models](/202603/21/2603.16434v1-from-natural-language-to-executable-option-strategies-via-large-language-models)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：通过强化学习调用修复工具的多模态大模型智能体
-5. [InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning](/202603/20/2603.17310v1-infodensity-rewarding-information-dense-traces-for-efficient-reasoning)  
+   evidence：LLM作为可执行领域特定工具查询的语义解析器
+3. [From the Inside Out: Progressive Distribution Refinement for Confidence Calibration](/202603/21/2603.16500v1-from-the-inside-out-progressive-distribution-refinement-for-confidence-calibration)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：为推理中的高信息密度轨迹提供奖励
-6. [Complementary Reinforcement Learning](/202603/20/2603.17621v1-complementary-reinforcement-learning)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：用于训练基于LLM的智能体的强化学习
-7. [Retrieval-Augmented LLM Agents: Learning to Learn from Experience](/202603/20/2603.18272v1-retrieval-augmented-llm-agents-learning-to-learn-from-experience)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：从经验中学习的检索增强大模型智能体
-8. [Learning to Self-Evolve](/202603/20/2603.18620v1-learning-to-self-evolve)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：强化学习框架，其中上下文编辑由下游性能提升奖励
-9. [Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation](/202603/20/2603.13045v1-mending-the-holes-mitigating-reward-hacking-in-reinforcement-learning-for-multilingual-translation)  
+   evidence：优化强化学习中的奖励信号
+4. [Can LLMs Reason Like Automated Theorem Provers for Rust Verification? VCoT-Bench: Evaluating via Verification Chain of Thought](/202603/21/2603.18334v1-can-llms-reason-like-automated-theorem-provers-for-rust-verification-vcot-bench-evaluating-via-verification-chain-of-thought)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：减轻强化学习中的奖励作弊
-10. [Diffusion Reinforcement Learning via Centered Reward Distillation](/202603/20/2603.14128v1-diffusion-reinforcement-learning-via-centered-reward-distillation)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：扩散模型的外部奖励强化学习微调
-11. [Efficient Soft Actor-Critic with LLM-Based Action-Level Guidance for Continuous Control](/202603/20/2603.17468v1-efficient-soft-actor-critic-with-llm-based-action-level-guidance-for-continuous-control)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：基于LLM的强化学习智能体动作级指导
+   evidence：通过高层验证思维链验证推理步骤
 
 
 <div class="dpr-home-promo-card">
