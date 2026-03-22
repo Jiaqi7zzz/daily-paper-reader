@@ -1,0 +1,150 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-22T19:44:49.104044+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2603.13765v1",
+      "title": "Knowledge Distillation for Large Language Models",
+      "abstract": "We propose a resource-efficient framework for compressing large language models through knowledge distillation, combined with guided chain-of-thought reinforcement learning. Using Qwen 3B as the teacher and Qwen 0.5B as the student, we apply knowledge distillation across English Dolly-15k, Spanish Dolly-15k, and code BugNet and PyTorrent datasets, with hyperparameters tuned in the English setting to optimize student performance. Across tasks, the distilled student retains a substantial portion of the teacher's capability while remaining significantly smaller: 70% to 91% in English, up to 95% in Spanish, and up to 93.5% Rouge-L in code. For coding tasks, integrating chain-of-thought prompting with Group Relative Policy Optimization using CoT-annotated Codeforces data improves reasoning coherence and solution correctness compared to knowledge distillation alone. Post-training 4-bit weight quantization further reduces memory footprint and inference latency. These results show that knowledge distillation combined with chain-of-thought guided reinforcement learning can produce compact, efficient models suitable for deployment in resource-constrained settings.",
+      "authors": [
+        "Alejandro Paredes La Torre",
+        "Barbara Flores",
+        "Diego Rodriguez"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-03-14T05:28:26+00:00",
+      "link": "https://arxiv.org/pdf/2603.13765v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reinforcement learning with verifiable rewards for coding tasks",
+      "llm_evidence_cn": "针对编程任务的具有可验证奖励的强化学习",
+      "llm_evidence": "针对编程任务的具有可验证奖励的强化学习",
+      "canonical_evidence": "针对编程任务的具有可验证奖励的强化学习",
+      "llm_tldr_en": "Combines knowledge distillation with RL and verifiable rewards to compress reasoning capabilities.",
+      "llm_tldr_cn": "结合知识蒸馏与具有可验证奖励的强化学习，以压缩模型的推理能力。",
+      "llm_tldr": "结合知识蒸馏与具有可验证奖励的强化学习，以压缩模型的推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.17208v1",
+      "title": "SYMDIREC: A Neuro-Symbolic Divide-Retrieve-Conquer Framework for Enhanced RTL Synthesis and Summarization",
+      "abstract": "Register-Transfer Level (RTL) synthesis and summarization are central to hardware design automation but remain challenging for Large Language Models (LLMs) due to rigid HDL syntax, limited supervision, and weak alignment with natural language. Existing prompting and retrieval-augmented generation (RAG) methods have not incorporated symbolic planning, limiting their structural precision. We introduce SYMDIREC, a neuro-symbolic framework that decomposes RTL tasks into symbolic subgoals, retrieves relevant code via a fine-tuned retriever, and assembles verified outputs through LLM reasoning. Supporting both Verilog and VHDL without LLM fine-tuning, SYMDIREC achieves ~20% higher Pass@1 rates for synthesis and 15-20% ROUGE-L improvements for summarization over prompting and RAG baselines, demonstrating the benefits of symbolic guidance in RTL tasks.",
+      "authors": [
+        "Prashanth Vijayaraghavan",
+        "Apoorva Nitsure",
+        "Luyao Shi",
+        "Charles Mackin",
+        "Ashutosh Jadhav",
+        "David Beymer",
+        "Ehsan Degan",
+        "Vandana Mukherjee"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.PL"
+      ],
+      "published": "2026-03-17T23:15:24+00:00",
+      "link": "https://arxiv.org/pdf/2603.17208v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "assembling verified outputs through LLM reasoning and symbolic subgoals",
+      "llm_evidence_cn": "通过大模型推理和符号子目标组装经过验证的输出",
+      "llm_evidence": "通过大模型推理和符号子目标组装经过验证的输出",
+      "canonical_evidence": "通过大模型推理和符号子目标组装经过验证的输出",
+      "llm_tldr_en": "SYMDIREC uses a neuro-symbolic framework to decompose tasks and assemble verified RTL outputs.",
+      "llm_tldr_cn": "SYMDIREC采用神经符号框架分解任务并组装经过验证的RTL输出。",
+      "llm_tldr": "SYMDIREC采用神经符号框架分解任务并组装经过验证的RTL输出。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.18074v1",
+      "title": "Lightweight Adaptation for LLM-based Technical Service Agent: Latent Logic Augmentation and Robust Noise Reduction",
+      "abstract": "Adapting Large Language Models in complex technical service domains is constrained by the absence of explicit cognitive chains in human demonstrations and the inherent ambiguity arising from the diversity of valid responses. These limitations severely hinder agents from internalizing latent decision dynamics and generalizing effectively. Moreover, practical adaptation is often impeded by the prohibitive resource and time costs associated with standard training paradigms. To overcome these challenges and guarantee computational efficiency, we propose a lightweight adaptation framework comprising three key contributions. (1) Latent Logic Augmentation: We introduce Planning-Aware Trajectory Modeling and Decision Reasoning Augmentation to bridge the gap between surface-level supervision and latent decision logic. These approaches strengthen the stability of Supervised Fine-Tuning alignment. (2) Robust Noise Reduction: We construct a Multiple Ground Truths dataset through a dual-filtering method to reduce the noise by validating diverse responses, thereby capturing the semantic diversity. (3) Lightweight Adaptation: We design a Hybrid Reward mechanism that fuses an LLM-based judge with a lightweight relevance-based Reranker to distill high-fidelity reward signals while reducing the computational cost compared to standard LLM-as-a-Judge reinforcement learning. Empirical evaluations on real-world Cloud service tasks, conducted across semantically diverse settings, demonstrate that our framework achieves stability and performance gains through Latent Logic Augmentation and Robust Noise Reduction. Concurrently, our Hybrid Reward mechanism achieves alignment comparable to standard LLM-as-a-judge methods with reduced training time, underscoring the practical value for deploying technical service agents.",
+      "authors": [
+        "Yi Yu",
+        "Junzhuo Ma",
+        "Chenghuang Shen",
+        "Xingyan Liu",
+        "Jing Gu",
+        "Hangyi Sun",
+        "Guangquan Hu",
+        "Jianfeng Liu",
+        "Weiting Liu",
+        "Mingyue Pu",
+        "Yu Wang",
+        "Zhengdong Xiao",
+        "Rui Xie",
+        "Longjiu Luo",
+        "Qianrong Wang",
+        "Gurong Cui",
+        "Honglin Qiao",
+        "Wenlian Lu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IR",
+        "stat.AP"
+      ],
+      "published": "2026-03-18T05:01:17+00:00",
+      "link": "https://arxiv.org/pdf/2603.18074v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM-based technical service agent with trajectory modeling",
+      "llm_evidence_cn": "基于大语言模型的轨迹建模技术服务智能体",
+      "llm_evidence": "基于大语言模型的轨迹建模技术服务智能体",
+      "canonical_evidence": "基于大语言模型的轨迹建模技术服务智能体",
+      "llm_tldr_en": "Proposes a lightweight framework for adapting LLMs to complex technical service agent tasks.",
+      "llm_tldr_cn": "提出了一种轻量级框架，用于将大语言模型适配到复杂的技术服务智能体任务中。",
+      "llm_tldr": "提出了一种轻量级框架，用于将大语言模型适配到复杂的技术服务智能体任务中。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

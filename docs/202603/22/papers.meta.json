@@ -1,0 +1,51 @@
+{
+  "label": "2026-03-22",
+  "date": "2026-03-22",
+  "generated_at": "2026-03-22T19:45:24",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202603/22/2603.13765v1-knowledge-distillation-for-large-language-models",
+      "section": "quick",
+      "title_en": "Knowledge Distillation for Large Language Models",
+      "authors": "Alejandro Paredes La Torre, Barbara Flores, Diego Rodriguez",
+      "date": "2026-03-14",
+      "pdf": "https://arxiv.org/pdf/2603.13765v1",
+      "score": "7.0",
+      "evidence": "针对编程任务的具有可验证奖励的强化学习",
+      "tldr": "本研究提出一种高效的大语言模型压缩框架，通过知识蒸馏将 Qwen 3B 的能力迁移至 Qwen 0.5B。在多语言和代码数据集上进行实验，并结合思维链（CoT）引导的强化学习（GRPO）提升代码推理能力。最终通过4比特量化进一步降低资源消耗，在保持高性能的同时实现了显著的模型轻量化，为资源受限环境下的模型部署提供了有效方案。",
+      "tags": "query:rl-tl",
+      "abstract_en": "We propose a resource-efficient framework for compressing large language models through knowledge distillation, combined with guided chain-of-thought reinforcement learning. Using Qwen 3B as the teacher and Qwen 0.5B as the student, we apply knowledge distillation across English Dolly-15k, Spanish Dolly-15k, and code BugNet and PyTorrent datasets, with hyperparameters tuned in the English setting to optimize student performance. Across tasks, the distilled student retains a substantial portion of the teacher's capability while remaining significantly smaller: 70% to 91% in English, up to 95% in Spanish, and up to 93.5% Rouge-L in code. For coding tasks, integrating chain-of-thought prompting with Group Relative Policy Optimization using CoT-annotated Codeforces data improves reasoning coherence and solution correctness compared to knowledge distillation alone. Post-training 4-bit weight quantization further reduces memory footprint and inference latency. These results show that knowledge distillation combined with chain-of-thought guided reinforcement learning can produce compact, efficient models suitable for deployment in resource-constrained settings.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/22/2603.17208v1-symdirec-a-neuro-symbolic-divide-retrieve-conquer-framework-for-enhanced-rtl-synthesis-and-summarization",
+      "section": "quick",
+      "title_en": "SYMDIREC: A Neuro-Symbolic Divide-Retrieve-Conquer Framework for Enhanced RTL Synthesis and Summarization",
+      "authors": "Prashanth Vijayaraghavan, Apoorva Nitsure, Luyao Shi, Charles Mackin, Ashutosh Jadhav, David Beymer, Ehsan Degan, Vandana Mukherjee",
+      "date": "2026-03-17",
+      "pdf": "https://arxiv.org/pdf/2603.17208v1",
+      "score": "6.0",
+      "evidence": "通过大模型推理和符号子目标组装经过验证的输出",
+      "tldr": "针对大语言模型在处理寄存器传输级（RTL）硬件设计任务时面临的语法严苛、监督数据有限及结构精度不足等挑战，本文提出了一种名为 SYMDIREC 的神经符号框架。该框架采用“分而治之”的策略，将 RTL 任务分解为符号化子目标，结合微调的检索器获取相关代码，并通过 LLM 推理生成验证后的输出。SYMDIREC 在无需微调 LLM 的情况下，显著提升了 Verilog 和 VHDL 的合成与摘要性能。",
+      "tags": "query:rl-tl",
+      "abstract_en": "Register-Transfer Level (RTL) synthesis and summarization are central to hardware design automation but remain challenging for Large Language Models (LLMs) due to rigid HDL syntax, limited supervision, and weak alignment with natural language. Existing prompting and retrieval-augmented generation (RAG) methods have not incorporated symbolic planning, limiting their structural precision. We introduce SYMDIREC, a neuro-symbolic framework that decomposes RTL tasks into symbolic subgoals, retrieves relevant code via a fine-tuned retriever, and assembles verified outputs through LLM reasoning. Supporting both Verilog and VHDL without LLM fine-tuning, SYMDIREC achieves ~20% higher Pass@1 rates for synthesis and 15-20% ROUGE-L improvements for summarization over prompting and RAG baselines, demonstrating the benefits of symbolic guidance in RTL tasks.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/22/2603.18074v1-lightweight-adaptation-for-llm-based-technical-service-agent-latent-logic-augmentation-and-robust-noise-reduction",
+      "section": "quick",
+      "title_en": "Lightweight Adaptation for LLM-based Technical Service Agent: Latent Logic Augmentation and Robust Noise Reduction",
+      "authors": "Yi Yu, Junzhuo Ma, Chenghuang Shen, Xingyan Liu, Jing Gu, Hangyi Sun, Guangquan Hu, Jianfeng Liu, Weiting Liu, Mingyue Pu, Yu Wang, Zhengdong Xiao, Rui Xie, Longjiu Luo, Qianrong Wang, Gurong Cui, Honglin Qiao, Wenlian Lu",
+      "date": "2026-03-18",
+      "pdf": "https://arxiv.org/pdf/2603.18074v1",
+      "score": "6.0",
+      "evidence": "基于大语言模型的轨迹建模技术服务智能体",
+      "tldr": "针对技术服务领域LLM适配中存在的认知链缺失、响应歧义及高计算成本问题，本文提出一种轻量化适配框架。通过潜在逻辑增强（规划感知轨迹建模与推理增强）弥补决策逻辑鸿沟，利用鲁棒降噪技术捕捉语义多样性，并设计混合奖励机制（LLM评判器结合轻量级重排序器）以降低训练成本。实验证明该框架在云服务任务中实现了高性能与高效率的平衡。",
+      "tags": "query:rl-tl",
+      "abstract_en": "Adapting Large Language Models in complex technical service domains is constrained by the absence of explicit cognitive chains in human demonstrations and the inherent ambiguity arising from the diversity of valid responses. These limitations severely hinder agents from internalizing latent decision dynamics and generalizing effectively. Moreover, practical adaptation is often impeded by the prohibitive resource and time costs associated with standard training paradigms. To overcome these challenges and guarantee computational efficiency, we propose a lightweight adaptation framework comprising three key contributions. (1) Latent Logic Augmentation: We introduce Planning-Aware Trajectory Modeling and Decision Reasoning Augmentation to bridge the gap between surface-level supervision and latent decision logic. These approaches strengthen the stability of Supervised Fine-Tuning alignment. (2) Robust Noise Reduction: We construct a Multiple Ground Truths dataset through a dual-filtering method to reduce the noise by validating diverse responses, thereby capturing the semantic diversity. (3) Lightweight Adaptation: We design a Hybrid Reward mechanism that fuses an LLM-based judge with a lightweight relevance-based Reranker to distill high-fidelity reward signals while reducing the computational cost compared to standard LLM-as-a-Judge reinforcement learning. Empirical evaluations on real-world Cloud service tasks, conducted across semantically diverse settings, demonstrate that our framework achieves stability and performance gains through Latent Logic Augmentation and Robust Noise Reduction. Concurrently, our Hybrid Reward mechanism achieves alignment comparable to standard LLM-as-a-judge methods with reduced training time, underscoring the practical value for deploying technical service agents.",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
