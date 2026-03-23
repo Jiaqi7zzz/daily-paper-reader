@@ -6,32 +6,45 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-22
-- 运行时间：2026-03-22 19:45:11 UTC
+- 最新运行日期：2026-03-23
+- 运行时间：2026-03-23 20:09:49 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：0
-- 速读区：3
+- 本次总论文数：8
+- 精读区：3
+- 速读区：5
 
 ### 今日简报（AI）
-今日深入探索大模型的高效压缩与垂直领域落地，涵盖知识蒸馏、芯片设计及技术客服优化。
-重点推荐 LLM 知识蒸馏综述，以及利用神经符号框架解决 RTL 硬件综合难题的创新方案。
-建议关注模型轻量化部署及 AI 在硬件自动化设计中的前沿应用。
-- 详情：[/202603/22/README](/202603/22/README)
+今日聚焦长叙事空间布局生成与智能体安全权衡，深度解析 8 篇 AI 前沿进展。
+重点推荐
+- 详情：[/202603/23/README](/202603/23/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Text-to-Stage: Spatial Layouts from Long-form Narratives](/202603/23/2603.17832v1-text-to-stage-spatial-layouts-from-long-form-narratives)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：通过 GRPO 进行具有可验证奖励的强化学习以实现空间推理
+2. [The Verifier Tax: Horizon Dependent Safety Success Tradeoffs in Tool Using LLM Agents](/202603/23/2603.19328v1-the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-agents)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：验证智能体中的工具执行结果与安全性
+3. [Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification](/202603/23/2603.19329v1-goedel-code-prover-hierarchical-proof-search-for-open-state-of-the-art-code-verification)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：将分解分数作为自动代码验证的训练奖励
 
 ### 速读区论文标签
-1. [Knowledge Distillation for Large Language Models](/202603/22/2603.13765v1-knowledge-distillation-for-large-language-models)  
+1. [What If Consensus Lies? Selective-Complementary Reinforcement Learning at Test Time](/202603/23/2603.19880v1-what-if-consensus-lies-selective-complementary-reinforcement-learning-at-test-time)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：针对编程任务的具有可验证奖励的强化学习
-2. [SYMDIREC: A Neuro-Symbolic Divide-Retrieve-Conquer Framework for Enhanced RTL Synthesis and Summarization](/202603/22/2603.17208v1-symdirec-a-neuro-symbolic-divide-retrieve-conquer-framework-for-enhanced-rtl-synthesis-and-summarization)  
+   evidence：带有伪奖励的测试时强化学习
+2. [Experience is the Best Teacher: Motivating Effective Exploration in Reinforcement Learning for LLMs](/202603/23/2603.20046v1-experience-is-the-best-teacher-motivating-effective-exploration-in-reinforcement-learning-for-llms)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：基于准则奖励和后验经验的强化学习用于推理任务
+3. [The $\mathbf{Y}$-Combinator for LLMs: Solving Long-Context Rot with $λ$-Calculus](/202603/23/2603.20105v1-the-mathbfy-combinator-for-llms-solving-long-context-rot-with--calculus)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：通过类型化函数运行时实现可验证执行
+4. [Box Maze: A Process-Control Architecture for Reliable LLM Reasoning](/202603/23/2603.19182v1-box-maze-a-process-control-architecture-for-reliable-llm-reasoning)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：通过大模型推理和符号子目标组装经过验证的输出
-3. [Lightweight Adaptation for LLM-based Technical Service Agent: Latent Logic Augmentation and Robust Noise Reduction](/202603/22/2603.18074v1-lightweight-adaptation-for-llm-based-technical-service-agent-latent-logic-augmentation-and-robust-noise-reduction)  
+   evidence：推理过程完整性的边界强制执行
+5. [Stepwise: Neuro-Symbolic Proof Search for Automated Systems Verification](/202603/23/2603.19715v1-stepwise-neuro-symbolic-proof-search-for-automated-systems-verification)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：基于大语言模型的轨迹建模技术服务智能体
+   evidence：用于自动化系统验证的神经符号证明搜索
 
 
 <div class="dpr-home-promo-card">

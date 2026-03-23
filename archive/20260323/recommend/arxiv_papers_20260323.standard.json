@@ -1,0 +1,332 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-23T20:08:37.403211+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2603.17832v1",
+      "title": "Text-to-Stage: Spatial Layouts from Long-form Narratives",
+      "abstract": "In this work, we probe the ability of a language model to demonstrate spatial reasoning from unstructured text, mimicking human capabilities and automating a process that benefits many downstream media applications. Concretely, we study the narrative-to-play task: inferring stage-play layouts (scenes, speaker positions, movements, and room types) from text that lacks explicit spatial, positional, or relational cues. We then introduce a dramaturgy-inspired deterministic evaluation suite and, finally, a training and inference recipe that combines rejection SFT using Best-of-N sampling with RL from verifiable rewards via GRPO. Experiments on a text-only corpus of classical English literature demonstrate improvements over vanilla models across multiple metrics (character attribution, spatial plausibility, and movement economy), as well as alignment with an LLM-as-a-judge and subjective human preferences.",
+      "authors": [
+        "Jefferson Hernandez",
+        "Swarnadeep Saha",
+        "Chenxi Whitehouse",
+        "Sanjeel Parekh",
+        "Calvin Murdock",
+        "Yuliang Li",
+        "W. Owen Brimijoin",
+        "Vamsi Krishna Ithapu",
+        "Ishwarya Ananthabhotla"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-18T15:26:27+00:00",
+      "link": "https://arxiv.org/pdf/2603.17832v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL from verifiable rewards via GRPO for spatial reasoning",
+      "llm_evidence_cn": "通过 GRPO 进行具有可验证奖励的强化学习以实现空间推理",
+      "llm_evidence": "通过 GRPO 进行具有可验证奖励的强化学习以实现空间推理",
+      "canonical_evidence": "通过 GRPO 进行具有可验证奖励的强化学习以实现空间推理",
+      "llm_tldr_en": "Applies RL with verifiable rewards to improve spatial reasoning and layout generation from narratives.",
+      "llm_tldr_cn": "应用具有可验证奖励的强化学习来提升大模型的空间推理和剧本布局生成能力。",
+      "llm_tldr": "应用具有可验证奖励的强化学习来提升大模型的空间推理和剧本布局生成能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.19328v1",
+      "title": "The Verifier Tax: Horizon Dependent Safety Success Tradeoffs in Tool Using LLM Agents",
+      "abstract": "We study how runtime enforcement against unsafe actions affects end-to-end task performance in multi-step tool using large language model (LLM) agents. Using tau-bench across Airline and Retail domains, we compare baseline Tool-Calling, planning-integrated (TRIAD), and policy-mediated (TRIAD-SAFETY) architectures with GPT-OSS-20B and GLM-4-9B. We identify model dependent interaction horizons (15 to 30 turns) and decompose outcomes into overall success rate (SR), safe success rate (SSR), and unsafe success rate (USR). Our results reveal a persistent Safety Capability Gap. While safety mediation can intercept up to 94 percent of non-compliant actions, it rarely translates into strictly safe goal attainment (SSR below 5 percent in most settings). We find that high unsafe success rates are primarily driven by Integrity Leaks, where models hallucinate user identifiers to bypass mandatory authentication. Recovery rates following blocked actions are consistently low, ranging from 21 percent for GPT-OSS-20B in simpler procedural tasks to near zero in complex Retail scenarios. These results demonstrate that runtime enforcement imposes a significant verifier tax on conversational length and compute cost without guaranteeing safe completion, highlighting the critical need for agents capable of grounded identity verification and post-intervention reasoning.",
+      "authors": [
+        "Tanmay Sah",
+        "Vishal Srivastava",
+        "Dolly Sah",
+        "Kayden Jordan"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-03-18T16:16:34+00:00",
+      "link": "https://arxiv.org/pdf/2603.19328v1",
+      "tags": [
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Verifying tool execution results and safety in agents",
+      "llm_evidence_cn": "验证智能体中的工具执行结果与安全性",
+      "llm_evidence": "验证智能体中的工具执行结果与安全性",
+      "canonical_evidence": "验证智能体中的工具执行结果与安全性",
+      "llm_tldr_en": "Analyzes the impact of runtime enforcement and verification on the success rates of tool-using LLM agents.",
+      "llm_tldr_cn": "分析了运行时强制执行和验证对使用工具的LLM智能体任务成功率的影响。",
+      "llm_tldr": "分析了运行时强制执行和验证对使用工具的LLM智能体任务成功率的影响。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.19329v1",
+      "title": "Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification",
+      "abstract": "Large language models (LLMs) can generate plausible code but offer limited guarantees of correctness. Formally verifying that implementations satisfy specifications requires constructing machine-checkable proofs, a task that remains beyond current automation. We propose a hierarchical proof search framework for automated code verification in Lean~4 that decomposes complex verification goals into structurally simpler subgoals before attempting tactic-level proving. Central to our approach is a principled decomposition score that combines constructive justification with structural effectiveness. Crucially, this score serves as both the training reward and the inference-time ranking criterion, ensuring strict alignment between optimization and deployment. We train Goedel-Code-Prover-8B, a single unified policy for both decomposition and completion, via supervised initialization followed by hybrid reinforcement learning, where a continuous decomposition reward drives planning exploration while supervised replay stabilizes proof generation. On three Lean-based code verification benchmarks comprising 427 tasks, our 8B-parameter model achieves a 62.0\\% prove success rate, a 2.6$\\times$ improvement over the strongest baseline, surpassing neural provers up to 84$\\times$ larger. We further observe consistent inference-time scaling: success rates improve monotonically with search iterations and sampling budget, with our trained model achieving greater efficiency than frontier off-the-shelf models of comparable scale.",
+      "authors": [
+        "Zenan Li",
+        "Ziran Yang",
+        "Deyuan",
+        "He",
+        "Haoyu Zhao",
+        "Andrew Zhao",
+        "Shange Tang",
+        "Kaiyu Yang",
+        "Aarti Gupta",
+        "Zhendong Su",
+        "Chi Jin"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-03-18T18:42:04+00:00",
+      "link": "https://arxiv.org/pdf/2603.19329v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "decomposition score as training reward for automated code verification",
+      "llm_evidence_cn": "将分解分数作为自动代码验证的训练奖励",
+      "llm_evidence": "将分解分数作为自动代码验证的训练奖励",
+      "canonical_evidence": "将分解分数作为自动代码验证的训练奖励",
+      "llm_tldr_en": "A hierarchical proof search framework for code verification using a decomposition score as an RL reward.",
+      "llm_tldr_cn": "一种用于代码验证的分层证明搜索框架，使用分解分数作为强化学习奖励。",
+      "llm_tldr": "一种用于代码验证的分层证明搜索框架，使用分解分数作为强化学习奖励。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.19880v1",
+      "title": "What If Consensus Lies? Selective-Complementary Reinforcement Learning at Test Time",
+      "abstract": "Test-Time Reinforcement Learning (TTRL) enables Large Language Models (LLMs) to enhance reasoning capabilities on unlabeled test streams by deriving pseudo-rewards from majority voting consensus. However, existing TTRL methods rely exclusively on positive pseudo-labeling strategies. Such reliance becomes vulnerable under challenging scenarios where answer distributions are highly dispersed, resulting in weak consensus that inadvertently reinforces incorrect trajectories as supervision signals. In this paper, we propose SCRL (Selective-Complementary Reinforcement Learning), a robust test-time reinforcement learning framework that effectively mitigates label noise amplification. SCRL develops Selective Positive Pseudo-Labeling, which enforces strict consensus criteria to filter unreliable majorities. Complementarily, SCRL introduces Entropy-Gated Negative Pseudo-Labeling, the first negative supervision mechanism in TTRL, to reliably prune incorrect trajectories based on generation uncertainty. Extensive experiments on multiple reasoning benchmarks demonstrate that SCRL achieves substantial improvements over baselines, while maintaining robust generalization and training stability under constrained rollout budgets. Our code is available at https://github.com/Jasper-Yan/SCRL.",
+      "authors": [
+        "Dong Yan",
+        "Jian Liang",
+        "Yanbo Wang",
+        "Shuo Lu",
+        "Ran He",
+        "Tieniu Tan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-20T11:47:12+00:00",
+      "link": "https://arxiv.org/pdf/2603.19880v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "test-time reinforcement learning with pseudo-rewards",
+      "llm_evidence_cn": "带有伪奖励的测试时强化学习",
+      "llm_evidence": "带有伪奖励的测试时强化学习",
+      "canonical_evidence": "带有伪奖励的测试时强化学习",
+      "llm_tldr_en": "Proposes a robust test-time RL framework to mitigate label noise in reasoning tasks.",
+      "llm_tldr_cn": "提出一种鲁棒的测试时强化学习框架，以减轻推理任务中的标签噪声。",
+      "llm_tldr": "提出一种鲁棒的测试时强化学习框架，以减轻推理任务中的标签噪声。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.19182v1",
+      "title": "Box Maze: A Process-Control Architecture for Reliable LLM Reasoning",
+      "abstract": "Large language models (LLMs) demonstrate strong generative capabilities but remain vulnerable to hallucination and unreliable reasoning under adversarial prompting. Existing safety approaches -- such as reinforcement learning from human feedback (RLHF) and output filtering -- primarily operate at the behavioral level and may lack explicit architectural mechanisms for enforcing reasoning process integrity.   This paper proposes the Box Maze framework, a conceptual process-control architecture that decomposes LLM reasoning into three explicit layers: memory grounding, structured inference, and boundary enforcement. We introduce preliminary simulation-based evaluation involving progressive boundary erosion scenarios across multiple heterogeneous LLM systems (DeepSeek-V3, Doubao, Qwen). Results from n=50 adversarial scenarios suggest that explicit cognitive control layers may improve consistency in boundary maintenance, with architectural constraints reducing boundary failure rates from approximately 40% (baseline RLHF) to below 1% under adversarial conditions.   While current validation is simulation-based, these preliminary results indicate that process-level control may offer a promising direction for improving reliability in large language model reasoning.",
+      "authors": [
+        "Zou Qiang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-19T17:41:18+00:00",
+      "link": "https://arxiv.org/pdf/2603.19182v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Boundary enforcement for reasoning process integrity",
+      "llm_evidence_cn": "推理过程完整性的边界强制执行",
+      "llm_evidence": "推理过程完整性的边界强制执行",
+      "canonical_evidence": "推理过程完整性的边界强制执行",
+      "llm_tldr_en": "Proposes a process-control architecture to enforce reasoning integrity and boundary safety in LLMs.",
+      "llm_tldr_cn": "提出一种过程控制架构，以强制执行LLM的推理完整性和边界安全性。",
+      "llm_tldr": "提出一种过程控制架构，以强制执行LLM的推理完整性和边界安全性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.20046v1",
+      "title": "Experience is the Best Teacher: Motivating Effective Exploration in Reinforcement Learning for LLMs",
+      "abstract": "Reinforcement Learning (RL) with rubric-based rewards has recently shown remarkable progress in enhancing general reasoning capabilities of Large Language Models (LLMs), yet still suffers from ineffective exploration confined to curent policy distribution. In fact, RL optimization can be viewed as steering the policy toward an ideal distribution that maximizes the rewards, while effective exploration should align efforts with desired target. Leveraging this insight, we propose HeRL, a Hindsight experience guided Reinforcement Learning framework to bootstrap effective exploration by explicitly telling LLMs the desired behaviors specified in rewards. Concretely, HeRL treats failed trajectories along with their unmet rubrics as hindsight experience, which serves as in-context guidance for the policy to explore desired responses beyond its current distribution. Additionally, we introduce a bonus reward to incentivize responses with greater potential for improvement under such guidance. HeRL facilitates effective learning from desired high quality samples without repeated trial-and-error from scratch, yielding a more accurate estimation of the expected gradient theoretically. Extensive experiments across various benchmarks demonstrate that HeRL achieves superior performance gains over baselines, and can further benefit from experience guided self-improvement at test time. Our code is available at https://github.com/sikelifei/HeRL.",
+      "authors": [
+        "Wenjian Zhang",
+        "Kongcheng Zhang",
+        "Jiaxin Qi",
+        "Baisheng Lai",
+        "Jianqiang Huang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-20T15:32:06+00:00",
+      "link": "https://arxiv.org/pdf/2603.20046v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL with rubric-based rewards and hindsight experience for reasoning",
+      "llm_evidence_cn": "基于准则奖励和后验经验的强化学习用于推理任务",
+      "llm_evidence": "基于准则奖励和后验经验的强化学习用于推理任务",
+      "canonical_evidence": "基于准则奖励和后验经验的强化学习用于推理任务",
+      "llm_tldr_en": "HeRL uses hindsight experience and reward rubrics to guide effective exploration in LLM reinforcement learning.",
+      "llm_tldr_cn": "HeRL利用后验经验和奖励准则来引导大语言模型强化学习中的有效探索。",
+      "llm_tldr": "HeRL利用后验经验和奖励准则来引导大语言模型强化学习中的有效探索。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.19715v1",
+      "title": "Stepwise: Neuro-Symbolic Proof Search for Automated Systems Verification",
+      "abstract": "Formal verification via interactive theorem proving is increasingly used to ensure the correctness of critical systems, yet constructing large proof scripts remains highly manual and limits scalability. Advances in large language models (LLMs), especially in mathematical reasoning, make their integration into software verification increasingly promising. This paper introduces a neuro-symbolic proof generation framework designed to automate proof search for systems-level verification projects. The framework performs a best-first tree search over proof states, repeatedly querying an LLM for the next candidate proof step. On the neural side, we fine-tune LLMs using datasets of proof state-step pairs; on the symbolic side, we incorporate a range of ITP tools to repair rejected steps, filter and rank proof states, and automatically discharge subgoals when search progress stalls. This synergy enables data-efficient LLM adaptation and semantics-informed pruning of the search space. We implement the framework on a new Isabelle REPL that exposes fine-grained proof states and automation tools, and evaluate it on the FVEL seL4 benchmark and additional Isabelle developments. On seL4, the system proves up to 77.6\\% of the theorems, substantially surpassing previous LLM-based approaches and standalone Sledgehammer, while solving significantly more multi-step proofs. Results across further benchmarks demonstrate strong generalization, indicating a viable path toward scalable automated software verification.",
+      "authors": [
+        "Baoding He",
+        "Zenan Li",
+        "Wei Sun",
+        "Yuan Yao",
+        "Taolue Chen",
+        "Xiaoxing Ma",
+        "Zhendong Su"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-20T07:45:49+00:00",
+      "link": "https://arxiv.org/pdf/2603.19715v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "neuro-symbolic proof search for automated systems verification",
+      "llm_evidence_cn": "用于自动化系统验证的神经符号证明搜索",
+      "llm_evidence": "用于自动化系统验证的神经符号证明搜索",
+      "canonical_evidence": "用于自动化系统验证的神经符号证明搜索",
+      "llm_tldr_en": "Automates formal verification by combining LLM proof step generation with symbolic tree search.",
+      "llm_tldr_cn": "通过结合大模型证明步骤生成与符号树搜索，实现自动化形式化验证。",
+      "llm_tldr": "通过结合大模型证明步骤生成与符号树搜索，实现自动化形式化验证。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.20105v1",
+      "title": "The $\\mathbf{Y}$-Combinator for LLMs: Solving Long-Context Rot with $λ$-Calculus",
+      "abstract": "LLMs are increasingly used as general-purpose reasoners, but long inputs remain bottlenecked by a fixed context window. Recursive Language Models (RLMs) address this by externalising the prompt and recursively solving subproblems. Yet existing RLMs depend on an open-ended read-eval-print loop (REPL) in which the model generates arbitrary control code, making execution difficult to verify, predict, and analyse.   We introduce $λ$-RLM, a framework for long-context reasoning that replaces free-form recursive code generation with a typed functional runtime grounded in $λ$-calculus. It executes a compact library of pre-verified combinators and uses neural inference only on bounded leaf subproblems, turning recursive reasoning into a structured functional program with explicit control flow. We show that $λ$-RLM admits formal guarantees absent from standard RLMs, including termination, closed-form cost bounds, controlled accuracy scaling with recursion depth, and an optimal partition rule under a simple cost model. Empirically, across four long-context reasoning tasks and nine base models, $λ$-RLM outperforms standard RLM in 29 of 36 model-task comparisons, improves average accuracy by up to +21.9 points across model tiers, and reduces latency by up to 4.1x. These results show that typed symbolic control yields a more reliable and efficient foundation for long-context reasoning than open-ended recursive code generation. The complete implementation of $λ$-RLM, is open-sourced for the community at: https://github.com/lambda-calculus-LLM/lambda-RLM.",
+      "authors": [
+        "Amartya Roy",
+        "Rasul Tutunov",
+        "Xiaotong Ji",
+        "Matthieu Zimmer",
+        "Haitham Bou-Ammar"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-20T16:29:51+00:00",
+      "link": "https://arxiv.org/pdf/2603.20105v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Verifiable execution via typed functional runtime",
+      "llm_evidence_cn": "通过类型化函数运行时实现可验证执行",
+      "llm_evidence": "通过类型化函数运行时实现可验证执行",
+      "canonical_evidence": "通过类型化函数运行时实现可验证执行",
+      "llm_tldr_en": "Replaces free-form code with pre-verified combinators to make LLM recursive reasoning verifiable and predictable.",
+      "llm_tldr_cn": "用预验证的组合子取代自由代码生成，使LLM递归推理过程可验证且可预测。",
+      "llm_tldr": "用预验证的组合子取代自由代码生成，使LLM递归推理过程可验证且可预测。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
