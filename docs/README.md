@@ -6,45 +6,70 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-23
-- 运行时间：2026-03-23 20:09:49 UTC
+- 最新运行日期：2026-03-24
+- 运行时间：2026-03-24 20:35:54 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：3
-- 速读区：5
+- 本次总论文数：16
+- 精读区：7
+- 速读区：9
 
 ### 今日简报（AI）
-今日聚焦长叙事空间布局生成与智能体安全权衡，深度解析 8 篇 AI 前沿进展。
-重点推荐
-- 详情：[/202603/23/README](/202603/23/README)
+今日聚焦 16 篇 AI 智能体前沿进展，深度拆解长程工具调用与策略合规验证的核心技术。
+满分论文给出了长程工具使用智能体的强化学习全套方案，并展示了如何利用求解器确保 LLM 行为符合预设策略。
+建议优先研读强化学习与符号对齐的结合，这是解决复杂推理与智能体可靠性问题的关键趋势。
+- 详情：[/202603/24/README](/202603/24/README)
 
 ### 精读区论文标签
-1. [Text-to-Stage: Spatial Layouts from Long-form Narratives](/202603/23/2603.17832v1-text-to-stage-spatial-layouts-from-long-form-narratives)  
+1. [Demystifying Reinforcement Learning for Long-Horizon Tool-Using Agents: A Comprehensive Recipe](/202603/24/2603.21972v1-demystifying-reinforcement-learning-for-long-horizon-tool-using-agents-a-comprehensive-recipe)  
+   标签：评分：10.0/10、query:rl-tl
+   evidence：具有奖励塑造的长程工具使用智能体强化学习
+2. [Solver-Aided Verification of Policy Compliance in Tool-Augmented LLM Agents](/202603/24/2603.20449v1-solver-aided-verification-of-policy-compliance-in-tool-augmented-llm-agents)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：通过 GRPO 进行具有可验证奖励的强化学习以实现空间推理
-2. [The Verifier Tax: Horizon Dependent Safety Success Tradeoffs in Tool Using LLM Agents](/202603/23/2603.19328v1-the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-agents)  
+   evidence：使用SMT求解器辅助框架强制执行工具增强大模型代理的工具使用策略合规性
+3. [RLVR Training of LLMs Does Not Improve Thinking Ability for General QA: Evaluation Method and a Simple Solution](/202603/24/2603.20799v1-rlvr-training-of-llms-does-not-improve-thinking-ability-for-general-qa-evaluation-method-and-a-simple-solution)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：验证智能体中的工具执行结果与安全性
-3. [Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification](/202603/23/2603.19329v1-goedel-code-prover-hierarchical-proof-search-for-open-state-of-the-art-code-verification)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：将分解分数作为自动代码验证的训练奖励
+   evidence：对 LLM 中 RLVR（来自可验证奖励的强化学习）的评估
+4. [LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning](/202603/24/2603.21065v1-longcat-flash-prover-advancing-native-formal-reasoning-via-agentic-tool-integrated-reinforcement-learning)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：用于形式化推理的智能体工具集成强化学习
+5. [Prompt replay: speeding up grpo with on-policy reuse of high-signal prompts](/202603/24/2603.21177v1-prompt-replay-speeding-up-grpo-with-on-policy-reuse-of-high-signal-prompts)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：具有可验证奖励的强化学习 (RLVR) 与 GRPO 训练
+6. [P^2O: Joint Policy and Prompt Optimization](/202603/24/2603.21877v1-p2o-joint-policy-and-prompt-optimization)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：在RLVR中协同提示词优化与策略优化
+7. [On the Direction of RLVR Updates for LLM Reasoning: Identification and Exploitation](/202603/24/2603.22117v1-on-the-direction-of-rlvr-updates-for-llm-reasoning-identification-and-exploitation)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：使用标记级对数概率差异分析大模型推理的RLVR更新方向
 
 ### 速读区论文标签
-1. [What If Consensus Lies? Selective-Complementary Reinforcement Learning at Test Time](/202603/23/2603.19880v1-what-if-consensus-lies-selective-complementary-reinforcement-learning-at-test-time)  
+1. [Stabilizing Iterative Self-Training with Verified Reasoning via Symbolic Recursive Self-Alignment](/202603/24/2603.21558v1-stabilizing-iterative-self-training-with-verified-reasoning-via-symbolic-recursive-self-alignment)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：推理步骤的符号验证子系统
+2. [CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution](/202603/24/2603.17775v2-coverrl-breaking-the-consensus-trap-in-label-free-reasoning-via-generator-verifier-co-evolution)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：带有伪奖励的测试时强化学习
-2. [Experience is the Best Teacher: Motivating Effective Exploration in Reinforcement Learning for LLMs](/202603/23/2603.20046v1-experience-is-the-best-teacher-motivating-effective-exploration-in-reinforcement-learning-for-llms)  
+   evidence：带有验证器引导的无标签强化学习
+3. [User Preference Modeling for Conversational LLM Agents: Weak Rewards from Retrieval-Augmented Interaction](/202603/24/2603.20939v1-user-preference-modeling-for-conversational-llm-agents-weak-rewards-from-retrieval-augmented-interaction)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：基于准则奖励和后验经验的强化学习用于推理任务
-3. [The $\mathbf{Y}$-Combinator for LLMs: Solving Long-Context Rot with $λ$-Calculus](/202603/23/2603.20105v1-the-mathbfy-combinator-for-llms-solving-long-context-rot-with--calculus)  
+   evidence：通过交互获得弱奖励的对话式LLM智能体
+4. [TAMTRL: Teacher-Aligned Reward Reshaping for Multi-Turn Reinforcement Learning in Long-Context Compression](/202603/24/2603.21663v1-tamtrl-teacher-aligned-reward-reshaping-for-multi-turn-reinforcement-learning-in-long-context-compression)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：通过类型化函数运行时实现可验证执行
-4. [Box Maze: A Process-Control Architecture for Reliable LLM Reasoning](/202603/23/2603.19182v1-box-maze-a-process-control-architecture-for-reliable-llm-reasoning)  
+   evidence：多轮强化学习中的奖励重塑与过程奖励模型
+5. [SpatialReward: Verifiable Spatial Reward Modeling for Fine-Grained Spatial Consistency in Text-to-Image Generation](/202603/24/2603.22228v1-spatialreward-verifiable-spatial-reward-modeling-for-fine-grained-spatial-consistency-in-text-to-image-generation)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：强化学习中空间布局的可验证奖励模型
+6. [LoopRPT: Reinforcement Pre-Training for Looped Language Models](/202603/24/2603.19714v1-looprpt-reinforcement-pre-training-for-looped-language-models)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：推理过程完整性的边界强制执行
-5. [Stepwise: Neuro-Symbolic Proof Search for Automated Systems Verification](/202603/23/2603.19715v1-stepwise-neuro-symbolic-proof-search-for-automated-systems-verification)  
+   evidence：将强化信号分配给潜在推理步骤
+7. [Breaking the Capability Ceiling of LLM Post-Training by Reintroducing Markov States](/202603/24/2603.19987v1-breaking-the-capability-ceiling-of-llm-post-training-by-reintroducing-markov-states)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：用于自动化系统验证的神经符号证明搜索
+   evidence：用于大模型后训练和对齐的强化学习
+8. [kRAIG: A Natural Language-Driven Agent for Automated DataOps Pipeline Generation](/202603/24/2603.20311v1-kraig-a-natural-language-driven-agent-for-automated-dataops-pipeline-generation)  
+   标签：评分：6.0/10、query:rl-tl
+   evidence：用于自动化工具生成和执行的LLM智能体
+9. [Semantic Tool Discovery for Large Language Models: A Vector-Based Approach to MCP Tool Selection](/202603/24/2603.20313v1-semantic-tool-discovery-for-large-language-models-a-vector-based-approach-to-mcp-tool-selection)  
+   标签：评分：6.0/10、query:rl-tl
+   evidence：LLM工具调用的语义工具发现
 
 
 <div class="dpr-home-promo-card">
