@@ -6,46 +6,52 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-25
-- 运行时间：2026-03-25 19:43:10 UTC
+- 最新运行日期：2026-03-26
+- 运行时间：2026-03-26 20:40:45 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：5
-- 速读区：3
+- 本次总论文数：10
+- 精读区：4
+- 速读区：6
 
 ### 今日简报（AI）
-今日深度解析 8 篇 AI 论文，重点攻克大模型在特定领域的推理增强与强化学习微调难题。
-满分论文 WIST 揭示了联网迭代自博弈对推理的显著提升，而 Token 级分析则精准定位了 RLVR 微调中的分布偏移关键点。
-建议优先研读自博弈与检索增强（RAG）的结合方案，以提升复杂逻辑任务的输出可靠性。
-- 详情：[/202603/25/README](/202603/25/README)
+今日聚焦大模型经验学习与机器人规划，深度解析 10 篇前沿成果。
+满分论文揭示了“双重引导”对经验内化的关键作用，闭环语言强化学习则为机器人任务规划带来突破。
+推荐优先研读经验学习的内化机制，探索 AI 如何通过自我演进与代码生成实现更复杂的物理交互。
+- 详情：[/202603/26/README](/202603/26/README)
 
 ### 精读区论文标签
-1. [WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement](/202603/25/2603.22352v1-wist-web-grounded-iterative-self-play-tree-for-domain-targeted-reasoning-improvement)  
+1. [Towards Effective Experiential Learning: Dual Guidance for Utilization and Internalization](/202603/26/2603.24093v1-towards-effective-experiential-learning-dual-guidance-for-utilization-and-internalization)  
    标签：评分：10.0/10、query:rl-tl
-   evidence：具有可验证奖励的强化学习（RLVR）用于推理提升
-2. [Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs](/202603/25/2603.22446v1-sparse-but-critical-a-token-level-analysis-of-distributional-shifts-in-rlvr-fine-tuning-of-llms)  
-   标签：评分：10.0/10、query:rl-tl
-   evidence：具有可验证奖励的强化学习 (RLVR) 的标记级分析
-3. [Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought](/202603/25/2603.22847v1-rethinking-token-level-policy-optimization-for-multimodal-chain-of-thought)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：多模态推理中的可验证奖励强化学习 (RLVR)
-4. [The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration](/202603/25/2603.22862v1-the-evolution-of-tool-use-in-llm-agents-from-single-tool-call-to-multi-tool-orchestration)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：大模型智能体多工具编排与可验证性综述
-5. [Off-Policy Value-Based Reinforcement Learning for Large Language Models](/202603/25/2603.23355v1-off-policy-value-based-reinforcement-learning-for-large-language-models)  
+   evidence：针对可验证奖励强化学习（RLVR）的双重指导优化
+2. [Closed-Loop Verbal Reinforcement Learning for Task-Level Robotic Planning](/202603/26/2603.22169v1-closed-loop-verbal-reinforcement-learning-for-task-level-robotic-planning)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：结合内部一致性与结果验证的基于价值的强化学习
+   evidence：验证大模型任务级机器人规划的执行轨迹
+3. [Agent-Sentry: Bounding LLM Agents via Execution Provenance](/202603/26/2603.22868v1-agent-sentry-bounding-llm-agents-via-execution-provenance)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：通过执行溯源验证系统是否成功执行了用户的预期任务
+4. [Large Language Model Guided Incentive Aware Reward Design for Cooperative Multi-Agent Reinforcement Learning](/202603/26/2603.24324v1-large-language-model-guided-incentive-aware-reward-design-for-cooperative-multi-agent-reinforcement-learning)  
+   标签：评分：8.0/10、query:rl-tl
+   evidence：利用大模型合成可执行程序的自动奖励设计框架
 
 ### 速读区论文标签
-1. [Efficient Exploration at Scale](/202603/25/2603.17378v1-efficient-exploration-at-scale)  
+1. [CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation](/202603/26/2603.22435v1-cap-x-a-framework-for-benchmarking-and-improving-coding-agents-for-robot-manipulation)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：使用可执行代码对机器人操作的编程智能体进行基准测试
+2. [Implicit Turn-Wise Policy Optimization for Proactive User-LLM Interaction](/202603/26/2603.23550v1-implicit-turn-wise-policy-optimization-for-proactive-user-llm-interaction)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：用于强化学习优化的可验证中间奖励
+3. [HDPO: Hybrid Distillation Policy Optimization via Privileged Self-Distillation](/202603/26/2603.23871v1-hdpo-hybrid-distillation-policy-optimization-via-privileged-self-distillation)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：数学推理强化学习，利用地面真值过滤正确解
+4. [FinToolSyn: A forward synthesis Framework for Financial Tool-Use Dialogue Data with Dynamic Tool Retrieval](/202603/26/2603.24051v1-fintoolsyn-a-forward-synthesis-framework-for-financial-tool-use-dialogue-data-with-dynamic-tool-retrieval)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：金融工具使用对话数据合成
+5. [Enhancing Reinforcement Learning Fine-Tuning with an Online Refiner](/202603/26/2603.18088v1-enhancing-reinforcement-learning-fine-tuning-with-an-online-refiner)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：具有奖励不确定性建模的 RLHF 在线学习算法
-2. [PAVE: Premise-Aware Validation and Editing for Retrieval-Augmented LLMs](/202603/25/2603.20673v1-pave-premise-aware-validation-and-editing-for-retrieval-augmented-llms)  
+   evidence：带有动态约束和在线精炼器的强化学习微调
+6. [LLMORPH: Automated Metamorphic Testing of Large Language Models](/202603/26/2603.23611v1-llmorph-automated-metamorphic-testing-of-large-language-models)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：用于证据驱动答案验证的推理时验证层
-3. [Fault-Tolerant Design and Multi-Objective Model Checking for Real-Time Deep Reinforcement Learning Systems](/202603/25/2603.23113v1-fault-tolerant-design-and-multi-objective-model-checking-for-real-time-deep-reinforcement-learning-systems)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：用于深度强化学习安全性和性能的形式化方法与模型检测
+   evidence：用于验证大语言模型输出正确性的自动化蜕变测试
 
 
 <div class="dpr-home-promo-card">
