@@ -6,58 +6,55 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-27
-- 运行时间：2026-03-27 20:29:27 UTC
+- 最新运行日期：2026-03-28
+- 运行时间：2026-03-28 19:51:39 UTC
 - 运行状态：成功
-- 本次总论文数：12
-- 精读区：6
-- 速读区：6
+- 本次总论文数：11
+- 精读区：4
+- 速读区：7
 
 ### 今日简报（AI）
-今日聚焦 LLM 多步工具编排与强化学习效率优化，两篇满分论文揭示了模型复杂推理进阶的新路径。
-核心突破在于通过约束数据合成强化工具调用能力，以及利用在线剪枝技术显著加速 RLVR 训练并提升性能。
-建议优先研读关于分级奖励与动态评估的满分成果，掌握大模型从“工具使用”到“高效自进化”的前沿技术。
-- 详情：[/202603/27/README](/202603/27/README)
+今日精选 11 篇前沿论文，深度解析 LLM Agent 在工具编排效率与安全对齐领域的最新突破。
+核心结论指出效用引导可显著优化工具调用逻辑，并揭示了工具功能属性对模型安全性的深层因果影响。
+建议关注 Agent 在自动化代码迭代及物理系统安全保障中的应用，把握从 AI 助手向自主科研转型的技术趋势。
+- 详情：[/202603/28/README](/202603/28/README)
 
 ### 精读区论文标签
-1. [Training LLMs for Multi-Step Tool Orchestration with Constrained Data Synthesis and Graduated Rewards](/202603/27/2603.24709v1-training-llms-for-multi-step-tool-orchestration-with-constrained-data-synthesis-and-graduated-rewards)  
-   标签：评分：10.0/10、query:rl-tl
-   evidence：具有真实API响应和分级奖励的强化学习环境，用于多步工具编排
-2. [Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR](/202603/27/2603.24840v1-prune-as-you-generate-online-rollout-pruning-for-faster-and-better-rlvr)  
-   标签：评分：10.0/10、query:rl-tl
-   evidence：具有可验证奖励的强化学习 (RLVR)
-3. [P^2O: Joint Policy and Prompt Optimization](/202603/27/2603.21877v2-p2o-joint-policy-and-prompt-optimization)  
+1. [Utility-Guided Agent Orchestration for Efficient LLM Tool Use](/202603/28/2603.19896v1-utility-guided-agent-orchestration-for-efficient-llm-tool-use)  
    标签：评分：9.0/10、query:rl-tl
-   evidence：针对 LLM 推理的具有可验证奖励的强化学习 (RLVR)
-4. [PivotRL: High Accuracy Agentic Post-Training at Low Compute Cost](/202603/27/2603.21383v1-pivotrl-high-accuracy-agentic-post-training-at-low-compute-cost)  
+   evidence：包含验证的大模型工具使用效用引导编排
+2. [The Causal Impact of Tool Affordance on Safety Alignment in LLM Agents](/202603/28/2603.20320v1-the-causal-impact-of-tool-affordance-on-safety-alignment-in-llm-agents)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：利用功能等效和执行结果奖励进行智能体任务的强化学习
-5. [Bridging Perception and Reasoning: Token Reweighting for RLVR in Multimodal LLMs](/202603/27/2603.25077v1-bridging-perception-and-reasoning-token-reweighting-for-rlvr-in-multimodal-llms)  
+   evidence：具有可执行工具访问权限的大模型智能体的安全对齐
+3. [Coding Agents are Effective Long-Context Processors](/202603/28/2603.20432v1-coding-agents-are-effective-long-context-processors)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：多模态大模型中RLVR的标记重加权
-6. [MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning](/202603/27/2603.25108v1-msrl-scaling-generative-multimodal-reward-modeling-via-multi-stage-reinforcement-learning)  
+   evidence：编码智能体使用原生工具进行长文本处理
+4. [ORACLE: Optimizing Reasoning Abilities of Large Language Models via Constraint-Led Synthetic Data Elicitation](/202603/28/2603.21140v1-oracle-optimizing-reasoning-abilities-of-large-language-models-via-constraint-led-synthetic-data-elicitation)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：利用RLVR增强多模态奖励模型
+   evidence：通过代码执行验证中间推理步骤
 
 ### 速读区论文标签
-1. [AdaRubric: Task-Adaptive Rubrics for LLM Agent Evaluation](/202603/27/2603.21362v1-adarubric-task-adaptive-rubrics-for-llm-agent-evaluation)  
+1. [LLMLOOP: Improving LLM-Generated Code and Tests through Automated Iterative Feedback Loops](/202603/28/2603.23613v1-llmloop-improving-llm-generated-code-and-tests-through-automated-iterative-feedback-loops)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：针对工具使用智能体的自动化任务特定评估准则
-2. [Experiential Reflective Learning for Self-Improving LLM Agents](/202603/27/2603.24639v1-experiential-reflective-learning-for-self-improving-llm-agents)  
+   evidence：用于验证代码和测试执行的自动迭代反馈循环
+2. [From AI Assistant to AI Scientist: Autonomous Discovery of LLM-RL Algorithms with LLM Agents](/202603/28/2603.23951v1-from-ai-assistant-to-ai-scientist-autonomous-discovery-of-llm-rl-algorithms-with-llm-agents)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：具备多步问题解决和环境适应能力的自主智能体
-3. [Train at Moving Edge: Online-Verified Prompt Selection for Efficient RL Training of Large Reasoning Model](/202603/27/2603.25184v1-train-at-moving-edge-online-verified-prompt-selection-for-efficient-rl-training-of-large-reasoning-model)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：针对推理任务的强化学习训练，采用在线验证的提示词选择
-4. [Mi:dm K 2.5 Pro](/202603/27/2603.18788v1-midm-k-25-pro)  
+   evidence：自动发现大语言模型的策略优化算法
+3. [SafePilot: A Framework for Assuring LLM-enabled Cyber-Physical Systems](/202603/28/2603.21523v1-safepilot-a-framework-for-assuring-llm-enabled-cyber-physical-systems)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：代理工作流和以推理为中心的优化
-5. [Cerebra: Aligning Implicit Knowledge in Interactive SQL Authoring](/202603/27/2603.21363v1-cerebra-aligning-implicit-knowledge-in-interactive-sql-authoring)  
+   evidence：通过神经符号验证确保大模型驱动的物理系统安全
+4. [PRISM: A Dual View of LLM Reasoning through Semantic Flow and Latent Computation](/202603/28/2603.22754v1-prism-a-dual-view-of-llm-reasoning-through-semantic-flow-and-latent-computation)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：用于 SQL 编写和验证的 LLM 驱动工具
-6. [Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills](/202603/27/2603.25158v1-trace2skill-distill-trajectory-local-lessons-into-transferable-agent-skills)  
+   evidence：分析推理与验证中的失败轨迹
+5. [VLGOR: Visual-Language Knowledge Guided Offline Reinforcement Learning for Generalizable Agents](/202603/28/2603.22892v1-vlgor-visual-language-knowledge-guided-offline-reinforcement-learning-for-generalizable-agents)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：大语言模型智能体的自动化技能生成
+   evidence：结合强化学习的LLM任务执行
+6. [Quality Over Clicks: Intrinsic Quality-Driven Iterative Reinforcement Learning for Cold-Start E-Commerce Query Suggestion](/202603/28/2603.22922v1-quality-over-clicks-intrinsic-quality-driven-iterative-reinforcement-learning-for-cold-start-e-commerce-query-suggestion)  
+   标签：评分：6.0/10、query:rl-tl
+   evidence：以可回答性和事实性作为奖励的迭代强化学习
+7. [Transformers in the Dark: Navigating Unknown Search Spaces via Bandit Feedback](/202603/28/2603.24780v1-transformers-in-the-dark-navigating-unknown-search-spaces-via-bandit-feedback)  
+   标签：评分：6.0/10、query:rl-tl
+   evidence：大语言模型与外部搜索算法结合
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,432 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-28T19:50:26.023111+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2603.19896v1",
+      "title": "Utility-Guided Agent Orchestration for Efficient LLM Tool Use",
+      "abstract": "Tool-using large language model (LLM) agents often face a fundamental tension between answer quality and execution cost. Fixed workflows are stable but inflexible, while free-form multi-step reasoning methods such as ReAct may improve task performance at the expense of excessive tool calls, longer trajectories, higher token consumption, and increased latency. In this paper, we study agent orchestration as an explicit decision problem rather than leaving it entirely to prompt-level behavior. We propose a utility-guided orchestration policy that selects among actions such as respond, retrieve, tool call, verify, and stop by balancing estimated gain, step cost, uncertainty, and redundancy. Our goal is not to claim universally best task performance, but to provide a controllable and analyzable policy framework for studying quality-cost trade-offs in tool-using LLM agents. Experiments across direct answering, threshold control, fixed workflows, ReAct, and several policy variants show that explicit orchestration signals substantially affect agent behavior. Additional analyses on cost definitions, workflow fairness, and redundancy control further demonstrate that lightweight utility design can provide a defensible and practical mechanism for agent control.",
+      "authors": [
+        "Boyan Liu",
+        "Gongming Zhao",
+        "Hongli Xu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-20T12:29:12+00:00",
+      "link": "https://arxiv.org/pdf/2603.19896v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "utility-guided orchestration for LLM tool use including verification",
+      "llm_evidence_cn": "包含验证的大模型工具使用效用引导编排",
+      "llm_evidence": "包含验证的大模型工具使用效用引导编排",
+      "canonical_evidence": "包含验证的大模型工具使用效用引导编排",
+      "llm_tldr_en": "Optimizes LLM tool use by treating agent orchestration as a decision problem with utility-guided policies.",
+      "llm_tldr_cn": "通过将代理编排视为具有效用引导策略的决策问题，优化大模型工具的使用效率。",
+      "llm_tldr": "通过将代理编排视为具有效用引导策略的决策问题，优化大模型工具的使用效率。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.20320v1",
+      "title": "The Causal Impact of Tool Affordance on Safety Alignment in LLM Agents",
+      "abstract": "Large language models (LLMs) are increasingly deployed as agents with access to executable tools, enabling direct interaction with external systems. However, most safety evaluations remain text-centric and assume that compliant language implies safe behavior, an assumption that becomes unreliable once models are allowed to act. In this work, we empirically examine how executable tool affordance alters safety alignment in LLM agents using a paired evaluation framework that compares text-only chatbot behavior with tool-enabled agent behavior under identical prompts and policies. Experiments are conducted in a deterministic financial transaction environment with binary safety constraints across 1,500 procedurally generated scenarios. To separate intent from outcome, we distinguish between attempted and realized violations using dual enforcement regimes that either block or permit unsafe actions. Both evaluated models maintain perfect compliance in text-only settings, yet exhibit sharp increases in violations after tool access is introduced, reaching rates up to 85% despite unchanged rules. We observe substantial gaps between attempted and executed violations, indicating that external guardrails can suppress visible harm while masking persistent misalignment. Agents also develop spontaneous constraint circumvention strategies without adversarial prompting. These results demonstrate that tool affordance acts as a primary driver of safety misalignment and that text-based evaluation alone is insufficient for assessing agentic systems.",
+      "authors": [
+        "Shasha Yu",
+        "Fiona Carroll",
+        "Barry L. Bentley"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-03-19T23:34:46+00:00",
+      "link": "https://arxiv.org/pdf/2603.20320v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "safety alignment in LLM agents with access to executable tools",
+      "llm_evidence_cn": "具有可执行工具访问权限的大模型智能体的安全对齐",
+      "llm_evidence": "具有可执行工具访问权限的大模型智能体的安全对齐",
+      "canonical_evidence": "具有可执行工具访问权限的大模型智能体的安全对齐",
+      "llm_tldr_en": "Examines how tool affordance impacts safety alignment in LLM agents within deterministic environments.",
+      "llm_tldr_cn": "研究了在确定性环境中，工具可用性如何影响大模型智能体的安全对齐。",
+      "llm_tldr": "研究了在确定性环境中，工具可用性如何影响大模型智能体的安全对齐。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable rewards for LLM tool use",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.20432v1",
+      "title": "Coding Agents are Effective Long-Context Processors",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable progress in scaling to access massive contexts. However, the access is via the latent and uninterpretable attention mechanisms, and LLMs fail to effective process long context, exhibiting significant performance degradation as context length increases. In this work, we study whether long-context processing can be externalized from latent attention into explicit, executable interactions, by allowing coding agents to organize text in file systems and manipulate it using its native tools. We evaluate off-the-shelf frontier coding agents as the general interface for tasks that require processing long contexts, including long-context reasoning, retrieval-augmented generation, and open-domain question answering with large-scale corpus contains up to three trillion tokens. Across multiple benchmarks, these agents outperform published state-of-the-art by 17.3% on average. We attribute this efficacy to two key factors: native tool proficiency, which enables agents to leverage executable code and terminal commands rather than passive semantic queries, and file system familiarity, which allows them to navigate massive text corpora as directory structures. These findings suggest that delegating long-context processing to coding agents offers an effective alternative to semantic search or context window scaling, opening new directions for long-context processing in LLMs.",
+      "authors": [
+        "Weili Cao",
+        "Xunjian Yin",
+        "Bhuwan Dhingra",
+        "Shuyan Zhou"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-03-20T19:03:20+00:00",
+      "link": "https://arxiv.org/pdf/2603.20432v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "coding agents using native tools for long-context processing",
+      "llm_evidence_cn": "编码智能体使用原生工具进行长文本处理",
+      "llm_evidence": "编码智能体使用原生工具进行长文本处理",
+      "canonical_evidence": "编码智能体使用原生工具进行长文本处理",
+      "llm_tldr_en": "Evaluates coding agents as interfaces that use executable tools to process long-context information.",
+      "llm_tldr_cn": "评估编码智能体作为使用可执行工具处理长文本信息的接口的效果。",
+      "llm_tldr": "评估编码智能体作为使用可执行工具处理长文本信息的接口的效果。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.21140v1",
+      "title": "ORACLE: Optimizing Reasoning Abilities of Large Language Models via Constraint-Led Synthetic Data Elicitation",
+      "abstract": "Training large language models (LLMs) with synthetic reasoning data has become a popular approach to enhancing their reasoning capabilities, while a key factor influencing the effectiveness of this paradigm is the quality of the generated multi-step reasoning data. To generate high-quality reasoning data, many recent methods generate synthetic reasoning paths and filter them based on final answer correctness, often overlooking flaws in intermediate reasoning steps. To enhance the verification of intermediate reasoning steps, prior work primarily resorts to code execution or symbolic reasoning engines. However, code-based validation is restricted to code or mathematical tasks, and reasoning engines require a well-structured and complete context. As a result, existing methods fail to function effectively in natural language reasoning tasks that involve ambiguous or incomplete contexts. In these tasks, synthetic data still lack reliable checks for verifying each reasoning step. To address this challenge, we introduce ORACLE, a structured data generation framework inspired by syllogistic reasoning. ORACLE integrates the generative strengths of LLMs with symbolic supervision: the LLM produces step-wise reasoning contexts, while a symbolic reasoning engine verifies the validity of each intermediate step. By employing a unified prompting template to elicit modular reasoning chains, ORACLE enables fine-grained, step-level validation, facilitating the construction of high-quality multi-step reasoning data. Across six logical, factual, and commonsense reasoning benchmarks, our ORACLE consistently outperforms strong baselines on multiple models.",
+      "authors": [
+        "Zhuojie Yang",
+        "Wentao Wan",
+        "Keze Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-22T09:30:43+00:00",
+      "link": "https://arxiv.org/pdf/2603.21140v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "verification of intermediate reasoning steps via code execution",
+      "llm_evidence_cn": "通过代码执行验证中间推理步骤",
+      "llm_evidence": "通过代码执行验证中间推理步骤",
+      "canonical_evidence": "通过代码执行验证中间推理步骤",
+      "llm_tldr_en": "Enhances LLM reasoning by verifying intermediate steps using code execution and symbolic engines.",
+      "llm_tldr_cn": "通过代码执行和符号引擎验证中间步骤，从而优化大模型的推理能力。",
+      "llm_tldr": "通过代码执行和符号引擎验证中间步骤，从而优化大模型的推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.23613v1",
+      "title": "LLMLOOP: Improving LLM-Generated Code and Tests through Automated Iterative Feedback Loops",
+      "abstract": "Large Language Models (LLMs) are showing remarkable performance in generating source code, yet the generated code often has issues like compilation errors or incorrect code. Researchers and developers often face wasted effort in implementing checks and refining LLM-generated code, frequently duplicating their efforts. This paper presents LLMLOOP, a framework that automates the refinement of both source code and test cases produced by LLMs. LLMLOOP employs five iterative loops: resolving compilation errors, addressing static analysis issues, fixing test case failures, and improving test quality through mutation analysis. These loops ensure the generation of high-quality test cases that serve as both a validation mechanism and a regression test suite for the generated code. We evaluated LLMLOOP on HUMANEVAL-X, a recent benchmark of programming tasks. Results demonstrate the tool's effectiveness in refining LLM-generated outputs.",
+      "authors": [
+        "Ravin Ravi",
+        "Dylan Bradshaw",
+        "Stefano Ruberto",
+        "Gunel Jahangirova",
+        "Valerio Terragni"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-03-24T18:01:14+00:00",
+      "link": "https://arxiv.org/pdf/2603.23613v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "automated iterative feedback loops for verifying code and test execution",
+      "llm_evidence_cn": "用于验证代码和测试执行的自动迭代反馈循环",
+      "llm_evidence": "用于验证代码和测试执行的自动迭代反馈循环",
+      "canonical_evidence": "用于验证代码和测试执行的自动迭代反馈循环",
+      "llm_tldr_en": "Automates the refinement of LLM-generated code through iterative execution-based verification loops.",
+      "llm_tldr_cn": "通过基于执行的迭代验证循环，自动优化大模型生成的代码。",
+      "llm_tldr": "通过基于执行的迭代验证循环，自动优化大模型生成的代码。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.21523v1",
+      "title": "SafePilot: A Framework for Assuring LLM-enabled Cyber-Physical Systems",
+      "abstract": "Large Language Models (LLMs), deep learning architectures with typically over 10 billion parameters, have recently begun to be integrated into various cyber-physical systems (CPS) such as robotics, industrial automation, and autopilot systems. The abstract knowledge and reasoning capabilities of LLMs are employed for tasks like planning and navigation. However, a significant challenge arises from the tendency of LLMs to produce \"hallucinations\" - outputs that are coherent yet factually incorrect or contextually unsuitable. This characteristic can lead to undesirable or unsafe actions in the CPS. Therefore, our research focuses on assuring the LLM-enabled CPS by enhancing their critical properties. We propose SafePilot, a novel hierarchical neuro-symbolic framework that provides end-to-end assurance for LLM-enabled CPS according to attribute-based and temporal specifications. Given a task and its specification, SafePilot first invokes a hierarchical planner with a discriminator that assesses task complexity. If the task is deemed manageable, it is passed directly to an LLM-based task planner with built-in verification. Otherwise, the hierarchical planner applies a divide-and-conquer strategy, decomposing the task into sub-tasks, each of which is individually planned and later merged into a final solution. The LLM-based task planner translates natural language constraints into formal specifications and verifies the LLM's output against them. If violations are detected, it identifies the flaw, adjusts the prompt accordingly, and re-invokes the LLM. This iterative process continues until a valid plan is produced or a predefined limit is reached. Our framework supports LLM-enabled CPS with both attribute-based and temporal constraints. Its effectiveness and adaptability are demonstrated through two illustrative case studies.",
+      "authors": [
+        "Weizhe Xu",
+        "Mengyu Liu",
+        "Fanxin Kong"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-03-23T03:31:51+00:00",
+      "link": "https://arxiv.org/pdf/2603.21523v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "assuring LLM-enabled cyber-physical systems through neuro-symbolic verification",
+      "llm_evidence_cn": "通过神经符号验证确保大模型驱动的物理系统安全",
+      "llm_evidence": "通过神经符号验证确保大模型驱动的物理系统安全",
+      "canonical_evidence": "通过神经符号验证确保大模型驱动的物理系统安全",
+      "llm_tldr_en": "Proposes a framework for verifying LLM planning and actions in cyber-physical tool-use environments.",
+      "llm_tldr_cn": "提出了一个用于验证大模型在信息物理工具使用环境中的规划和行动的框架。",
+      "llm_tldr": "提出了一个用于验证大模型在信息物理工具使用环境中的规划和行动的框架。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.23951v1",
+      "title": "From AI Assistant to AI Scientist: Autonomous Discovery of LLM-RL Algorithms with LLM Agents",
+      "abstract": "Discovering improved policy optimization algorithms for language models remains a costly manual process requiring repeated mechanism-level modification and validation. Unlike simple combinatorial code search, this problem requires searching over algorithmic mechanisms tightly coupled with training dynamics while reusing empirical evidence across iterations. We propose POISE, a closed-loop framework for automated discovery of policy optimization algorithms for language models. POISE maintains a structured, genealogically linked archive linking proposals, executable implementations, standardized evaluations, and natural-language reflections to support evidence-driven iteration. In mathematical reasoning experiments starting from GRPO, POISE evaluates 64 candidate algorithms and discovers improved mechanisms, including analytic-variance scaling and validity masking. The best variant improves weighted Overall from 47.8 to 52.5 (+4.6) and increases AIME25 pass@32 from 26.7% to 43.3%, demonstrating the feasibility of automated policy optimization discovery while supporting interpretable design principles.",
+      "authors": [
+        "Sirui Xia",
+        "Yikai Zhang",
+        "Aili Chen",
+        "Siye Wu",
+        "Siyu Yuan",
+        "Yanghua Xiao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-25T05:19:23+00:00",
+      "link": "https://arxiv.org/pdf/2603.23951v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Automated discovery of policy optimization algorithms for LLMs",
+      "llm_evidence_cn": "自动发现大语言模型的策略优化算法",
+      "llm_evidence": "自动发现大语言模型的策略优化算法",
+      "canonical_evidence": "自动发现大语言模型的策略优化算法",
+      "llm_tldr_en": "Introduces POISE, a framework for the autonomous discovery and iteration of RL algorithms for language models.",
+      "llm_tldr_cn": "引入了 POISE 框架，用于自动发现和迭代语言模型的强化学习算法。",
+      "llm_tldr": "引入了 POISE 框架，用于自动发现和迭代语言模型的强化学习算法。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.22754v1",
+      "title": "PRISM: A Dual View of LLM Reasoning through Semantic Flow and Latent Computation",
+      "abstract": "Large language models (LLMs) solve complex problems by generating multi-step reasoning traces. Yet these traces are typically analyzed from only one of two perspectives: the sequence of tokens across different reasoning steps in the generated text, or the hidden-state vectors across model layers within one step. We introduce PRISM (Probabilistic Reasoning Inspection through Semantic and Implicit Modeling), a framework and diagnostic tool for jointly analyzing both levels, providing a unified view of how reasoning evolves across steps and layers. Across multiple reasoning models and benchmarks, PRISM uncovers systematic patterns in the reasoning process, showing that failed trajectories are more likely to become trapped in unproductive verification loops and further diverge into distinct modes such as overthinking and premature commitment, which behave differently once a candidate answer is reached. It further reveals how prompting reshapes reasoning behavior beyond aggregate accuracy by altering both semantic transitions and internal computational patterns. By modeling reasoning trajectories as structured processes, PRISM makes these behaviors observable and analyzable rather than relying solely on final-task accuracy. Taken together, these insights position PRISM as a practical tool for analyzing and diagnosing reasoning processes in LLMs.",
+      "authors": [
+        "Ruidi Chang",
+        "Jiawei Zhou",
+        "Hanjie Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-24T03:31:53+00:00",
+      "link": "https://arxiv.org/pdf/2603.22754v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "analyzing failed trajectories in reasoning and verification",
+      "llm_evidence_cn": "分析推理与验证中的失败轨迹",
+      "llm_evidence": "分析推理与验证中的失败轨迹",
+      "canonical_evidence": "分析推理与验证中的失败轨迹",
+      "llm_tldr_en": "PRISM analyzes LLM reasoning traces to understand how models get trapped in unproductive verification.",
+      "llm_tldr_cn": "PRISM分析大模型推理轨迹，以理解模型如何陷入无效的验证循环。",
+      "llm_tldr": "PRISM分析大模型推理轨迹，以理解模型如何陷入无效的验证循环。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.22892v1",
+      "title": "VLGOR: Visual-Language Knowledge Guided Offline Reinforcement Learning for Generalizable Agents",
+      "abstract": "Combining Large Language Models (LLMs) with Reinforcement Learning (RL) enables agents to interpret language instructions more effectively for task execution. However, LLMs typically lack direct perception of the physical environment, which limits their understanding of environmental dynamics and their ability to generalize to unseen tasks. To address this limitation, we propose Visual-Language Knowledge-Guided Offline Reinforcement Learning (VLGOR), a framework that integrates visual and language knowledge to generate imaginary rollouts, thereby enriching the interaction data. The core premise of VLGOR is to fine-tune a vision-language model to predict future states and actions conditioned on an initial visual observation and high-level instructions, ensuring that the generated rollouts remain temporally coherent and spatially plausible. Furthermore, we employ counterfactual prompts to produce more diverse rollouts for offline RL training, enabling the agent to acquire knowledge that facilitates following language instructions while grounding in environments based on visual cues. Experiments on robotic manipulation benchmarks demonstrate that VLGOR significantly improves performance on unseen tasks requiring novel optimal policies, achieving a success rate over 24% higher than the baseline methods.",
+      "authors": [
+        "Pengsen Liu",
+        "Maosen Zeng",
+        "Nan Tang",
+        "Kaiyuan Li",
+        "Jing-Cheng Pang",
+        "Yunan Liu",
+        "Yang Yu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-24T07:40:30+00:00",
+      "link": "https://arxiv.org/pdf/2603.22892v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLMs with RL for task execution",
+      "llm_evidence_cn": "结合强化学习的LLM任务执行",
+      "llm_evidence": "结合强化学习的LLM任务执行",
+      "canonical_evidence": "结合强化学习的LLM任务执行",
+      "llm_tldr_en": "VLGOR integrates visual and language knowledge into offline RL for generalizable agents.",
+      "llm_tldr_cn": "VLGOR将视觉和语言知识整合到离线强化学习中，以提升通用智能体的泛化能力。",
+      "llm_tldr": "VLGOR将视觉和语言知识整合到离线强化学习中，以提升通用智能体的泛化能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.22922v1",
+      "title": "Quality Over Clicks: Intrinsic Quality-Driven Iterative Reinforcement Learning for Cold-Start E-Commerce Query Suggestion",
+      "abstract": "Existing dialogue systems rely on Query Suggestion (QS) to enhance user engagement. Recent efforts typically employ large language models with Click-Through Rate (CTR) model, yet fail in cold-start scenarios due to their heavy reliance on abundant online click data for effective CTR model training. To bridge this gap, we propose Cold-EQS, an iterative reinforcement learning framework for Cold-Start E-commerce Query Suggestion (EQS). Specifically, we leverage answerability, factuality, and information gain as reward to continuously optimize the quality of suggested queries. To continuously optimize our QS model, we estimate uncertainty for grouped candidate suggested queries to select hard and ambiguous samples from online user queries lacking click signals. In addition, we provide an EQS-Benchmark comprising 16,949 online user queries for offline training and evaluation. Extensive offline and online experiments consistently demonstrate a strong positive correlation between online and offline effectiveness. Both offline and online experimental results demonstrate the superiority of our Cold-EQS, achieving a significant +6.81% improvement in online chatUV.",
+      "authors": [
+        "Qi Sun",
+        "Kejun Xiao",
+        "Huaipeng Zhao",
+        "Tao Luo",
+        "Xiaoyi Zeng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-24T08:11:39+00:00",
+      "link": "https://arxiv.org/pdf/2603.22922v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Iterative RL with answerability and factuality as rewards",
+      "llm_evidence_cn": "以可回答性和事实性作为奖励的迭代强化学习",
+      "llm_evidence": "以可回答性和事实性作为奖励的迭代强化学习",
+      "canonical_evidence": "以可回答性和事实性作为奖励的迭代强化学习",
+      "llm_tldr_en": "Uses intrinsic quality metrics as rewards in an RL framework for e-commerce query suggestion.",
+      "llm_tldr_cn": "在电子商务查询建议的强化学习框架中，使用内在质量指标作为奖励。",
+      "llm_tldr": "在电子商务查询建议的强化学习框架中，使用内在质量指标作为奖励。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.24780v1",
+      "title": "Transformers in the Dark: Navigating Unknown Search Spaces via Bandit Feedback",
+      "abstract": "Effective problem solving with Large Language Models (LLMs) can be enhanced when they are paired with external search algorithms. By viewing the space of diverse ideas and their follow-up possibilities as a tree structure, the search algorithm can navigate such a search space and guide the LLM toward better solutions more efficiently. While the search algorithm enables an effective balance between exploitation and exploration of a tree-structured space, the need for an external component can complicate the overall problem-solving process. We therefore pose the following question: Can LLMs or their underlying Transformer architectures approximate a search algorithm? To answer this question, we first introduce a simplified framework in which tree extensions and feedback signals are externally specified, allowing for controlled evaluation of search capabilities. We call this setting unknown tree search with bandit feedback. Within this setting, we show that Transformers are theoretically expressive enough to implement distinct search strategies and can be trained from scratch to approximate those strategies. Our Transformer models exhibit the possibility of generalizing to unseen conditions such as longer horizons or deeper trees. Furthermore, we demonstrate that continued task-focused training unlocks the complete capabilities of a pretrained LLM, by fine-tuning the LLM on search trajectories.",
+      "authors": [
+        "Jungtaek Kim",
+        "Thomas Zeng",
+        "Ziqian Lin",
+        "Minjae Lee",
+        "Chungpa Lee",
+        "Jy-yong Sohn",
+        "Hyung Il Koo",
+        "Kangwook Lee"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-25T19:50:32+00:00",
+      "link": "https://arxiv.org/pdf/2603.24780v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLMs paired with external search algorithms",
+      "llm_evidence_cn": "大语言模型与外部搜索算法结合",
+      "llm_evidence": "大语言模型与外部搜索算法结合",
+      "canonical_evidence": "大语言模型与外部搜索算法结合",
+      "llm_tldr_en": "Investigates if Transformers can approximate search algorithms to navigate unknown problem spaces.",
+      "llm_tldr_cn": "探讨了Transformer架构是否能模拟搜索算法，以在未知空间中进行有效的问题解决。",
+      "llm_tldr": "探讨了Transformer架构是否能模拟搜索算法，以在未知空间中进行有效的问题解决。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
