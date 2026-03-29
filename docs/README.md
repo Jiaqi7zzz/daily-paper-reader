@@ -6,55 +6,52 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-28
-- 运行时间：2026-03-28 19:51:39 UTC
+- 最新运行日期：2026-03-29
+- 运行时间：2026-03-29 19:53:43 UTC
 - 运行状态：成功
-- 本次总论文数：11
-- 精读区：4
-- 速读区：7
+- 本次总论文数：10
+- 精读区：2
+- 速读区：8
 
 ### 今日简报（AI）
-今日精选 11 篇前沿论文，深度解析 LLM Agent 在工具编排效率与安全对齐领域的最新突破。
-核心结论指出效用引导可显著优化工具调用逻辑，并揭示了工具功能属性对模型安全性的深层因果影响。
-建议关注 Agent 在自动化代码迭代及物理系统安全保障中的应用，把握从 AI 助手向自主科研转型的技术趋势。
-- 详情：[/202603/28/README](/202603/28/README)
+今日深度研读 10 篇论文，聚焦多模态医疗推理与概率程序合成的前沿突破。
+重点推荐 AD-Reasoning 引导的阿尔茨海默症精准诊断，以及对程序合成中似然黑客行为的深度反思。
+建议关注强化学习如何赋能视频智能体与知识图谱推理，探索大模型在复杂任务中的落地潜力。
+- 详情：[/202603/29/README](/202603/29/README)
 
 ### 精读区论文标签
-1. [Utility-Guided Agent Orchestration for Efficient LLM Tool Use](/202603/28/2603.19896v1-utility-guided-agent-orchestration-for-efficient-llm-tool-use)  
-   标签：评分：9.0/10、query:rl-tl
-   evidence：包含验证的大模型工具使用效用引导编排
-2. [The Causal Impact of Tool Affordance on Safety Alignment in LLM Agents](/202603/28/2603.20320v1-the-causal-impact-of-tool-affordance-on-safety-alignment-in-llm-agents)  
+1. [AD-Reasoning: Multimodal Guideline-Guided Reasoning for Alzheimer's Disease Diagnosis](/202603/29/2603.24059v1-ad-reasoning-multimodal-guideline-guided-reasoning-for-alzheimers-disease-diagnosis)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：具有可执行工具访问权限的大模型智能体的安全对齐
-3. [Coding Agents are Effective Long-Context Processors](/202603/28/2603.20432v1-coding-agents-are-effective-long-context-processors)  
+   evidence：具有可验证奖励的推理强化微调
+2. [Likelihood hacking in probabilistic program synthesis](/202603/29/2603.24126v1-likelihood-hacking-in-probabilistic-program-synthesis)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：编码智能体使用原生工具进行长文本处理
-4. [ORACLE: Optimizing Reasoning Abilities of Large Language Models via Constraint-Led Synthetic Data Elicitation](/202603/28/2603.21140v1-oracle-optimizing-reasoning-abilities-of-large-language-models-via-constraint-led-synthetic-data-elicitation)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：通过代码执行验证中间推理步骤
+   evidence：在强化学习训练中验证程序合成结果
 
 ### 速读区论文标签
-1. [LLMLOOP: Improving LLM-Generated Code and Tests through Automated Iterative Feedback Loops](/202603/28/2603.23613v1-llmloop-improving-llm-generated-code-and-tests-through-automated-iterative-feedback-loops)  
+1. [RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models](/202603/29/2603.21341v1-roboalign-learning-test-time-reasoning-for-language-action-alignment-in-vision-language-action-models)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：用于验证代码和测试执行的自动迭代反馈循环
-2. [From AI Assistant to AI Scientist: Autonomous Discovery of LLM-RL Algorithms with LLM Agents](/202603/28/2603.23951v1-from-ai-assistant-to-ai-scientist-autonomous-discovery-of-llm-rl-algorithms-with-llm-agents)  
+   evidence：通过推理将多模态理解转化为底层动作
+2. [KG-Hopper: Empowering Compact Open LLMs with Knowledge Graph Reasoning via Reinforcement Learning](/202603/29/2603.21440v1-kg-hopper-empowering-compact-open-llms-with-knowledge-graph-reasoning-via-reinforcement-learning)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：自动发现大语言模型的策略优化算法
-3. [SafePilot: A Framework for Assuring LLM-enabled Cyber-Physical Systems](/202603/28/2603.21523v1-safepilot-a-framework-for-assuring-llm-enabled-cyber-physical-systems)  
+   evidence：将知识图谱推理作为工具使用任务的强化学习
+3. [EVA: Efficient Reinforcement Learning for End-to-End Video Agent](/202603/29/2603.22918v1-eva-efficient-reinforcement-learning-for-end-to-end-video-agent)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：使用外部工具的视频智能体强化学习框架
+4. [Improving Lean4 Autoformalization via Cycle Consistency Fine-tuning](/202603/29/2603.24372v1-improving-lean4-autoformalization-via-cycle-consistency-fine-tuning)  
+   标签：评分：7.0/10、query:rl-tl
+   evidence：使用循环一致性奖励进行形式化证明验证的强化学习
+5. [Incentivizing Generative Zero-Shot Learning via Outcome-Reward Reinforcement Learning with Visual Cues](/202603/29/2603.21138v1-incentivizing-generative-zero-shot-learning-via-outcome-reward-reinforcement-learning-with-visual-cues)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：通过神经符号验证确保大模型驱动的物理系统安全
-4. [PRISM: A Dual View of LLM Reasoning through Semantic Flow and Latent Computation](/202603/28/2603.22754v1-prism-a-dual-view-of-llm-reasoning-through-semantic-flow-and-latent-computation)  
+   evidence：生成模型的基于结果奖励的强化学习
+6. [SortedRL: Accelerating RL Training for LLMs through Online Length-Aware Scheduling](/202603/29/2603.23414v1-sortedrl-accelerating-rl-training-for-llms-through-online-length-aware-scheduling)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：分析推理与验证中的失败轨迹
-5. [VLGOR: Visual-Language Knowledge Guided Offline Reinforcement Learning for Generalizable Agents](/202603/28/2603.22892v1-vlgor-visual-language-knowledge-guided-offline-reinforcement-learning-for-generalizable-agents)  
+   evidence：加速大语言模型推理任务的强化学习训练
+7. [Towards Reward Modeling for AI Tutors in Math Mistake Remediation](/202603/29/2603.24375v1-towards-reward-modeling-for-ai-tutors-in-math-mistake-remediation)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：结合强化学习的LLM任务执行
-6. [Quality Over Clicks: Intrinsic Quality-Driven Iterative Reinforcement Learning for Cold-Start E-Commerce Query Suggestion](/202603/28/2603.22922v1-quality-over-clicks-intrinsic-quality-driven-iterative-reinforcement-learning-for-cold-start-e-commerce-query-suggestion)  
+   evidence：AI导师教学方面的奖励建模
+8. [Beyond Content Safety: Real-Time Monitoring for Reasoning Vulnerabilities in Large Language Models](/202603/29/2603.25412v1-beyond-content-safety-real-time-monitoring-for-reasoning-vulnerabilities-in-large-language-models)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：以可回答性和事实性作为奖励的迭代强化学习
-7. [Transformers in the Dark: Navigating Unknown Search Spaces via Bandit Feedback](/202603/28/2603.24780v1-transformers-in-the-dark-navigating-unknown-search-spaces-via-bandit-feedback)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：大语言模型与外部搜索算法结合
+   evidence：监控推理轨迹的一致性
 
 
 <div class="dpr-home-promo-card">

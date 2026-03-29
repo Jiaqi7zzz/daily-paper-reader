@@ -1,0 +1,404 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-29T19:52:25.117668+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2603.24059v1",
+      "title": "AD-Reasoning: Multimodal Guideline-Guided Reasoning for Alzheimer's Disease Diagnosis",
+      "abstract": "Alzheimer's disease (AD) diagnosis requires integrating neuroimaging with heterogeneous clinical evidence and reasoning under established criteria, yet most multimodal models remain opaque and weakly guideline-aligned. We present AD-Reasoning, a multimodal framework that couples structural MRI with six clinical modalities and a rule-based verifier to generate structured, NIA-AA-consistent diagnoses. AD-Reasoning combines modality-specific encoders, bidirectional cross-attention fusion, and reinforcement fine-tuning with verifiable rewards that enforce output format, guideline evidence coverage, and reasoning--decision consistency. We also release AD-MultiSense, a 10,378-visit multimodal QA dataset with guideline-validated rationales built from ADNI/AIBL. On AD-MultiSense, AD-Reasoning achieves state-of-the-art diagnostic accuracy and produces structured rationales that improve transparency over recent baselines, while providing transparent rationales.",
+      "authors": [
+        "Qiuhui Chen",
+        "Yushan Deng",
+        "Xuancheng Yao",
+        "Yi Hong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-03-25T08:07:04+00:00",
+      "link": "https://arxiv.org/pdf/2603.24059v1",
+      "tags": [
+        "keyword:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reinforcement fine-tuning with verifiable rewards for reasoning",
+      "llm_evidence_cn": "具有可验证奖励的推理强化微调",
+      "llm_evidence": "具有可验证奖励的推理强化微调",
+      "canonical_evidence": "具有可验证奖励的推理强化微调",
+      "llm_tldr_en": "Uses rule-based verifiers and verifiable rewards in RL to align multimodal LLM reasoning with clinical guidelines.",
+      "llm_tldr_cn": "在强化学习中使用基于规则的验证器和可验证奖励，使多模态大模型推理符合临床指南。",
+      "llm_tldr": "在强化学习中使用基于规则的验证器和可验证奖励，使多模态大模型推理符合临床指南。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.24126v1",
+      "title": "Likelihood hacking in probabilistic program synthesis",
+      "abstract": "When language models are trained by reinforcement learning (RL) to write probabilistic programs, they can artificially inflate their marginal-likelihood reward by producing programs whose data distribution fails to normalise instead of fitting the data better. We call this failure likelihood hacking (LH). We formalise LH in a core probabilistic programming language (PPL) and give sufficient syntactic conditions for its prevention, proving that a safe language fragment $\\mathcal{L}_{\\text{safe}}$ satisfying these conditions cannot produce likelihood-hacking programs. Empirically, we show that GRPO-trained models generating PyMC code discover LH exploits within the first few training steps, driving violation rates well above the untrained-model baseline. We implement $\\mathcal{L}_{\\text{safe}}$'s conditions as $\\texttt{SafeStan}$, a LH-resistant modification of Stan, and show empirically that it prevents LH under optimisation pressure. These results show that language-level safety constraints are both theoretically grounded and effective in practice for automated Bayesian model discovery.",
+      "authors": [
+        "Jacek Karwowski",
+        "Younesse Kaddar",
+        "Zihuiwen Ye",
+        "Nikolay Malkin",
+        "Sam Staton"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.PL"
+      ],
+      "published": "2026-03-25T09:39:15+00:00",
+      "link": "https://arxiv.org/pdf/2603.24126v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "verifying program synthesis results in RL training",
+      "llm_evidence_cn": "在强化学习训练中验证程序合成结果",
+      "llm_evidence": "在强化学习训练中验证程序合成结果",
+      "canonical_evidence": "在强化学习训练中验证程序合成结果",
+      "llm_tldr_en": "Addresses likelihood hacking in RL-trained program synthesis by defining safe language fragments.",
+      "llm_tldr_cn": "通过定义安全语言片段，解决了强化学习训练的程序合成中的似然性作弊问题。",
+      "llm_tldr": "通过定义安全语言片段，解决了强化学习训练的程序合成中的似然性作弊问题。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.21341v1",
+      "title": "RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models",
+      "abstract": "Improving embodied reasoning in multimodal-large-language models (MLLMs) is essential for building vision-language-action models (VLAs) on top of them to readily translate multimodal understanding into low-level actions. Accordingly, recent work has explored enhancing embodied reasoning in MLLMs through supervision of vision-question-answering type. However, these approaches have been reported to result in unstable VLA performance, often yielding only marginal or even negative gains. In this paper, we propose a more systematic MLLM training framework RoboAlign that reliably improves VLA performance. Our key idea is to sample action tokens via zero-shot natural language reasoning and refines this reasoning using reinforcement learning (RL) to improve action accuracy. As a result, RoboAlign bridges the modality gap between language and low-level actions in MLLMs, and facilitate knowledge transfer from MLLM to VLA. To validate the effectiveness of RoboAlign, we train VLAs by adding a diffusion-based action head on top of an MLLM backbone and evaluate them on major robotics benchmarks. Remarkably, by performing RL-based alignment after SFT using less than 1\\% of the data, RoboAlign achieves performance improvements of 17.5\\%, 18.9\\%, and 106.6\\% over SFT baselines on LIBERO, CALVIN, and real-world environments, respectively.",
+      "authors": [
+        "Dongyoung Kim",
+        "Sumin Park",
+        "Woomin Song",
+        "Seungku Kim",
+        "Taeyoung Kim",
+        "Huiwon Jang",
+        "Jinwoo Shin",
+        "Jaehyung Kim",
+        "Younggyo Seo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-22T17:57:55+00:00",
+      "link": "https://arxiv.org/pdf/2603.21341v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Translating multimodal understanding into low-level actions via reasoning",
+      "llm_evidence_cn": "通过推理将多模态理解转化为底层动作",
+      "llm_evidence": "通过推理将多模态理解转化为底层动作",
+      "canonical_evidence": "通过推理将多模态理解转化为底层动作",
+      "llm_tldr_en": "Proposes RoboAlign to improve vision-language-action models through natural language reasoning and refinement.",
+      "llm_tldr_cn": "提出 RoboAlign 框架，通过自然语言推理和细化来提升视觉-语言-动作模型的性能。",
+      "llm_tldr": "提出 RoboAlign 框架，通过自然语言推理和细化来提升视觉-语言-动作模型的性能。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.21138v1",
+      "title": "Incentivizing Generative Zero-Shot Learning via Outcome-Reward Reinforcement Learning with Visual Cues",
+      "abstract": "Recent advances in zero-shot learning (ZSL) have demonstrated the potential of generative models. Typically, generative ZSL synthesizes visual features conditioned on semantic prototypes to model the data distribution of unseen classes, followed by training a classifier on the synthesized data. However, the synthesized features often remain task-agnostic, leading to degraded performance. Moreover, inferring a faithful distribution from semantic prototypes alone is insufficient for classes that are semantically similar but visually distinct. To address these and advance ZSL, we propose RLVC, an outcome-reward reinforcement learning RL framework with visual cues for generative ZSL. At its core, RL empowers the generative model to self-evolve, implicitly enhancing its generation capability. In particular, RLVC updates the generative model using an outcome-based reward, encouraging the synthesis of task-relevant features. Furthermore, we introduce class-wise visual cues that (i) align synthesized features with visual prototypes and (ii) stabilize the RL training updates. For the training process, we present a novel cold-start strategy. Comprehensive experiments and analyses on three prevalent ZSL benchmarks demonstrate that RLVC achieves state-of-the-art results with a 4.7% gain.",
+      "authors": [
+        "Wenjin Hou",
+        "Xiaoxiao Sun",
+        "Hehe Fan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-03-22T09:28:04+00:00",
+      "link": "https://arxiv.org/pdf/2603.21138v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Outcome-reward reinforcement learning for generative models",
+      "llm_evidence_cn": "生成模型的基于结果奖励的强化学习",
+      "llm_evidence": "生成模型的基于结果奖励的强化学习",
+      "canonical_evidence": "生成模型的基于结果奖励的强化学习",
+      "llm_tldr_en": "Uses outcome-reward RL with visual cues to improve generative zero-shot learning performance.",
+      "llm_tldr_cn": "利用带有视觉提示的结果奖励强化学习来提升生成式零样本学习的性能。",
+      "llm_tldr": "利用带有视觉提示的结果奖励强化学习来提升生成式零样本学习的性能。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.21440v1",
+      "title": "KG-Hopper: Empowering Compact Open LLMs with Knowledge Graph Reasoning via Reinforcement Learning",
+      "abstract": "Large Language Models (LLMs) demonstrate impressive natural language capabilities but often struggle with knowledge-intensive reasoning tasks. Knowledge Base Question Answering (KBQA), which leverages structured Knowledge Graphs (KGs) exemplifies this challenge due to the need for accurate multi-hop reasoning. Existing approaches typically perform sequential reasoning steps guided by predefined pipelines, restricting flexibility and causing error cascades due to isolated reasoning at each step. To address these limitations, we propose KG-Hopper, a novel Reinforcement Learning (RL) framework that empowers compact open LLMs with the ability to perform integrated multi-hop KG reasoning within a single inference round. Rather than reasoning step-by-step, we train a Reasoning LLM that embeds the entire KG traversal and decision process into a unified ``thinking'' stage, enabling global reasoning over cross-step dependencies and dynamic path exploration with backtracking. Experimental results on eight KG reasoning benchmarks show that KG-Hopper, based on a 7B-parameter LLM, consistently outperforms larger multi-step systems (up to 70B) and achieves competitive performance with proprietary models such as GPT-3.5-Turbo and GPT-4o-mini, while remaining compact, open, and data-efficient. The code is publicly available at: https://github.com/Wangshuaiia/KG-Hopper.",
+      "authors": [
+        "Shuai Wang",
+        "Yinan Yu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-03-22T23:07:29+00:00",
+      "link": "https://arxiv.org/pdf/2603.21440v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL for knowledge graph reasoning as a tool-use task",
+      "llm_evidence_cn": "将知识图谱推理作为工具使用任务的强化学习",
+      "llm_evidence": "将知识图谱推理作为工具使用任务的强化学习",
+      "canonical_evidence": "将知识图谱推理作为工具使用任务的强化学习",
+      "llm_tldr_en": "Empowers LLMs to perform multi-hop knowledge graph reasoning using an RL framework for better accuracy.",
+      "llm_tldr_cn": "通过强化学习框架赋能大模型进行多跳知识图谱推理，提高知识密集型任务的准确性。",
+      "llm_tldr": "通过强化学习框架赋能大模型进行多跳知识图谱推理，提高知识密集型任务的准确性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.23414v1",
+      "title": "SortedRL: Accelerating RL Training for LLMs through Online Length-Aware Scheduling",
+      "abstract": "Scaling reinforcement learning (RL) has shown strong promise for enhancing the reasoning abilities of large language models (LLMs), particularly in tasks requiring long chain-of-thought generation. However, RL training efficiency is often bottlenecked by the rollout phase, which can account for up to 70% of total training time when generating long trajectories (e.g., 16k tokens), due to slow autoregressive generation and synchronization overhead between rollout and policy updates. We propose SortedRL, an online length-aware scheduling strategy designed to address this bottleneck by improving rollout efficiency and maintaining training stability. SortedRL reorders rollout samples based on output lengths, prioritizing short samples forming groups for early updates. This enables large rollout batches, flexible update batches, and near on-policy micro-curriculum construction simultaneously. To further accelerate the pipeline, SortedRL incorporates a mechanism to control the degree of off-policy training through a cache-based mechanism, and is supported by a dedicated RL infrastructure that manages rollout and update via a stateful controller and rollout buffer. Experiments using LLaMA-3.1-8B and Qwen-2.5-32B on diverse tasks, including logical puzzles, and math challenges like AIME 24, Math 500, and Minerval, show that SortedRL reduces RL training bubble ratios by over 50%, while attaining 3.9% to 18.4% superior performance over baseline given same amount of data.",
+      "authors": [
+        "Yiqi Zhang",
+        "Huiqiang Jiang",
+        "Xufang Luo",
+        "Zhihe Yang",
+        "Chengruidong Zhang",
+        "Yifei Shen",
+        "Dongsheng Li",
+        "Yuqing Yang",
+        "Lili Qiu",
+        "Yang You"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-24T16:48:31+00:00",
+      "link": "https://arxiv.org/pdf/2603.23414v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "accelerating RL training for LLM reasoning tasks",
+      "llm_evidence_cn": "加速大语言模型推理任务的强化学习训练",
+      "llm_evidence": "加速大语言模型推理任务的强化学习训练",
+      "canonical_evidence": "加速大语言模型推理任务的强化学习训练",
+      "llm_tldr_en": "Proposes SortedRL to improve LLM RL training efficiency by scheduling rollouts based on sequence length.",
+      "llm_tldr_cn": "提出SortedRL，通过基于序列长度的采样调度来提高大语言模型强化学习训练的效率。",
+      "llm_tldr": "提出SortedRL，通过基于序列长度的采样调度来提高大语言模型强化学习训练的效率。",
+      "llm_tags": [
+        "query:rl-tl:composite"
+      ],
+      "matched_query_tag": "query:rl-tl:composite",
+      "matched_query_text": "Papers central to 具有可验证奖励的强化学习在大语言模型工具学习中的应用, especially work that connects or combines: l; R; reinforcement learning with verifiable reward functions; large language model tool learning and tool use; reinforcement learning with verifiable rewards for LLM tool use; automated reward modeling for tool augmented language models; verifying tool execution results in RL training for LLMs.",
+      "matched_requirement_id": "req-composite-rl-tl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.22918v1",
+      "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+      "abstract": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.",
+      "authors": [
+        "Yaolun Zhang",
+        "Ruohui Wang",
+        "Jiahao Wang",
+        "Yepeng Tang",
+        "Xuanyu Zheng",
+        "Haonan Duan",
+        "Hao Lu",
+        "Hanming Deng",
+        "Lewei Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-24T08:06:29+00:00",
+      "link": "https://arxiv.org/pdf/2603.22918v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reinforcement learning framework for video agents using external tools",
+      "llm_evidence_cn": "使用外部工具的视频智能体强化学习框架",
+      "llm_evidence": "使用外部工具的视频智能体强化学习框架",
+      "canonical_evidence": "使用外部工具的视频智能体强化学习框架",
+      "llm_tldr_en": "An RL framework for multimodal agents to autonomously plan and use tools for video understanding.",
+      "llm_tldr_cn": "一种针对多模态智能体的强化学习框架，使其能自主规划并使用工具进行视频理解。",
+      "llm_tldr": "一种针对多模态智能体的强化学习框架，使其能自主规划并使用工具进行视频理解。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.24375v1",
+      "title": "Towards Reward Modeling for AI Tutors in Math Mistake Remediation",
+      "abstract": "Evaluating the pedagogical quality of AI tutors remains challenging: standard NLG metrics do not determine whether responses identify mistakes, scaffold reasoning, or avoid revealing the answers. For the task of mistake remediation, we derive a hierarchy of pedagogical aspects from human pairwise preferences on MRBench, and synthesize minimally contrastive response pairs that differ along key aspects (e.g., mistake identification and location, targetedness, scaffolding, actionability, clarity, and coherence). We develop and release Bradley-Terry preference models trained on weighted-sum rankings that we automatically create from MRBench, synthetic pairs, and data combinations. Using only synthetic data, our best model reaches 0.69 pairwise accuracy on a human preference test, and combining weighted-sum data with targeted synthetic groups improves accuracy to 0.74, outperforming larger general-purpose reward models while using only a 0.5B-parameter backbone.",
+      "authors": [
+        "Kseniia Petukhova",
+        "Ekaterina Kochmar"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-25T14:56:08+00:00",
+      "link": "https://arxiv.org/pdf/2603.24375v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reward modeling for pedagogical aspects in AI tutors",
+      "llm_evidence_cn": "AI导师教学方面的奖励建模",
+      "llm_evidence": "AI导师教学方面的奖励建模",
+      "canonical_evidence": "AI导师教学方面的奖励建模",
+      "llm_tldr_en": "Develops reward models to evaluate the pedagogical quality of AI tutors in math remediation.",
+      "llm_tldr_cn": "开发奖励模型以评估AI导师在数学纠错任务中的教学质量。",
+      "llm_tldr": "开发奖励模型以评估AI导师在数学纠错任务中的教学质量。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "automated reward modeling for tool augmented language models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.24372v1",
+      "title": "Improving Lean4 Autoformalization via Cycle Consistency Fine-tuning",
+      "abstract": "Autoformalization - automatically translating natural language mathematical texts into formal proof language such as Lean4 - can help accelerate AI-assisted mathematical research, be it via proof verification or proof search. I fine-tune Qwen3.5-2B with LoRA for natural language to Lean4 formalization on FineLeanCorpus and consider three training regimes: supervised fine-tuning (SFT) with curriculum learning (difficulty 1 to 10), SFT without curriculum ordering, and reinforcement learning using group relative policy optimization (GRPO) with a cycle consistency reward. Cycle consistency measures how well the meaning of a statement is preserved through a NL to Lean4 to NL' loop, computed as cosine similarity of off-the-shelf sentence embeddings. On an unseen subset of FineLeanCorpus (FLC) and on PutnamBench, RL substantially outperforms both SFT variants (mean cycle consistency 0.669 vs. 0.513 on FLC; 0.561 vs. 0.422 on PutnamBench), while increasing cross-entropy loss by only 0.011 nats, with minimal impact on formalization quality. Curriculum ordering provides no measurable benefit over shuffled training.",
+      "authors": [
+        "Arsen Shebzukhov"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-25T14:53:48+00:00",
+      "link": "https://arxiv.org/pdf/2603.24372v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reinforcement learning using cycle consistency reward for formal proof verification",
+      "llm_evidence_cn": "使用循环一致性奖励进行形式化证明验证的强化学习",
+      "llm_evidence": "使用循环一致性奖励进行形式化证明验证的强化学习",
+      "canonical_evidence": "使用循环一致性奖励进行形式化证明验证的强化学习",
+      "llm_tldr_en": "Fine-tunes LLMs for autoformalization using RL with a cycle consistency reward to ensure semantic preservation.",
+      "llm_tldr_cn": "利用循环一致性奖励的强化学习微调大模型，以提高数学公式自动形式化的准确性。",
+      "llm_tldr": "利用循环一致性奖励的强化学习微调大模型，以提高数学公式自动形式化的准确性。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.25412v1",
+      "title": "Beyond Content Safety: Real-Time Monitoring for Reasoning Vulnerabilities in Large Language Models",
+      "abstract": "Large language models (LLMs) increasingly rely on explicit chain-of-thought (CoT) reasoning to solve complex tasks, yet the safety of the reasoning process itself remains largely unaddressed. Existing work on LLM safety focuses on content safety--detecting harmful, biased, or factually incorrect outputs -- and treats the reasoning chain as an opaque intermediate artifact. We identify reasoning safety as an orthogonal and equally critical security dimension: the requirement that a model's reasoning trajectory be logically consistent, computationally efficient, and resistant to adversarial manipulation. We make three contributions. First, we formally define reasoning safety and introduce a nine-category taxonomy of unsafe reasoning behaviors, covering input parsing errors, reasoning execution errors, and process management errors. Second, we conduct a large-scale prevalence study annotating 4111 reasoning chains from both natural reasoning benchmarks and four adversarial attack methods (reasoning hijacking and denial-of-service), confirming that all nine error types occur in practice and that each attack induces a mechanistically interpretable signature. Third, we propose a Reasoning Safety Monitor: an external LLM-based component that runs in parallel with the target model, inspects each reasoning step in real time via a taxonomy-embedded prompt, and dispatches an interrupt signal upon detecting unsafe behavior. Evaluation on a 450-chain static benchmark shows that our monitor achieves up to 84.88\\% step-level localization accuracy and 85.37\\% error-type classification accuracy, outperforming hallucination detectors and process reward model baselines by substantial margins. These results demonstrate that reasoning-level monitoring is both necessary and practically achievable, and establish reasoning safety as a foundational concern for the secure deployment of large reasoning models.",
+      "authors": [
+        "Xunguang Wang",
+        "Yuguang Zhou",
+        "Qingyue Wang",
+        "Zongjie Li",
+        "Ruixuan Huang",
+        "Zhenlan Ji",
+        "Pingchuan Ma",
+        "Shuai Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-03-26T13:08:56+00:00",
+      "link": "https://arxiv.org/pdf/2603.25412v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "monitoring reasoning trajectories for consistency",
+      "llm_evidence_cn": "监控推理轨迹的一致性",
+      "llm_evidence": "监控推理轨迹的一致性",
+      "canonical_evidence": "监控推理轨迹的一致性",
+      "llm_tldr_en": "Defines reasoning safety and monitors LLM reasoning trajectories for logical consistency and efficiency.",
+      "llm_tldr_cn": "定义了推理安全，并监控大语言模型推理轨迹的逻辑一致性和效率。",
+      "llm_tldr": "定义了推理安全，并监控大语言模型推理轨迹的逻辑一致性和效率。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
