@@ -1,0 +1,246 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-30T20:09:03.028052+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2603.26126v1",
+      "title": "Beyond Where to Look: Trajectory-Guided Reinforcement Learning for Multimodal RLVR",
+      "abstract": "Recent advances in Reinforcement Learning with Verifiable Rewards (RLVR) for multimodal large language models (MLLMs) have mainly focused on improving final answer correctness and strengthening visual grounding. However, a critical bottleneck remains: although models can attend to relevant visual regions, they often fail to effectively incorporate visual evidence into subsequent reasoning, leading to reasoning chains that are weakly grounded in visual facts. To address this issue, we propose Trajectory-Guided Reinforcement Learning (TGRL), which guides the policy model to integrate visual evidence into fine-grained reasoning processes using expert reasoning trajectories from stronger models. We further introduce token-level reweighting and trajectory filtering to ensure stable and effective policy optimization. Extensive experiments on multiple multimodal reasoning benchmarks demonstrate that TGRL consistently improves reasoning performance and effectively bridges the gap between visual perception and logical reasoning.",
+      "authors": [
+        "Jinda Lu",
+        "Junkang Wu",
+        "Jinghan Li",
+        "Kexin Huang",
+        "Shuo Yang",
+        "Mingzhu Chen",
+        "Jiancan Wu",
+        "Kuien Liu",
+        "Xiang Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-03-27T07:18:18+00:00",
+      "link": "https://arxiv.org/pdf/2603.26126v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Reinforcement Learning with Verifiable Rewards (RLVR) for multimodal LLMs",
+      "llm_evidence_cn": "多模态大语言模型中具有可验证奖励的强化学习 (RLVR)",
+      "llm_evidence": "多模态大语言模型中具有可验证奖励的强化学习 (RLVR)",
+      "canonical_evidence": "多模态大语言模型中具有可验证奖励的强化学习 (RLVR)",
+      "llm_tldr_en": "Proposes Trajectory-Guided RL to improve visual reasoning in multimodal LLMs using verifiable rewards.",
+      "llm_tldr_cn": "提出了轨迹引导强化学习，利用可验证奖励提升多模态大语言模型的视觉推理能力。",
+      "llm_tldr": "提出了轨迹引导强化学习，利用可验证奖励提升多模态大语言模型的视觉推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.22744v1",
+      "title": "Beyond Binary Correctness: Scaling Evaluation of Long-Horizon Agents on Subjective Enterprise Tasks",
+      "abstract": "Large language models excel on objectively verifiable tasks such as math and programming, where evaluation reduces to unit tests or a single correct answer. In contrast, real-world enterprise work is often subjective and context-dependent: success hinges on organizational goals, user intent, and the quality of intermediate artifacts produced across long, multi-tool workflows.   We introduce LH-Bench, a three-pillar evaluation design that moves beyond binary correctness to score autonomous, long-horizon execution on subjective enterprise tasks. The pillars are: (i) expert-grounded rubrics that give LLM judges the domain context needed to score subjective work, (ii) curated ground-truth artifacts that enable stepwise reward signals (e.g., chapter-level annotation for content tasks), and (iii) pairwise human preference evaluation for convergent validation. We show that domain-authored rubrics provide substantially more reliable evaluation signals than LLM-authored rubrics (kappa = 0.60 vs. 0.46), and that human preference judgments confirm the same top-tier separation (p < 0.05), evidence that expert-grounded evaluation can scale without sacrificing reliability. We release public datasets and report results on two environments: Figma-to-code (33 real .fig tasks against the Figma API via MCP) and Programmatic content (41 courses comprising 183 individually-evaluated chapters on a course platform serving 30+ daily users).",
+      "authors": [
+        "Abhishek Chandwani",
+        "Ishan Gupta"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-24T03:16:32+00:00",
+      "link": "https://arxiv.org/pdf/2603.22744v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "scoring long-horizon execution on multi-tool workflows with stepwise rewards",
+      "llm_evidence_cn": "对多工具工作流的长程执行进行分步奖励评分",
+      "llm_evidence": "对多工具工作流的长程执行进行分步奖励评分",
+      "canonical_evidence": "对多工具工作流的长程执行进行分步奖励评分",
+      "llm_tldr_en": "Introduces LH-Bench for evaluating long-horizon agents on subjective tasks using stepwise rewards and tool workflows.",
+      "llm_tldr_cn": "引入LH-Bench，通过分步奖励和工具工作流评估长程智能体在主观任务上的表现。",
+      "llm_tldr": "引入LH-Bench，通过分步奖励和工具工作流评估长程智能体在主观任务上的表现。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.26233v1",
+      "title": "Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents",
+      "abstract": "As Large Language Model (LLM) agents are increasingly deployed in open-ended domains like software engineering, they frequently encounter underspecified instructions that lack crucial context. While human developers naturally resolve underspecification by asking clarifying questions, current agents are largely optimized for autonomous execution. In this work, we systematically evaluate the clarification-seeking abilities of LLM agents on an underspecified variant of SWE-bench Verified. We propose an uncertainty-aware multi-agent scaffold that explicitly decouples underspecification detection from code execution. Our results demonstrate that this multi-agent system using OpenHands + Claude Sonnet 4.5 achieves a 69.40% task resolve rate, significantly outperforming a standard single-agent setup (61.20%) and closing the performance gap with agents operating on fully specified instructions. Furthermore, we find that the multi-agent system exhibits well-calibrated uncertainty, conserving queries on simple tasks while proactively seeking information on more complex issues. These findings indicate that current models can be turned into proactive collaborators, where agents independently recognize when to ask questions to elicit missing information in real-world, underspecified tasks.",
+      "authors": [
+        "Nicholas Edwards",
+        "Sebastian Schuster"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-27T09:56:26+00:00",
+      "link": "https://arxiv.org/pdf/2603.26233v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "LLM agents in software engineering and code execution",
+      "llm_evidence_cn": "软件工程和代码执行中的大语言模型智能体",
+      "llm_evidence": "软件工程和代码执行中的大语言模型智能体",
+      "canonical_evidence": "软件工程和代码执行中的大语言模型智能体",
+      "llm_tldr_en": "Evaluates and improves LLM agents' ability to seek clarification in underspecified coding tasks.",
+      "llm_tldr_cn": "评估并提升大语言模型智能体在不明确编程任务中的澄清提问能力。",
+      "llm_tldr": "评估并提升大语言模型智能体在不明确编程任务中的澄清提问能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "large language model tool learning and tool use",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.25419v1",
+      "title": "TAPO: Translation Augmented Policy Optimization for Multilingual Mathematical Reasoning",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in English mathematical reasoning, yet a significant performance disparity persists in multilingual contexts, largely attributed to deficiencies in language understanding. To bridge this gap, we introduce Translation-Augmented Policy Optimization (TAPO), a novel reinforcement learning framework built upon GRPO. TAPO enforces an explicit alignment strategy where the model leverages English as a pivot and follows an understand-then-reason paradigm. Crucially, we employ a step-level relative advantage mechanism that decouples understanding from reasoning, allowing the integration of translation quality rewards without introducing optimization conflicts. Extensive experiments reveal that TAPO effectively synergizes language understanding with reasoning capabilities and is compatible with various models. It outperforms baseline methods in both multilingual mathematical reasoning and translation tasks, while generalizing well to unseen languages and out-of-domain tasks.",
+      "authors": [
+        "Xu Huang",
+        "Zhejian Lai",
+        "Zixian Huang",
+        "Jiajun Chen",
+        "Shujian Huang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-03-26T13:13:33+00:00",
+      "link": "https://arxiv.org/pdf/2603.25419v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "integration of translation quality rewards in reinforcement learning",
+      "llm_evidence_cn": "在强化学习中集成翻译质量奖励",
+      "llm_evidence": "在强化学习中集成翻译质量奖励",
+      "canonical_evidence": "在强化学习中集成翻译质量奖励",
+      "llm_tldr_en": "A novel RL framework for multilingual reasoning that decouples understanding from reasoning rewards.",
+      "llm_tldr_cn": "一种新型多语言推理强化学习框架，将理解与推理奖励解耦。",
+      "llm_tldr": "一种新型多语言推理强化学习框架，将理解与推理奖励解耦。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.25720v1",
+      "title": "R-C2: Cycle-Consistent Reinforcement Learning Improves Multimodal Reasoning",
+      "abstract": "Robust perception and reasoning require consistency across sensory modalities. Yet current multimodal models often violate this principle, yielding contradictory predictions for visual and textual representations of the same concept. Rather than masking these failures with standard voting mechanisms, which can amplify systematic biases, we show that cross-modal inconsistency provides a rich and natural signal for learning. We introduce RC2, a reinforcement learning framework that resolves internal conflicts by enforcing cross-modal cycle consistency. By requiring a model to perform backward inference, switch modalities, and reliably reconstruct the answer through forward inference, we obtain a dense, label-free reward. This cyclic constraint encourages the model to align its internal representations autonomously. Optimizing for this structure mitigates modality-specific errors and improves reasoning accuracy by up to 7.6 points. Our results suggest that advanced reasoning emerges not only from scaling data, but also from enforcing a structurally consistent understanding of the world.",
+      "authors": [
+        "Zirui Zhang",
+        "Haoyu Dong",
+        "Kexin Pei",
+        "Chengzhi Mao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-03-26T17:58:04+00:00",
+      "link": "https://arxiv.org/pdf/2603.25720v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-free reward from cross-modal cycle consistency",
+      "llm_evidence_cn": "跨模态循环一致性产生的无标签奖励",
+      "llm_evidence": "跨模态循环一致性产生的无标签奖励",
+      "canonical_evidence": "跨模态循环一致性产生的无标签奖励",
+      "llm_tldr_en": "Introduces a cycle-consistent RL framework for multimodal reasoning using label-free rewards.",
+      "llm_tldr_cn": "引入循环一致性强化学习框架，利用无标签奖励提升多模态推理能力。",
+      "llm_tldr": "引入循环一致性强化学习框架，利用无标签奖励提升多模态推理能力。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "reinforcement learning with verifiable reward functions",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.25810v1",
+      "title": "ExVerus: Verus Proof Repair via Counterexample Reasoning",
+      "abstract": "Large Language Models (LLMs) have shown promising results in automating formal verification. However, existing approaches treat proof generation as a static, end-to-end prediction over source code, relying on limited verifier feedback and lacking access to concrete program behaviors. We present EXVERUS, a counterexample-guided framework that enables LLMs to reason about proofs using behavioral feedback via counterexamples. When a proof fails, EXVERUS automatically generates and validates counterexamples, and then guides the LLM to generalize them into inductive invariants to block these failures. Our evaluation shows that EXVERUS significantly improves proof accuracy, robustness, and token efficiency over the state-of-the-art prompting-based Verus proof generator.",
+      "authors": [
+        "Jun Yang",
+        "Yuechun Sun",
+        "Yi Wu",
+        "Rodrigo Caridad",
+        "Yongwei Yuan",
+        "Jianan Yao",
+        "Shan Lu",
+        "Kexin Pei"
+      ],
+      "primary_category": "cs.PL",
+      "categories": [
+        "cs.PL",
+        "cs.LG"
+      ],
+      "published": "2026-03-26T18:14:34+00:00",
+      "link": "https://arxiv.org/pdf/2603.25810v1",
+      "tags": [
+        "keyword:RL TL",
+        "query:RL TL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Verifying program behaviors and proof generation using behavioral feedback",
+      "llm_evidence_cn": "利用行为反馈验证程序行为和证明生成",
+      "llm_evidence": "利用行为反馈验证程序行为和证明生成",
+      "canonical_evidence": "利用行为反馈验证程序行为和证明生成",
+      "llm_tldr_en": "Uses counterexample reasoning to repair formal proofs generated by LLMs through behavioral feedback.",
+      "llm_tldr_cn": "通过反例推理，利用行为反馈修复大语言模型生成的正式证明。",
+      "llm_tldr": "通过反例推理，利用行为反馈修复大语言模型生成的正式证明。",
+      "llm_tags": [
+        "query:rl-tl"
+      ],
+      "matched_query_tag": "query:rl-tl",
+      "matched_query_text": "verifying tool execution results in RL training for LLMs",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -6,52 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-29
-- 运行时间：2026-03-29 19:53:43 UTC
+- 最新运行日期：2026-03-30
+- 运行时间：2026-03-30 20:10:04 UTC
 - 运行状态：成功
-- 本次总论文数：10
+- 本次总论文数：6
 - 精读区：2
-- 速读区：8
+- 速读区：4
 
 ### 今日简报（AI）
-今日深度研读 10 篇论文，聚焦多模态医疗推理与概率程序合成的前沿突破。
-重点推荐 AD-Reasoning 引导的阿尔茨海默症精准诊断，以及对程序合成中似然黑客行为的深度反思。
-建议关注强化学习如何赋能视频智能体与知识图谱推理，探索大模型在复杂任务中的落地潜力。
-- 详情：[/202603/29/README](/202603/29/README)
+今日聚焦强化学习在多模态推理与企业级长程智能体评估中的突破，深度解析 6 篇前沿成果。
+- 详情：[/202603/30/README](/202603/30/README)
 
 ### 精读区论文标签
-1. [AD-Reasoning: Multimodal Guideline-Guided Reasoning for Alzheimer's Disease Diagnosis](/202603/29/2603.24059v1-ad-reasoning-multimodal-guideline-guided-reasoning-for-alzheimers-disease-diagnosis)  
+1. [Beyond Where to Look: Trajectory-Guided Reinforcement Learning for Multimodal RLVR](/202603/30/2603.26126v1-beyond-where-to-look-trajectory-guided-reinforcement-learning-for-multimodal-rlvr)  
+   标签：评分：9.0/10、query:rl-tl
+   evidence：多模态大语言模型中具有可验证奖励的强化学习 (RLVR)
+2. [Beyond Binary Correctness: Scaling Evaluation of Long-Horizon Agents on Subjective Enterprise Tasks](/202603/30/2603.22744v1-beyond-binary-correctness-scaling-evaluation-of-long-horizon-agents-on-subjective-enterprise-tasks)  
    标签：评分：8.0/10、query:rl-tl
-   evidence：具有可验证奖励的推理强化微调
-2. [Likelihood hacking in probabilistic program synthesis](/202603/29/2603.24126v1-likelihood-hacking-in-probabilistic-program-synthesis)  
-   标签：评分：8.0/10、query:rl-tl
-   evidence：在强化学习训练中验证程序合成结果
+   evidence：对多工具工作流的长程执行进行分步奖励评分
 
 ### 速读区论文标签
-1. [RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models](/202603/29/2603.21341v1-roboalign-learning-test-time-reasoning-for-language-action-alignment-in-vision-language-action-models)  
+1. [Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents](/202603/30/2603.26233v1-ask-or-assume-uncertainty-aware-clarification-seeking-in-coding-agents)  
    标签：评分：7.0/10、query:rl-tl
-   evidence：通过推理将多模态理解转化为底层动作
-2. [KG-Hopper: Empowering Compact Open LLMs with Knowledge Graph Reasoning via Reinforcement Learning](/202603/29/2603.21440v1-kg-hopper-empowering-compact-open-llms-with-knowledge-graph-reasoning-via-reinforcement-learning)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：将知识图谱推理作为工具使用任务的强化学习
-3. [EVA: Efficient Reinforcement Learning for End-to-End Video Agent](/202603/29/2603.22918v1-eva-efficient-reinforcement-learning-for-end-to-end-video-agent)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：使用外部工具的视频智能体强化学习框架
-4. [Improving Lean4 Autoformalization via Cycle Consistency Fine-tuning](/202603/29/2603.24372v1-improving-lean4-autoformalization-via-cycle-consistency-fine-tuning)  
-   标签：评分：7.0/10、query:rl-tl
-   evidence：使用循环一致性奖励进行形式化证明验证的强化学习
-5. [Incentivizing Generative Zero-Shot Learning via Outcome-Reward Reinforcement Learning with Visual Cues](/202603/29/2603.21138v1-incentivizing-generative-zero-shot-learning-via-outcome-reward-reinforcement-learning-with-visual-cues)  
+   evidence：软件工程和代码执行中的大语言模型智能体
+2. [TAPO: Translation Augmented Policy Optimization for Multilingual Mathematical Reasoning](/202603/30/2603.25419v1-tapo-translation-augmented-policy-optimization-for-multilingual-mathematical-reasoning)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：生成模型的基于结果奖励的强化学习
-6. [SortedRL: Accelerating RL Training for LLMs through Online Length-Aware Scheduling](/202603/29/2603.23414v1-sortedrl-accelerating-rl-training-for-llms-through-online-length-aware-scheduling)  
+   evidence：在强化学习中集成翻译质量奖励
+3. [R-C2: Cycle-Consistent Reinforcement Learning Improves Multimodal Reasoning](/202603/30/2603.25720v1-r-c2-cycle-consistent-reinforcement-learning-improves-multimodal-reasoning)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：加速大语言模型推理任务的强化学习训练
-7. [Towards Reward Modeling for AI Tutors in Math Mistake Remediation](/202603/29/2603.24375v1-towards-reward-modeling-for-ai-tutors-in-math-mistake-remediation)  
+   evidence：跨模态循环一致性产生的无标签奖励
+4. [ExVerus: Verus Proof Repair via Counterexample Reasoning](/202603/30/2603.25810v1-exverus-verus-proof-repair-via-counterexample-reasoning)  
    标签：评分：6.0/10、query:rl-tl
-   evidence：AI导师教学方面的奖励建模
-8. [Beyond Content Safety: Real-Time Monitoring for Reasoning Vulnerabilities in Large Language Models](/202603/29/2603.25412v1-beyond-content-safety-real-time-monitoring-for-reasoning-vulnerabilities-in-large-language-models)  
-   标签：评分：6.0/10、query:rl-tl
-   evidence：监控推理轨迹的一致性
+   evidence：利用行为反馈验证程序行为和证明生成
 
 
 <div class="dpr-home-promo-card">
